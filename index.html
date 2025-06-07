@@ -9,7 +9,7 @@
       margin: 0;
       font-family: monospace;
       background: black;
-      color: #00bfff;
+      color: indigo;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -28,24 +28,23 @@
       line-height: 1.6;
     }
     .glow {
-      text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+      text-shadow: 0 0 10px indigo, 0 0 20px indigo;
     }
     .button {
       padding: 10px 20px;
-      border: 1px solid #00bfff;
-      color: #00bfff;
+      border: 1px solid indigo;
+      color: indigo;
       background: transparent;
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
-    .mirror-box {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, #001122 30%, #00bfff 100%);
-      border: 2px solid #00bfff;
+    img {
       margin-top: 2rem;
-      box-shadow: 0 0 20px #00bfff, inset 0 0 10px #00bfff;
+      border: 2px solid indigo;
+      box-shadow: 0 0 20px indigo;
+      max-width: 90%;
+      height: auto;
     }
   </style>
 </head>
@@ -58,6 +57,6 @@
     Watch it glow. Watch it think.
   </p>
   <button class="button" onclick="alert('Stay tuned. The organism is still learning.')">Join the Signal</button>
-  <div class="mirror-box"></div>
+  <img src="ChatGPT Image Jun 6, 2025, 09_26_13 PM.png" alt="Biocomputer mockup" />
 </body>
 </html>
