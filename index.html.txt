@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extratemporal Biology: A Hidden Stage of Life Revealed — Astrobiota</title>
+  <meta name="description" content="Independent research notes from Astrobiota: stabilizing a novel, fast-growing lichen morphology and outlining a living biobank vision." />
+  <!-- Open Graph / Twitter for clean sharing -->
+  <meta property="og:title" content="Extratemporal Biology: A Hidden Stage of Life Revealed — Astrobiota" />
+  <meta property="og:description" content="A founder-scientist reveals a hidden morphology of lichen and a plan to preserve 100 California species." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://simbiosis.bio/" />
+  <meta property="og:image" content="/images/hero-lichen.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Extratemporal Biology: A Hidden Stage of Life Revealed — Astrobiota" />
+  <meta name="twitter:description" content="A founder-scientist reveals a hidden morphology of lichen and a plan to preserve 100 California species." />
+  <meta name="twitter:image" content="/images/hero-lichen.jpg" />
+
+  <!-- Super-light, inlined CSS for speed; Medium-like typography -->
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#111111; --muted:#666; --link:#0f6; --hr:#e6e6e6; --accent:#0aa36a;
+      --maxw: 44rem; /* ~704px */
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#44e6a1; --hr:#1b1f24; --accent:#33d399; }
+    }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:1.25rem; }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:1rem; }
+    .brand{ font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-weight:700; letter-spacing:0.2px; }
+    nav a{ color:var(--muted); text-decoration:none; margin-left:1rem; font-size:0.95rem; }
+    nav a:hover{ color:var(--fg); }
+
+    .hero{ margin:0 auto 1.5rem; border-radius:14px; overflow:hidden; background:#000; }
+    .hero img{ width:100%; height:auto; display:block; filter:contrast(1.02) saturate(1.02); }
+
+    article h1{ font-size:2.25rem; line-height:1.15; margin:0.25rem 0 0.5rem; }
+    .sub{ color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-size:0.95rem; }
+    article h2{ font-size:1.5rem; margin-top:2.25rem; margin-bottom:0.75rem; }
+    p{ font-size:1.125rem; line-height:1.75; margin: 0.75rem 0; }
+    ul{ padding-left:1.25rem; }
+    li{ font-size:1.125rem; line-height:1.7; margin:0.35rem 0; }
+    hr{ border:0; height:1px; background:var(--hr); margin:2rem 0; }
+
+    .cta{ position:sticky; bottom:0; background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:saturate(160%) blur(8px); border-top:1px solid var(--hr); }
+    .cta .inner{ max-width:var(--maxw); margin:0 auto; padding:0.85rem 1.25rem; display:flex; gap:0.75rem; align-items:center; justify-content:space-between; }
+    .btn{ display:inline-block; padding:0.8rem 1.1rem; border-radius:999px; background:var(--accent); color:#00311f; text-decoration:none; font-weight:700; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    .btn:hover{ filter:brightness(1.05); }
+    .ladder{ display:grid; grid-template-columns: 1fr; gap:0.5rem; margin-top:0.75rem; }
+    .tag{ font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--muted); font-size:0.95rem; }
+
+    .pill{ display:inline-block; padding:0.35rem 0.7rem; border:1px solid var(--hr); border-radius:999px; font-size:0.95rem; color:var(--muted); }
+    footer{ color:var(--muted); font-size:0.95rem; margin:3rem 0 2rem; }
+    .kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:0.95rem; padding:0.15rem 0.4rem; border-radius:6px; background:var(--hr); color:var(--fg); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Astrobiota</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#support">Support</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <!-- Optional hero image; replace src with your hosted file. Use a compressed JPG/WebP. -->
+    <figure class="hero">
+      <img loading="lazy" src="/images/hero-lichen.jpg" alt="Proto-lichen morphology macro photograph" />
+    </figure>
+
+    <article>
+      <h1>Extratemporal Biology: A Hidden Stage of Life Revealed</h1>
+      <p class="sub">Independent research notes · Astrobiota Research Labs</p>
+
+      <h2>Discovery</h2>
+      <p>It emerges like a butterfly from a cocoon—an entirely new stage of life that has never been documented before.</p>
+      <p>Lichen thallus, collected from the wild, sterilized, and stored in a humid environment, begins to pale and peel away under controlled conditions. Then something remarkable happens: <strong>thick, tomentose mycelium emerges</strong>. Soon after, the algae relocates to the aerial tips, forming a dry biofilm over the fungal network.</p>
+      <p>Two lifeforms—fungus and alga—are reorganized into a completely new formation. Not a new stage of one organism, but a reprogrammed state of a symbiosis.</p>
+
+      <h2>Why It Matters</h2>
+      <p>I call this <strong>extratemporal biology</strong>—biological states that lie outside the stable temporal cycles recognized by evolution.</p>
+      <ul>
+        <li><strong>Metabolic intelligence</strong> – acquiring and transforming energy from complex sources.</li>
+        <li><strong>Reproductive intelligence</strong> – cyclic renewal tied to rhythms such as circadian time or seasons.</li>
+        <li><strong>Immune intelligence</strong> – chemical and structural defenses against threats.</li>
+      </ul>
+      <p>This lichen morphology does not conform to these intelligences. It is not reproductive, since no cortex or thallus is formed. It is not immune, as it does not produce secondary metabolites under current conditions. It may be metabolic, but in a way unlike traditional lichen growth—exposing rapid mycelium that carries its photobiont partner externally, like a biofilm wrapped over the fungal scaffold.</p>
+      <p>To my knowledge, this has never been documented before. That uniqueness is profound. It suggests that lichens are capable of revealing architectures of life that evolution itself does not stabilize in nature.</p>
+      <p><em>Note:</em> This form does <strong>not</strong> produce lichen metabolites, at least not under the conditions I’ve observed. That makes it clear this is not the final solution for harnessing lichen chemistry—but it is a crucial first step toward it.</p>
+
+      <h2>The Context</h2>
+      <p>NASA’s recent discoveries of complex organics on asteroids and other planetary bodies strengthen the case that life’s chemistry is widespread in space.</p>
+      <p>If life carries this cosmic imprint, it may already be optimized for extreme conditions: desiccation, radiation, vacuum, scarcity. Lichens, with their resilience, are already models for survival beyond Earth. But extratemporal biology—the emergence of new, unrecorded forms of symbiosis—suggests that hidden states of life may be even more suited for space than we realize.</p>
+      <p>This is not speculation. It is a reproducible observation of two organisms reorganizing into a form evolution never stabilizes, yet one that thrives under controlled conditions. That makes it both a biological discovery and a potential astrobiological model.</p>
+
+      <h2 id="about">The Vision</h2>
+      <p>This is the foundation of <strong>Astrobiota Research Labs</strong>. My work is pioneering <strong>Symbiology Engineering</strong>—the design and programming of multi-species systems that unlock resilience, adaptability, and computation. By preserving, stabilizing, and reprogramming symbioses like lichens, we can build a living biobank of forms evolution itself does not normally permit.</p>
+      <p>On Earth, this has profound implications for ecological resilience, medicine, and conservation. Beyond Earth, it points to a future where biology is not just preserved for space, but actively adapted to it.</p>
+
+      <h2 id="support">Call to Action</h2>
+      <p>Astrobiota is an ambitious project, and it cannot move forward on my effort alone. These forms exist only under careful cultivation. Without support, they risk disappearing back into obscurity. With support, we can preserve them and unlock their potential.</p>
+      <p>I’m beginning with a simple but vital step: building a living biobank of lichens here in California. My goal is to raise <strong>$10,000 to preserve 100 species locally</strong>—capturing their genetics, symbioses, and hidden morphologies before they are lost.</p>
+      <p class="tag">What your support makes possible:</p>
+      <ul>
+        <li>🌱 <strong>$100</strong> — Preserve <strong>1 lichen species</strong> for future generations</li>
+        <li>🌿 <strong>$500</strong> — Preserve <strong>5 species</strong>, adding depth to the local biobank</li>
+        <li>🌳 <strong>$1,000</strong> — Preserve <strong>10 species</strong>, building a true genetic archive</li>
+        <li>🌍 <strong>$5,000</strong> — Preserve <strong>50 species</strong>, anchoring California’s lichen diversity</li>
+        <li>🚀 <strong>$10,000 (Founding Goal)</strong> — Preserve <strong>100 species</strong>, securing a living foundation for Earth and beyond</li>
+      </ul>
+      <p>
+        <a class="btn" href="https://simbiosis.bio/support" rel="noopener" target="_blank">Become a Founding Supporter</a>
+      </p>
+
+      <hr>
+      <p class="sub">Tip: images are large; serve them compressed (<span class="kbd">.jpg</span> or <span class="kbd">.webp</span>) and use a CDN if available. Replace the hero path above with your hosted file.</p>
+    </article>
+
+    <footer>
+      <p>© <span id="yr"></span> Astrobiota · Simbiosis</p>
+    </footer>
+  </div>
+
+  <div class="cta">
+    <div class="inner">
+      <span class="pill">Help launch the California lichen biobank</span>
+      <a class="btn" href="https://simbiosis.bio/support" rel="noopener" target="_blank">Donate</a>
+    </div>
+  </div>
+
+  <script>
+    // Minimal JS for the footer year; everything else is plain HTML/CSS for speed.
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
