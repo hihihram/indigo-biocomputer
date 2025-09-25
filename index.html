@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AstroBiota — Symbiology Engineering</title>
-  <meta name="description" content="AstroBiota pioneers Symbiology Engineering and A-temporal Biology — programming resilient symbioses and biobanking life for Earth and beyond." />
+  <meta name="description" content="AstroBiota pioneers Symbiology Engineering and A‑temporal Biology — programming resilient symbioses and biobanking life for Earth and beyond." />
   <meta property="og:title" content="AstroBiota — Symbiology Engineering" />
-  <meta property="og:description" content="Programming resilient symbioses. A-temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
+  <meta property="og:description" content="Programming resilient symbioses. A‑temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://simbiosis.bio/" />
   <meta property="og:image" content="images/hero-lichen.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AstroBiota — Symbiology Engineering" />
-  <meta name="twitter:description" content="Programming resilient symbioses. A-temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
+  <meta name="twitter:description" content="Programming resilient symbioses. A‑temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
   <meta name="twitter:image" content="images/hero-lichen.jpg" />
   <style>
     :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 56rem; }
@@ -32,9 +32,12 @@
     /* Buttons */
     .btn{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
     .btn-ghost{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); }
+    /* Hero CTA overlay */
+    .cta-hero{ position:absolute; left:50%; bottom:6vh; transform:translateX(-50%); box-shadow:0 6px 20px rgba(0,0,0,.25); }
+    @media (max-width: 520px){ .cta-hero{ bottom:3vh; } }
 
     /* Hero */
-    .hero{ width:100%; height:78vh; min-height:520px; max-height:940px; }
+    .hero{ position:relative; width:100%; height:78vh; min-height:520px; max-height:940px; }
     .hero img{ width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05); }
 
     /* Sections */
@@ -46,6 +49,13 @@
     /* Ladder */
     .ladder{ display:grid; grid-template-columns: 1fr; gap:0.5rem; margin-top:0.5rem; }
     .pill{ display:inline-block; padding:0.4rem 0.6rem; border:1px solid var(--hr); border-radius:999px; color:var(--muted); font-size:0.95rem; }
+
+    /* About-me block */
+    .about-me{ display:grid; grid-template-columns:96px 1fr; gap:1rem; align-items:center; margin-top:1.25rem; background:color-mix(in srgb, var(--bg) 92%, transparent); border:1px solid var(--hr); border-radius:16px; padding:1rem 1.1rem; }
+    .about-me img{ width:96px; height:96px; border-radius:999px; object-fit:cover; border:1px solid var(--hr); }
+    .about-me h3{ margin:0 0 0.25rem; font-size:1.15rem; }
+    .about-me p{ margin:0; color:var(--muted); }
+    @media (min-width: 800px){ .about-me{ grid-template-columns:120px 1fr; } .about-me img{ width:120px; height:120px; } }
 
     /* Footer */
     footer{ border-top:1px solid var(--hr); margin-top:2.5rem; }
@@ -65,20 +75,21 @@
   </div>
 
   <header id="top" class="hero" role="banner">
-    <img src="images/hero-lichen.jpg" alt="Macro of proto-lichen morphology" loading="eager"/>
+    <img src="images/hero-lichen.jpg" alt="Macro of proto‑lichen morphology" loading="eager"/>
+    <a class=\"btn cta-hero\" href=\"https://ko-fi.com/astrobiota\" target=\"_blank\" rel=\"noopener\" aria-label=\"Donate to AstroBiota on Ko‑fi\">Donate<\/a>
   </header>
 
   <main>
     <section id="about">
       <h2>About</h2>
-      <p class="lead">AstroBiota is pioneering <strong>Symbiology Engineering</strong> — the science of programming living systems and their symbioses. Our breakthrough, <strong>A-temporal Biology</strong>, reveals life stages that don’t persist in nature, opening new frontiers in how biology can be preserved, studied, and designed.</p>
+      <p class="lead">AstroBiota is pioneering <strong>Symbiology Engineering</strong> — the science of programming living systems and their symbioses. Our breakthrough, <strong>A‑temporal Biology</strong>, reveals life stages that don’t persist in nature, opening new frontiers in how biology can be preserved, studied, and designed.</p>
       <p class="lead">We are building a platform for biobanking and engineering resilient symbioses — preparing biology for conservation on Earth and for adaptation to environments beyond our planet.</p>
-      <div class="card"><span class="pill">Independent · Donor-supported · Patent-pending research</span></div>
+      <div class="card"><span class="pill">Independent · Donor‑supported · Patent‑pending research</span></div>
     </section>
 
     <section id="blog">
       <h2>Blog</h2>
-      <p class="lead">A-Temporal Biology: A Hidden Stage of Life Revealed</p>
+      <p class="lead">A‑Temporal Biology: A Hidden Stage of Life Revealed</p>
       <p><a class="btn-ghost" href="firstblog.html">Read the Post</a></p>
     </section>
 
@@ -92,22 +103,31 @@
         <div>🌍 <strong>$5,000</strong> — Preserve <strong>50 species</strong></div>
         <div>🚀 <strong>$10,000</strong> — Founding goal: <strong>100 species</strong></div>
       </div>
-      <p style="margin-top:0.75rem">
-        <a class="btn" href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a>
-      </p>
+      <p style="margin-top:0.75rem"><a class="btn" href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a></p>
+
+      <!-- About me block -->
+      <div class="about-me">
+        <img src="images/your-photo.jpg" alt="Portrait of the founder" loading="lazy" />
+        <div>
+          <h3>About the Founder</h3>
+          <p>Hi, I’m Hiram — a founder‑scientist building AstroBiota to pioneer Symbiology Engineering and A‑temporal Biology. I work hands‑on at the edges of biology, stabilizing hidden symbiotic states and biobanking resilient life for Earth and beyond.</p>
+          <p style="margin-top:0.5rem"><a href="mailto:hi@simbiosis.bio">hi@simbiosis.bio</a> · <a href="firstblog.html">Read the Post</a> · <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a></p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="inner">
       <div>© <span id="yr"></span> AstroBiota</div>
-      <div>Independent, donor-supported science · No trackers</div>
+      <div>Independent, donor‑supported science · No trackers</div>
     </div>
   </footer>
 
   <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
 </body>
 </html>
+
 
 
 
