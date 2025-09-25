@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Astrobiota — Extratemporal Biology</title>
-  <meta name="description" content="Astrobiota is a private research lab pioneering Extratemporal Biology and Symbiology Engineering — preserving and programming multi‑species systems for Earth and beyond." />
-  <meta property="og:title" content="Astrobiota — Extratemporal Biology" />
-  <meta property="og:description" content="A founder‑scientist’s field station for alien life on Earth. Support the California Lichen Biobank (100 species)." />
+  <title>AstroBiota — A‑Temporal Biology</title>
+  <meta name="description" content="AstroBiota is an independent field station for a‑temporal biology and Symbiology Engineering — preserving and programming multi‑species systems for Earth and beyond." />
+  <meta property="og:title" content="AstroBiota — A‑Temporal Biology" />
+  <meta property="og:description" content="A founder‑scientist’s field station for alien life on Earth. Help preserve 100 California lichen species as proto‑lichen." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://simbiosis.bio/" />
   <meta property="og:image" content="/images/hero-lichen.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Astrobiota — Extratemporal Biology" />
-  <meta name="twitter:description" content="A founder‑scientist’s field station for alien life on Earth. Support the California Lichen Biobank (100 species)." />
+  <meta name="twitter:title" content="AstroBiota — A‑Temporal Biology" />
+  <meta name="twitter:description" content="A founder‑scientist’s field station for alien life on Earth. Help preserve 100 California lichen species as proto‑lichen." />
   <meta name="twitter:image" content="/images/hero-lichen.jpg" />
   <style>
     :root{
@@ -35,8 +35,8 @@
 
     /* Hero */
     .hero{ max-width:var(--maxw); margin:2rem auto 1rem; padding:0 1.25rem; display:grid; grid-template-columns: 1fr; gap:1.25rem; }
-    .hero-visual{ border-radius:16px; overflow:hidden; background:#000; }
-    .hero-visual img{ width:100%; height:auto; display:block; filter:contrast(1.02) saturate(1.02); }
+    .hero-visual{ border-radius:16px; overflow:hidden; background:#000; height:55vh; min-height:420px; }
+    .hero-visual img{ width:100%; height:100%; display:block; filter:contrast(1.02) saturate(1.02); object-fit:cover; }
     .hero h1{ font-size:clamp(2rem, 3.2vw + 1rem, 3rem); line-height:1.1; margin:0.25rem 0; }
     .hero p{ font-size:1.1rem; color:var(--muted); margin:0.5rem 0 0.75rem; }
     .btn{ display:inline-block; padding:0.85rem 1.1rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
@@ -65,19 +65,20 @@
     @media (min-width: 960px){
       .hero{ grid-template-columns: 1.1fr 0.9fr; align-items:center; }
       .grid{ grid-template-columns: repeat(3, 1fr); }
+      .hero-visual{ height:65vh; }
     }
   </style>
 </head>
 <body>
   <div class="nav">
     <div class="inner">
-      <div class="brand">Astrobiota</div>
+      <div class="brand"><a href="https://simbiosis.bio/">AstroBiota</a></div>
       <div class="menu">
         <a href="#focus">Research</a>
         <a href="#story">About</a>
         <a href="#biobank">Biobank</a>
         <a href="#blog">Blog</a>
-        <a href="#support">Support</a>
+        <a href="#donate">Donate</a>
       </div>
     </div>
   </div>
@@ -85,10 +86,10 @@
   <main>
     <section class="hero">
       <div>
-        <h1>Extratemporal Biology<br/>A field station for alien life on Earth</h1>
-        <p>Astrobiota is a private research lab pioneering <strong>Extratemporal Biology</strong> and <strong>Symbiology Engineering</strong> — stabilizing hidden stages of symbiosis, preserving rare lifeforms, and designing multi‑species systems for Earth and beyond.</p>
+        <h1>A‑Temporal Biology<br/>A field station for alien life on Earth</h1>
+        <p>AstroBiota pioneers <strong>a‑temporal biology</strong> and <strong>Symbiology Engineering</strong> — stabilizing hidden states of symbiosis, preserving resilient lifeforms, and designing multi‑species systems for Earth and beyond.</p>
         <p>
-          <a class="btn" href="#support">Become a Founding Supporter</a>
+          <a class="btn" href="#donate">Donate</a>
           <a class="btn-ghost" href="#blog">Read the Discovery</a>
         </p>
         <p><span class="pill">Patent‑pending research</span> <span class="pill">Independent, donor‑supported</span></p>
@@ -119,8 +120,8 @@
 
     <section id="story">
       <h2>About</h2>
-      <p class="lead">Founded by Hiram, a biotechnology researcher and engineer working at the edges of biology, Astrobiota operates like a field outpost: small, precise, and focused on discoveries too fragile for traditional labs.</p>
-      <p>Astrobiota’s first breakthrough stabilizes a previously undocumented lichen state — thick, tomentose mycelium carrying a photobiont as a dry biofilm. It grows far faster than traditional lichen because it bypasses cortex and thallus formation. This stage does not yet produce lichen metabolites; it is a foundation for deeper work, not the finish line.</p>
+      <p class="lead">Founded by Hiram, a biotechnology researcher and engineer, AstroBiota operates like a field outpost: small, precise, and focused on discoveries too fragile for traditional labs.</p>
+      <p>Our first breakthrough stabilizes a previously undocumented lichen state — thick, tomentose mycelium carrying a photobiont as a dry biofilm. It grows far faster than traditional lichen because it bypasses cortex and thallus formation. This stage does not produce lichen metabolites under observed conditions; it is a foundation for deeper work, not the finish line.</p>
     </section>
 
     <section id="biobank">
@@ -133,19 +134,19 @@
         <div>🌍 <strong>$5,000</strong> — Preserve <strong>50 species</strong></div>
         <div>🚀 <strong>$10,000</strong> — Founding goal: <strong>100 species</strong></div>
       </div>
-      <p style="margin-top:0.75rem"><a class="btn" href="/support" target="_blank" rel="noopener">Support the Biobank</a></p>
+      <p style="margin-top:0.75rem"><a class="btn" href="/support" target="_blank" rel="noopener">Donate</a></p>
     </section>
 
     <section id="blog">
       <h2>Latest Research Note</h2>
-      <p class="lead">Extratemporal Biology: A Hidden Stage of Life Revealed</p>
+      <p class="lead">A‑Temporal Biology: A Hidden Stage of Life Revealed</p>
       <p>Two lifeforms — fungus and alga — reorganized into a new, fast‑growing formation. Read the full note, with images and context for astrobiology and conservation.</p>
-      <p><a class="btn-ghost" href="/blog/extratemporal-biology.html">Read the Post</a></p>
+      <p><a class="btn-ghost" href="/blog/test-dummy-post.html">Read the Post</a></p>
     </section>
 
-    <section id="support">
-      <h2>Support</h2>
-      <p class="lead">This is independent, donor‑supported science. If the work resonates — if you see beauty, value, or potential here — consider becoming a founding supporter.</p>
+    <section id="donate">
+      <h2>Donate</h2>
+      <p class="lead">This is independent, donor‑supported science. If the work resonates — if you see beauty, value, or potential here — please consider donating.</p>
       <p><a class="btn" href="/support" target="_blank" rel="noopener">Donate</a> <a class="btn-ghost" href="mailto:hi@simbiosis.bio">Partner/Press</a></p>
       <p><span class="pill">No perks, no paywalls — just impact</span></p>
     </section>
@@ -153,7 +154,7 @@
 
   <footer>
     <div class="inner">
-      <div>© <span id="yr"></span> Astrobiota · Simbiosis</div>
+      <div>© <span id="yr"></span> AstroBiota</div>
       <div>Minimal site, maximal science. Images served compressed; no trackers.</div>
     </div>
   </footer>
