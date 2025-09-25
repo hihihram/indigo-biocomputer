@@ -3,164 +3,90 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AstroBiota — A‑Temporal Biology</title>
-  <meta name="description" content="AstroBiota is an independent field station for a‑temporal biology and Symbiology Engineering — preserving and programming multi‑species systems for Earth and beyond." />
-  <meta property="og:title" content="AstroBiota — A‑Temporal Biology" />
-  <meta property="og:description" content="A founder‑scientist’s field station for alien life on Earth. Help preserve 100 California lichen species as proto‑lichen." />
+  <title>AstroBiota — Symbiology Engineering</title>
+  <meta name="description" content="AstroBiota pioneers Symbiology Engineering and A‑temporal Biology — programming resilient symbioses and biobanking life for Earth and beyond." />
+  <meta property="og:title" content="AstroBiota — Symbiology Engineering" />
+  <meta property="og:description" content="Programming resilient symbioses. A‑temporal Biology reveals life stages that don't persist in nature — a platform for conservation and adaptation beyond Earth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://simbiosis.bio/" />
   <meta property="og:image" content="/images/hero-lichen.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AstroBiota — A‑Temporal Biology" />
-  <meta name="twitter:description" content="A founder‑scientist’s field station for alien life on Earth. Help preserve 100 California lichen species as proto‑lichen." />
+  <meta name="twitter:title" content="AstroBiota — Symbiology Engineering" />
+  <meta name="twitter:description" content="Programming resilient symbioses. A‑temporal Biology reveals life stages that don't persist in nature — a platform for conservation and adaptation beyond Earth." />
   <meta name="twitter:image" content="/images/hero-lichen.jpg" />
   <style>
-    :root{
-      --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a; --card:#f8f9fa;
-      --maxw: 56rem; /* 896px */
-    }
-    @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --card:#121416; }
-    }
+    :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 54rem; }
+    @media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a; } }
+    *{ box-sizing:border-box; }
     html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
     /* Header */
-    .nav{ position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:color-mix(in srgb, var(--bg) 90%, transparent); border-bottom:1px solid var(--hr); }
-    .nav .inner{ max-width:var(--maxw); margin:0 auto; padding:0.8rem 1.25rem; display:flex; align-items:center; justify-content:space-between; }
+    .nav{ position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--hr); }
+    .nav .inner{ max-width:var(--maxw); margin:0 auto; padding:0.75rem 1.1rem; display:flex; align-items:center; justify-content:space-between; }
     .brand{ font-weight:800; letter-spacing:0.2px; }
     .menu a{ color:var(--muted); margin-left:1rem; }
     .menu a:hover{ color:var(--fg); text-decoration:none; }
 
-    /* Hero */
-    .hero{ max-width:var(--maxw); margin:2rem auto 1rem; padding:0 1.25rem; display:grid; grid-template-columns: 1fr; gap:1.25rem; }
-    .hero-visual{ border-radius:16px; overflow:hidden; background:#000; height:55vh; min-height:420px; }
-    .hero-visual img{ width:100%; height:100%; display:block; filter:contrast(1.02) saturate(1.02); object-fit:cover; }
-    .hero h1{ font-size:clamp(2rem, 3.2vw + 1rem, 3rem); line-height:1.1; margin:0.25rem 0; }
-    .hero p{ font-size:1.1rem; color:var(--muted); margin:0.5rem 0 0.75rem; }
-    .btn{ display:inline-block; padding:0.85rem 1.1rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
-    .btn:hover{ filter:brightness(1.05); text-decoration:none; }
-    .btn-ghost{ display:inline-block; padding:0.85rem 1.1rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); margin-left:0.5rem; }
+    /* HERO — the golden thing */
+    .hero{ position:relative; width:100%; height:78vh; min-height:520px; max-height:940px; }
+    .hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(1.05) saturate(1.05); }
+    .hero .overlay{ position:absolute; inset:0; background:linear-gradient(to top, color-mix(in srgb, var(--bg) 35%, transparent) 0%, transparent 60%); }
+    .hero .content{ position:absolute; left:50%; bottom:8vh; transform:translateX(-50%); width:min(92%, var(--maxw)); color:var(--fg); }
+    .hero h1{ margin:0 0 0.6rem; font-size:clamp(2rem, 3.5vw + 1rem, 3.4rem); line-height:1.08; }
+    .hero p{ margin:0 0 1rem; font-size:clamp(1.05rem, 1.2vw + .6rem, 1.25rem); color:var(--muted); }
+    .btn{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
+    .btn-ghost{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); margin-left:0.6rem; }
 
-    /* Sections */
-    section{ max-width:var(--maxw); margin:2.25rem auto; padding:0 1.25rem; }
-    h2{ font-size:1.6rem; margin:0 0 0.75rem; }
-    p.lead{ font-size:1.15rem; color:var(--muted); }
-
-    /* Focus grid */
-    .grid{ display:grid; grid-template-columns:1fr; gap:0.9rem; }
-    .card{ background:var(--card); border:1px solid var(--hr); border-radius:16px; padding:1rem 1.1rem; }
-    .card h3{ margin:0 0 0.35rem; font-size:1.15rem; }
-    .card p{ margin:0; color:var(--muted); line-height:1.6; }
-
-    /* Ladder */
-    .ladder{ display:grid; grid-template-columns: 1fr; gap:0.5rem; margin-top:0.5rem; }
-    .pill{ display:inline-block; padding:0.4rem 0.6rem; border:1px solid var(--hr); border-radius:999px; color:var(--muted); font-size:0.95rem; }
+    /* Pitch */
+    .pitch{ max-width:var(--maxw); margin:2.25rem auto; padding:0 1.1rem; }
+    .pitch p{ font-size:1.15rem; color:var(--muted); line-height:1.65; margin:0; }
 
     /* Footer */
-    footer{ border-top:1px solid var(--hr); margin-top:3rem; }
-    footer .inner{ max-width:var(--maxw); margin:0 auto; padding:1.25rem; color:var(--muted); font-size:0.95rem; display:grid; gap:0.3rem; }
-
-    @media (min-width: 960px){
-      .hero{ grid-template-columns: 1.1fr 0.9fr; align-items:center; }
-      .grid{ grid-template-columns: repeat(3, 1fr); }
-      .hero-visual{ height:65vh; }
-    }
+    footer{ border-top:1px solid var(--hr); margin-top:2.5rem; }
+    footer .inner{ max-width:var(--maxw); margin:0 auto; padding:1.1rem; color:var(--muted); font-size:0.95rem; display:flex; justify-content:space-between; gap:0.5rem; flex-wrap:wrap; }
   </style>
 </head>
 <body>
   <div class="nav">
     <div class="inner">
-      <div class="brand"><a href="https://simbiosis.bio/">AstroBiota</a></div>
+      <div class="brand"><a href="/">AstroBiota</a></div>
       <div class="menu">
-        <a href="#focus">Research</a>
-        <a href="#story">About</a>
-        <a href="#biobank">Biobank</a>
-        <a href="#blog">Blog</a>
         <a href="#donate">Donate</a>
+        <a href="/blog/test-dummy-post.html">Read the Post</a>
       </div>
     </div>
   </div>
 
+  <header class="hero" role="banner">
+    <img src="/images/hero-lichen.jpg" alt="Macro of proto‑lichen morphology" loading="eager"/>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Programming living symbioses</h1>
+      <p>AstroBiota is pioneering <strong>Symbiology Engineering</strong> — the science of programming living systems and their symbioses. Our breakthrough concept, <strong>A‑temporal Biology</strong>, reveals life stages that do not persist in nature, opening new frontiers in how biology can be preserved, studied, and designed.</p>
+      <p><a class="btn" href="#donate">Donate</a> <a class="btn-ghost" href="/blog/test-dummy-post.html">Read the Post</a></p>
+    </div>
+  </header>
+
   <main>
-    <section class="hero">
-      <div>
-        <h1>A‑Temporal Biology<br/>A field station for alien life on Earth</h1>
-        <p>AstroBiota pioneers <strong>a‑temporal biology</strong> and <strong>Symbiology Engineering</strong> — stabilizing hidden states of symbiosis, preserving resilient lifeforms, and designing multi‑species systems for Earth and beyond.</p>
-        <p>
-          <a class="btn" href="#donate">Donate</a>
-          <a class="btn-ghost" href="#blog">Read the Discovery</a>
-        </p>
-        <p><span class="pill">Patent‑pending research</span> <span class="pill">Independent, donor‑supported</span></p>
-      </div>
-      <figure class="hero-visual">
-        <img loading="lazy" src="/images/hero-lichen.jpg" alt="Proto‑lichen morphology macro photograph" />
-      </figure>
+    <section class="pitch">
+      <p>We are building a platform for biobanking and engineering resilient symbioses — preparing biology for conservation on Earth and for adaptation to environments beyond our planet.</p>
     </section>
 
-    <section id="focus">
-      <h2>Research Focus</h2>
-      <p class="lead">We reveal and stabilize biological states that evolution does not normally permit — then preserve them, study them, and make them useful.</p>
-      <div class="grid">
-        <div class="card">
-          <h3>Proto‑lichen morphologies</h3>
-          <p>Fast‑growing, tomentose mycelial forms that carry photobionts externally; a reproducible, generalizable state across lichen types.</p>
-        </div>
-        <div class="card">
-          <h3>Symbiology Engineering</h3>
-          <p>Programming multi‑species systems for resilience, adaptation, and computation — without traditional thalli or defensive chemistry.</p>
-        </div>
-        <div class="card">
-          <h3>Biocomputation & Materials</h3>
-          <p>Exploring fungal networks as living information media and semi‑living materials inspired by conserved symbiotic architectures.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="story">
-      <h2>About</h2>
-      <p class="lead">Founded by Hiram, a biotechnology researcher and engineer, AstroBiota operates like a field outpost: small, precise, and focused on discoveries too fragile for traditional labs.</p>
-      <p>Our first breakthrough stabilizes a previously undocumented lichen state — thick, tomentose mycelium carrying a photobiont as a dry biofilm. It grows far faster than traditional lichen because it bypasses cortex and thallus formation. This stage does not produce lichen metabolites under observed conditions; it is a foundation for deeper work, not the finish line.</p>
-    </section>
-
-    <section id="biobank">
-      <h2>California Lichen Biobank</h2>
-      <p class="lead">Goal: raise <strong>$10,000</strong> to preserve <strong>100 species</strong> locally — capturing genetics, symbioses, and hidden morphologies before they are lost.</p>
-      <div class="ladder">
-        <div>🌱 <strong>$100</strong> — Preserve <strong>1 species</strong></div>
-        <div>🌿 <strong>$500</strong> — Preserve <strong>5 species</strong></div>
-        <div>🌳 <strong>$1,000</strong> — Preserve <strong>10 species</strong></div>
-        <div>🌍 <strong>$5,000</strong> — Preserve <strong>50 species</strong></div>
-        <div>🚀 <strong>$10,000</strong> — Founding goal: <strong>100 species</strong></div>
-      </div>
-      <p style="margin-top:0.75rem"><a class="btn" href="/support" target="_blank" rel="noopener">Donate</a></p>
-    </section>
-
-    <section id="blog">
-      <h2>Latest Research Note</h2>
-      <p class="lead">A‑Temporal Biology: A Hidden Stage of Life Revealed</p>
-      <p>Two lifeforms — fungus and alga — reorganized into a new, fast‑growing formation. Read the full note, with images and context for astrobiology and conservation.</p>
-      <p><a class="btn-ghost" href="/blog/test-dummy-post.html">Read the Post</a></p>
-    </section>
-
-    <section id="donate">
-      <h2>Donate</h2>
-      <p class="lead">This is independent, donor‑supported science. If the work resonates — if you see beauty, value, or potential here — please consider donating.</p>
-      <p><a class="btn" href="/support" target="_blank" rel="noopener">Donate</a> <a class="btn-ghost" href="mailto:hi@simbiosis.bio">Partner/Press</a></p>
-      <p><span class="pill">No perks, no paywalls — just impact</span></p>
+    <section id="donate" class="pitch">
+      <p><a class="btn" href="/support" target="_blank" rel="noopener">Donate</a> <span class="btn-ghost" aria-hidden="true">Independent, donor‑supported science</span></p>
     </section>
   </main>
 
   <footer>
     <div class="inner">
       <div>© <span id="yr"></span> AstroBiota</div>
-      <div>Minimal site, maximal science. Images served compressed; no trackers.</div>
+      <div>Minimal site, maximal science. No trackers.</div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
 </body>
 </html>
+
