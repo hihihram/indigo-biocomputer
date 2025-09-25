@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AstroBiota — Symbiology Engineering</title>
-  <meta name="description" content="AstroBiota pioneers Symbiology Engineering and A‑temporal Biology — programming resilient symbioses and biobanking life for Earth and beyond." />
+  <meta name="description" content="AstroBiota pioneers Symbiology Engineering and A-temporal Biology — programming resilient symbioses and biobanking life for Earth and beyond." />
   <meta property="og:title" content="AstroBiota — Symbiology Engineering" />
-  <meta property="og:description" content="Programming resilient symbioses. A‑temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
+  <meta property="og:description" content="Programming resilient symbioses. A-temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://simbiosis.bio/" />
   <meta property="og:image" content="/images/hero-lichen.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AstroBiota — Symbiology Engineering" />
-  <meta name="twitter:description" content="Programming resilient symbioses. A‑temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
+  <meta name="twitter:description" content="Programming resilient symbioses. A-temporal Biology reveals life stages that don't persist in nature — a platform for conservation on Earth and adaptation beyond." />
   <meta name="twitter:image" content="/images/hero-lichen.jpg" />
   <style>
     :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 56rem; }
@@ -30,14 +30,8 @@
     .menu a:hover{ color:var(--fg); text-decoration:none; }
 
     /* Hero */
-    .hero{ position:relative; width:100%; height:78vh; min-height:520px; max-height:940px; }
-    .hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(1.05) saturate(1.05); }
-    .hero .overlay{ position:absolute; inset:0; background:linear-gradient(to top, color-mix(in srgb, var(--bg) 35%, transparent) 0%, transparent 60%); }
-    .hero .content{ position:absolute; left:50%; bottom:8vh; transform:translateX(-50%); width:min(92%, var(--maxw)); color:var(--fg); }
-    .hero h1{ margin:0 0 0.6rem; font-size:clamp(2rem, 3.5vw + 1rem, 3.4rem); line-height:1.08; }
-    .hero p{ margin:0 0 1rem; font-size:clamp(1.05rem, 1.2vw + .6rem, 1.25rem); color:var(--muted); }
-    .btn{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
-    .btn-ghost{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); margin-left:0.6rem; }
+    .hero{ width:100%; height:78vh; min-height:520px; max-height:940px; }
+    .hero img{ width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05); }
 
     /* Sections */
     section{ max-width:var(--maxw); margin:2.25rem auto; padding:0 1.1rem; }
@@ -67,26 +61,21 @@
   </div>
 
   <header id="top" class="hero" role="banner">
-    <img src="/images/hero-lichen.jpg" alt="Macro of proto‑lichen morphology" loading="eager"/>
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Programming living symbioses</h1>
-      <p>AstroBiota is pioneering <strong>Symbiology Engineering</strong> — the science of programming living systems and their symbioses. Our breakthrough, <strong>A‑temporal Biology</strong>, reveals life stages that don’t persist in nature, opening new frontiers in how biology can be preserved, studied, and designed.</p>
-      <p><a class="btn" href="#donate">Donate</a> <a class="btn-ghost" href="#blog">Read the Post</a></p>
-    </div>
+    <img src="/images/hero-lichen.jpg" alt="Macro of proto-lichen morphology" loading="eager"/>
   </header>
 
   <main>
     <section id="about">
       <h2>About</h2>
+      <p class="lead">AstroBiota is pioneering <strong>Symbiology Engineering</strong> — the science of programming living systems and their symbioses. Our breakthrough, <strong>A-temporal Biology</strong>, reveals life stages that don’t persist in nature, opening new frontiers in how biology can be preserved, studied, and designed.</p>
       <p class="lead">We are building a platform for biobanking and engineering resilient symbioses — preparing biology for conservation on Earth and for adaptation to environments beyond our planet.</p>
-      <div class="card"><span class="pill">Independent · Donor‑supported · Patent‑pending research</span></div>
+      <div class="card"><span class="pill">Independent · Donor-supported · Patent-pending research</span></div>
     </section>
 
     <section id="blog">
       <h2>Blog</h2>
-      <p class="lead">A‑Temporal Biology: A Hidden Stage of Life Revealed</p>
-      <p><a class="btn-ghost" href="/blog/test-dummy-post.html">Read the Post</a></p>
+      <p class="lead">A-Temporal Biology: A Hidden Stage of Life Revealed</p>
+      <p><a class="btn-ghost" href="/firstblog.html">Read the Post</a></p>
     </section>
 
     <section id="donate">
@@ -106,7 +95,7 @@
   <footer>
     <div class="inner">
       <div>© <span id="yr"></span> AstroBiota</div>
-      <div>Independent, donor‑supported science · No trackers</div>
+      <div>Independent, donor-supported science · No trackers</div>
     </div>
   </footer>
 
