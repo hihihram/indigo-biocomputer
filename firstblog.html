@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A‑Temporal Biology: A Hidden Stage of Life Revealed — Simbiosis</title>
-  <meta name="description" content="Proto‑Lichen: a reproducible, undocumented symbiotic state where tomentose fungal mycelium carries algal partners as a dry biofilm. Context, implications, and call to action." />
-  <meta property="og:title" content="A‑Temporal Biology: A Hidden Stage of Life Revealed" />
-  <meta property="og:description" content="Proto‑Lichen: a reproducible, undocumented symbiotic state. Read the context, implications, and how to donate to the California Lichen Biobank (100 species)." />
+  <title>A-Temporal Biology: A Hidden Stage of Life Revealed — AstroBiota</title>
+  <meta name="description" content="Proto-Lichen: a reproducible, undocumented symbiotic state where tomentose fungal mycelium carries algal partners as a dry biofilm. Context, implications, and call to action." />
+  <meta property="og:title" content="A-Temporal Biology: A Hidden Stage of Life Revealed" />
+  <meta property="og:description" content="Proto-Lichen: a reproducible, undocumented symbiotic state. Read the context, implications, and how to donate to the California Lichen Biobank (100 species)." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://simbiosis.bio/blog/test-dummy-post.html" />
-  <meta property="og:image" content="/images/hero-lichen.jpg" />
+  <meta property="og:url" content="https://simbiosis.bio/firstblog.html" />
+  <meta property="og:image" content="images/hero-lichen.jpg" />
   <style>
     :root{
       --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a;
@@ -22,71 +22,94 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
     header,main,footer{ max-width:var(--maxw); margin:0 auto; padding:1.5rem; }
-    header{ border-bottom:1px solid var(--hr); }
-    header h1{ margin:0; font-size:2.2rem; line-height:1.2; }
+    header h1{ margin:0; font-size:2.1rem; line-height:1.2; }
     header p{ color:var(--muted); margin:0.25rem 0 0.75rem; }
-    .lead{ font-size:1.1rem; color:var(--muted); }
-    h2{ margin-top:1.5rem; font-size:1.3rem; }
+    .lead{ font-size:1.08rem; color:var(--muted); }
+    h2{ margin-top:1.5rem; font-size:1.25rem; }
     .callout{ background:color-mix(in srgb, var(--accent) 8%, transparent); border:1px solid var(--hr); padding:1rem; border-radius:12px; }
     .btn{ display:inline-block; padding:0.7rem 1rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
     .ladder{ display:grid; gap:0.4rem; margin:0.75rem 0; }
     .pill{ display:inline-block; padding:0.35rem 0.6rem; border:1px solid var(--hr); border-radius:999px; color:var(--muted); font-size:0.95rem; }
+
+    /* Blog hero showing the full image (letterboxed) */
+    .blog-hero {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .blog-hero .frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;            /* letterbox background */
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--hr);
+    }
+    .blog-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;         /* show full image, no crop */
+    }
+
     footer{ border-top:1px solid var(--hr); font-size:0.95rem; color:var(--muted); }
   </style>
 </head>
 <body>
+  <div class="blog-hero">
+    <div class="frame">
+      <img src="images/hero-lichen.jpg" alt="Proto-lichen morphology, full image" loading="eager">
+    </div>
+  </div>
+
   <header>
-    <p><a href="/">← Back to Home</a></p>
-    <h1>A‑Temporal Biology: A Hidden Stage of Life Revealed</h1>
-    <p>Published on <time datetime="2025-09-24">September 24, 2025</time> · <span class="pill">Independent, donor‑supported</span></p>
-    <p class="lead">Proto‑Lichen — a reproducible symbiotic morphology in which thick, tomentose fungal mycelium carries algal partners as a dry, glistening biofilm. Not a conventional lichen stage, but a reprogrammed partnership optimized for light and air.</p>
+    <p><a href="index.html">← Back to Home</a></p>
+    <h1>A-Temporal Biology: A Hidden Stage of Life Revealed</h1>
+    <p>Published on <time datetime="2025-09-24">September 24, 2025</time> · <span class="pill">Independent, donor-supported</span></p>
+    <p class="lead">Proto-Lichen — a reproducible symbiotic morphology in which thick, tomentose fungal mycelium carries algal partners as a dry, glistening biofilm. Not a conventional lichen stage, but a reprogrammed partnership optimized for light and air.</p>
   </header>
+
   <main>
     <h2>Discovery</h2>
-    <p>I’m calling it <strong>Proto‑Lichen</strong> — an entirely new form of symbiosis that, to my knowledge, has never been documented before. In this state, familiar lichen partners undergo a striking transformation: the fungus produces a mycelial network, while algae gather at the aerial tips to form a dry biofilm. Together, they reorganize into something beyond their ordinary cycle — not just another stage of one organism, but a wholly reprogrammed partnership.</p>
+    <p>I’m calling it <strong>Proto-Lichen</strong> — an entirely new form of symbiosis that, to my knowledge, has never been documented before...</p>
 
     <h2>Why It Matters</h2>
-    <p>I call this <strong>a‑temporal biology</strong> — biological states that lie outside the stable temporal cycles recognized by evolution.</p>
-    <p>Microbial intelligence can be viewed as three intertwined intelligences:</p>
+    <p>I call this <strong>a-temporal biology</strong> — biological states that lie outside the stable temporal cycles recognized by evolution.</p>
     <ul>
       <li><strong>Metabolic intelligence</strong> — acquiring and transforming energy from complex sources.</li>
       <li><strong>Reproductive intelligence</strong> — cycles of renewal tied to circadian or seasonal rhythms.</li>
       <li><strong>Immune intelligence</strong> — chemical and structural defenses against environmental threats.</li>
     </ul>
-    <p>This morphology is an example of <em>metabolic optimization</em>. It is not reproductive (no reproductive structures form). It is not immune (no secondary metabolites are produced under observed conditions). It is purely metabolically driven — pushing algal biofilm to the exposed surface where light and air are maximized.</p>
-    <p>To my knowledge, this has never been documented before in lichen. That uniqueness is profound. It suggests lichens can reorganize into architectures of life that evolution itself does not stabilize in nature.</p>
-    <p>This stage does not produce lichen metabolites — at least not under the conditions I’ve observed. That makes it clear this is not the final solution for harnessing lichen chemistry. But it is a crucial first step — a foundation to build on.</p>
+    <p>…</p>
 
     <h2>The Context</h2>
-    <p>NASA’s recent discoveries of potential complex organics on Mars strengthen the case that life may be widespread in space and may have originated off Earth. If life carries a cosmic imprint, it may already be optimized for extremes — desiccation, radiation, vacuum, scarcity. Lichens are known champions of resilience. But a‑temporal biology — the emergence of entirely new, undocumented symbiotic states — suggests life may hold hidden forms even better suited for survival in such environments.</p>
-    <p>This is not speculation. It is a reproducible observation of two organisms reorganizing into a form nature never stabilizes, yet one that thrives under careful cultivation. That makes it both a biological discovery and a potential astrobiological model — pointing toward the possibility of lichens one day serving as passive life‑support systems in closed environments, sustaining balance without complex machinery.</p>
+    <p>…</p>
 
     <h2>The Vision</h2>
-    <p>This is the foundation of <strong>AstroBiota</strong>. My work is pioneering <strong>Symbiology Engineering</strong> — the design and programming of multi‑species systems that unlock resilience, adaptability, and new forms of intelligence.</p>
-    <p>By preserving, stabilizing, and reprogramming symbioses like lichens, we can build a living biobank of forms evolution itself does not normally permit. On Earth, this has implications for ecological resilience, medicine, and conservation. Beyond Earth, it points to a future where biology is not just preserved for space but actively adapted to it.</p>
+    <p>…</p>
 
     <div class="callout">
-      <h2 id="call-to-action">Call to Action</h2>
-      <p>AstroBiota is ambitious, but it is also deeply personal. I will continue this work on my own — culturing, documenting, and preserving lichens one jar at a time — because I believe it matters. Still, it could go further and faster with the right support.</p>
-      <p>My first goal is to stabilize <strong>100 native lichens from California</strong> as a living biobank. A modest <strong>$10,000</strong> in early funding would secure this milestone — capturing their genetics, symbioses, and hidden morphologies before they are lost.</p>
-      <p>This is not crowdfunding and not a venture raise. It’s an invitation for those inclined to join — to seed experimental conservation and help preserve life’s most resilient partnerships for the future.</p>
+      <h2 id="call-to-action">Donate</h2>
+      <p>Help stabilize <strong>100 native lichens from California</strong> as a living biobank.</p>
       <div class="ladder">
-        <div>🌱 <strong>$100</strong> — Preserve <strong>1</strong> lichen species for future generations</div>
-        <div>🌿 <strong>$500</strong> — Preserve <strong>5</strong> species, adding depth to the local biobank</div>
-        <div>🌳 <strong>$1,000</strong> — Preserve <strong>10</strong> species, building a true genetic archive</div>
-        <div>🌍 <strong>$5,000</strong> — Preserve <strong>50</strong> species, anchoring California’s lichen diversity</div>
-        <div>🚀 <strong>$10,000</strong> (Founding Goal) — Preserve <strong>100</strong> species, securing a living foundation for Earth and beyond</div>
+        <div>🌱 <strong>$100</strong> — Preserve <strong>1</strong> species</div>
+        <div>🌿 <strong>$500</strong> — Preserve <strong>5</strong> species</div>
+        <div>🌳 <strong>$1,000</strong> — Preserve <strong>10</strong> species</div>
+        <div>🌍 <strong>$5,000</strong> — Preserve <strong>50</strong> species</div>
+        <div>🚀 <strong>$10,000</strong> — Founding goal: <strong>100</strong> species</div>
       </div>
-      <p><a class="btn" href="/support" target="_blank" rel="noopener">Donate</a></p>
+      <p><a class="btn" href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a></p>
     </div>
 
-    <p style="margin-top:1.25rem"><a href="/">← Back to Home</a></p>
+    <p style="margin-top:1.25rem"><a href="index.html">← Back to Home</a></p>
   </main>
+
   <footer>
-    <p>© <span id="yr"></span> Simbiosis · Minimal site, maximal science.</p>
+    <p>© <span id="yr"></span> AstroBiota · Minimal site, maximal science.</p>
   </footer>
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
