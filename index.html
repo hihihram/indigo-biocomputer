@@ -34,7 +34,7 @@
     .btn-ghost{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); }
 
     /* Hero */
-    .hero{ width:100%; height:78vh; min-height:520px; max-height:940px; }
+    .hero{ position:relative; width:100%; height:78vh; min-height:520px; max-height:940px; }
     .hero img{ width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05); }
 
     /* Sections */
@@ -57,6 +57,8 @@
     /* Footer */
     footer{ border-top:1px solid var(--hr); margin-top:2.5rem; }
     footer .inner{ max-width:var(--maxw); margin:0 auto; padding:1.1rem; color:var(--muted); font-size:0.95rem; display:flex; justify-content:space-between; gap:0.5rem; flex-wrap:wrap; }
+      /* Hero CTA overlay */
+    .cta-hero{ position:absolute; left:50%; bottom:6vh; transform:translateX(-50%); box-shadow:0 6px 20px rgba(0,0,0,.25); z-index:3; }
   </style>
 </head>
 <body>
@@ -71,8 +73,8 @@
     </div>
   </div>
 
-  <header id="top" class="hero" role="banner">
-    <img src="images/hero-lichen.jpg" alt="Macro of proto‑lichen morphology" loading="eager"/>
+  $1
+    <a class="btn cta-hero" href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener" aria-label="Donate to AstroBiota on Ko‑fi">Donate</a>
   </header>
 
   <main>
@@ -105,9 +107,9 @@
       <div class="about-me">
         <img src="images/your-photo.jpg" alt="Portrait of the founder" loading="lazy" />
         <div>
-          <h3>About the Founder</h3>
-          <p>Hi, I’m Hiram — a founder‑scientist building AstroBiota to pioneer Symbiology Engineering and A‑temporal Biology. I work hands‑on at the edges of biology, stabilizing hidden symbiotic states and biobanking resilient life for Earth and beyond.</p>
-          <p style="margin-top:0.5rem"><a href="mailto:hi@simbiosis.bio">hi@simbiosis.bio</a> · <a href="firstblog.html">Read the Post</a> · <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a></p>
+          $1
+          <p>Hi, I’m Hiram — a drug delivery and biotech engineer pioneering Symbiology Engineering through AstroBiota, an ambitious project to stabilize hidden symbiotic states and biobank resilient life. My aim is to show how impactful results can be achieved with lean resources—pushing biology forward for conservation, medicine, and the future of life on Earth and beyond.</p>
+          <p style="margin-top:0.5rem"><a href="https://www.linkedin.com/in/hiramdunn/" target="_blank" rel="noopener">LinkedIn</a> · <a href="firstblog.html">Read the Post</a> · <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a></p>
         </div>
       </div>
     </section>
@@ -123,3 +125,4 @@
   <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
 </body>
 </html>
+
