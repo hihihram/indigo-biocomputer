@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — AstroBiota</title>
+  <meta name="description" content="100-species gallery. Authentic proto-lichen images from AstroBiota. Click a photo to view the iNaturalist record." />
+  <meta property="og:title" content="Gallery — AstroBiota" />
+  <meta property="og:description" content="Authentic proto-lichen images. Real biology. No AI." />
+  <meta property="og:image" content="images/hero-lichen.jpg" />
+  <style>
+    :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw:56rem; }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a; }
+    }
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+
+    /* Top nav (key links only) */
+    .nav{ position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--hr); }
+    .nav .inner{ max-width:var(--maxw); margin:0 auto; padding:0.75rem 1.1rem; display:flex; align-items:center; justify-content:space-between; }
+    .brand{ font-weight:800; letter-spacing:0.2px; }
+    .menu a{ color:var(--muted); margin-left:1rem; text-decoration:none; }
+    .menu a:hover{ color:var(--fg); }
+
+    header, main, footer{ max-width:var(--maxw); margin:0 auto; padding:1.25rem 1.1rem; }
+    header h1{ margin:0.25rem 0 0.3rem; font-size:1.8rem; }
+    .lead{ margin:0; color:var(--muted); font-size:1.05rem; }
+
+    /* Grid: 3 columns desktop, square tiles */
+    .grid{ display:grid; grid-template-columns: 1fr; gap:0.75rem; margin-top:1rem; }
+    @media (min-width: 680px){ .grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 960px){ .grid{ grid-template-columns: repeat(3, 1fr); } }
+
+    .tile{ border:1px solid var(--hr); border-radius:14px; overflow:hidden; background:color-mix(in srgb, var(--bg) 92%, transparent); display:block; text-decoration:none; color:inherit; }
+    .frame{ aspect-ratio:1/1; background:#000; display:grid; place-items:center; overflow:hidden; }
+    .frame img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .meta{ padding:0.7rem 0.9rem; }
+    .meta h3{ margin:0 0 0.2rem; font-size:1.05rem; }
+    .meta p{ margin:0; color:var(--muted); font-size:0.95rem; }
+
+    /* Placeholders (not clickable) */
+    .tile.disabled{ pointer-events:none; }
+    .frame.tba{ background:linear-gradient(135deg, rgba(255,255,255,0.04), rgba(0,0,0,0.12)); }
+    .badge{ font-size:0.9rem; color:var(--muted); border:1px solid var(--hr); border-radius:999px; padding:0.35rem 0.6rem; background:color-mix(in srgb, var(--bg) 92%, transparent); }
+
+    footer{ border-top:1px solid var(--hr); margin-top:2rem; color:var(--muted); font-size:0.95rem; }
+    .pill{ display:inline-block; padding:0.35rem 0.6rem; border:1px solid var(--hr); border-radius:999px; color:var(--muted); font-size:0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="inner">
+      <div class="brand">AstroBiota</div>
+      <div class="menu">
+        <a href="index.html#about">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="firstblog.html">Blog</a>
+        <a href="index.html#prints">Prints</a>
+        <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h1>100 Species Gallery</h1>
+    <p class="lead"><span class="pill"><strong><span id="liveCount">3</span>/100</strong> stabilized & documented</span> · Real biology. No AI.</p>
+  </header>
+
+  <main>
+    <div class="grid" id="galleryGrid">
+      <!-- === LIVE TILES (replace links + filenames) === -->
+      <a class="tile live" href="https://www.inaturalist.org/observations/123456" target="_blank" rel="noopener" aria-label="View iNaturalist observation #01">
+        <div class="frame">
+          <img src="images/gallery-01.jpg" alt="Proto-lichen #01 — macro morphology" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <h3>#01 · Proto-Lichen</h3>
+          <p>California · 2025-08-12</p>
+        </div>
+      </a>
+
+      <a class="tile live" href="https://www.inaturalist.org/observations/234567" target="_blank" rel="noopener" aria-label="View iNaturalist observation #02">
+        <div class="frame">
+          <img src="images/gallery-02.jpg" alt="Proto-lichen #02 — tomentose mycelium carrying photobiont" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <h3>#02 · Proto-Lichen</h3>
+          <p>California · 2025-07-30</p>
+        </div>
+      </a>
+
+      <a class="tile live" href="https://www.inaturalist.org/observations/345678" target="_blank" rel="noopener" aria-label="View iNaturalist observation #03">
+        <div class="frame">
+          <img src="images/gallery-03.jpg" alt="Proto-lichen #03 — algal biofilm at aerial tips" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <h3>#03 · Proto-Lichen</h3>
+          <p>California · 2025-06-15</p>
+        </div>
+      </a>
+      <!-- === END LIVE TILES === -->
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:var(--maxw); margin:0 auto; padding:1.1rem; display:flex; justify-content:space-between; gap:0.5rem; flex-wrap:wrap;">
+      <div>© <span id="yr"></span> AstroBiota</div>
+      <div>Independent, donor-supported science</div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-generate placeholders for #04–#100 (square tiles, non-clickable)
+    const grid = document.getElementById('galleryGrid');
+    for (let i = 4; i <= 100; i++) {
+      const n = String(i).padStart(2,'0');
+      const tile = document.createElement('div');
+      tile.className = 'tile disabled';
+      tile.innerHTML = `
+        <div class="frame tba"><span class="badge">#${n} · TBA · Proto-Lichen</span></div>
+        <div class="meta">
+          <h3>#${n} · Proto-Lichen — TBA</h3>
+          <p>Coming soon</p>
+        </div>`;
+      grid.appendChild(tile);
+    }
+
+    // Live count = number of .tile.live
+    const count = document.querySelectorAll('.tile.live').length;
+    document.getElementById('liveCount').textContent = count;
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
