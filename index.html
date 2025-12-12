@@ -2,830 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Astrobiota — Institute for Biological Intelligence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Astrobiota is an independent institute studying biological intelligence and symbiotic computation — the hidden architectures of living matter that compute, adapt, and remember." />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Astrobiota — Institute for Biological Intelligence" />
-  <meta property="og:description" content="Astrobiota studies biological intelligence expressed by living substrates — from inverted proto-lichens to unseen symbiotic compute systems." />
+  <title>AstroBiota — Astrobiotic Intelligence & Symbiology Engineering</title>
+  <meta name="description" content="AstroBiota is an independent research initiative studying intelligent compute systems in living symbioses and building a lichen biobank for planetary conservation and long-horizon resilience." />
+  <meta property="og:title" content="AstroBiota — Astrobiotic Intelligence & Symbiology Engineering" />
+  <meta property="og:description" content="AstroBiota investigates intelligent compute systems expressed by Earth’s lifeforms and stabilizes rare symbiotic states as part of a long-term planetary conservation effort." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://astrobiota.org/" />
-  <meta property="og:image" content="images/hero-plate.jpg" />
-
+  <meta property="og:url" content="https://simbiosis.bio/" />
+  <meta property="og:image" content="images/hero-lichen.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Astrobiota — Institute for Biological Intelligence" />
-  <meta name="twitter:description" content="Astrobiota investigates the hidden computational architectures of life." />
-  <meta name="twitter:image" content="images/hero-plate.jpg" />
-
+  <meta name="twitter:title" content="AstroBiota — Astrobiotic Intelligence & Symbiology Engineering" />
+  <meta name="twitter:description" content="Symbiology Engineering and A-temporal Biology for preserving intelligent biological systems on Earth and preparing resilient lineages for environments beyond." />
+  <meta name="twitter:image" content="images/hero-lichen.jpg" />
   <style>
-    :root {
-      --bg: #05070a;
-      --bg-soft: #0b0f16;
-      --fg: #e8edf3;
-      --muted: #8b96a4;
-      --accent: #3ee0a2;
-      --accent-soft: rgba(62, 224, 162, 0.1);
-      --border: #151b24;
-      --link: #44e3b1;
-      --maxw: 64rem;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #ffffff;
-        --bg-soft: #f4f6fa;
-        --fg: #0a1018;
-        --muted: #5f6b7a;
-        --accent: #0abf7a;
-        --accent-soft: rgba(10, 191, 122, 0.08);
-        --border: #dde2ea;
-        --link: #089163;
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top, #101522 0, var(--bg) 48%, #020308 100%);
-      color: var(--fg);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      text-rendering: geometricPrecision;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Layout */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: saturate(160%) blur(14px);
-      background: linear-gradient(
-        to bottom,
-        rgba(5, 7, 10, 0.94),
-        rgba(5, 7, 10, 0.80),
-        rgba(5, 7, 10, 0.0)
-      );
-      border-bottom: 1px solid rgba(15, 22, 32, 0.8);
-    }
-
-    .nav-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: baseline;
-      gap: 0.4rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.92rem;
-    }
-
-    .brand span:last-child {
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      text-transform: none;
-      font-size: 0.8rem;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-    }
-
-    .nav-links a:hover {
-      color: var(--fg);
-      text-decoration: none;
-    }
-
-    .pill-nav {
-      padding: 0.45rem 0.95rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(5, 7, 10, 0.4);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-
-    .pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 18px rgba(62, 224, 162, 0.8);
-    }
-
-    /* Hero */
-    .hero {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 2.2rem 1.25rem 1.75rem;
-      display: grid;
-      grid-template-columns: minmax(0, 3.1fr) minmax(0, 2.4fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 1.75rem;
-      }
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid rgba(68, 227, 177, 0.3);
-      background: radial-gradient(circle at left, rgba(62, 224, 162, 0.22), rgba(8, 12, 20, 0.9));
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-kicker span {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.25rem, 3.2vw + 1.6rem, 3.35rem);
-      line-height: 1.05;
-      margin: 0 0 0.75rem;
-      letter-spacing: 0.01em;
-    }
-
-    .hero h1 span.highlight {
-      color: var(--accent);
-    }
-
-    .hero-lead {
-      margin: 0 0 1.2rem;
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 34rem;
-    }
-
-    .hero-sub {
-      margin: 0 0 1.8rem;
-      font-size: 0.96rem;
-      color: var(--muted);
-      max-width: 36rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.9rem 1.25rem;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 0.95rem;
-      background: linear-gradient(135deg, var(--accent), #27c98b);
-      color: #012015;
-      box-shadow: 0 0 26px rgba(62, 224, 162, 0.55);
-    }
-
-    .btn-primary span.icon {
-      font-size: 1.1rem;
-      margin-top: -1px;
-    }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.9rem 1.1rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(6, 9, 14, 0.8);
-      color: var(--fg);
-      font-weight: 500;
-      font-size: 0.92rem;
-    }
-
-    .btn-ghost span.icon {
-      font-size: 1rem;
-    }
-
-    .hero-meta {
-      margin-top: 1.1rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    /* Hero visual */
-    .hero-card {
-      border-radius: 22px;
-      padding: 1rem;
-      background:
-        radial-gradient(circle at top left, rgba(62, 224, 162, 0.18), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(88, 130, 255, 0.16), transparent 55%),
-        var(--bg-soft);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow:
-        0 18px 60px rgba(0, 0, 0, 0.75),
-        0 0 0 1px rgba(19, 27, 38, 0.9);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-chip {
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      background: rgba(2, 6, 12, 0.7);
-      border: 1px solid rgba(57, 70, 92, 0.9);
-      font-size: 0.75rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      color: var(--muted);
-    }
-
-    .hero-chip-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 12px rgba(62, 224, 162, 0.9);
-    }
-
-    .hero-plate {
-      margin-top: 0.35rem;
-      border-radius: 16px;
-      border: 1px solid rgba(32, 43, 58, 0.9);
-      background: radial-gradient(circle at top, #151f30 0, #05070b 45%, #010207 100%);
-      padding: 0.9rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-plate-img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      border-radius: 14px;
-      background-image: url("images/hero-plate.jpg");
-      background-size: cover;
-      background-position: center;
-      filter: contrast(1.08) saturate(1.06);
-    }
-
-    .hero-plate-caption {
-      margin-top: 0.5rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .hero-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 0.75rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .metric {
-      padding: 0.45rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(2, 6, 12, 0.8);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .metric span.value {
-      font-weight: 600;
-      color: var(--fg);
-      font-size: 0.86rem;
-    }
-
-    /* Sections */
-    main {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 1.25rem 2.5rem;
-    }
-
-    section {
-      margin-top: 2.25rem;
-    }
-
-    section h2 {
-      font-size: 1.4rem;
-      margin: 0 0 0.5rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
-    .section-lead {
-      margin: 0 0 1rem;
-      color: var(--muted);
-      font-size: 0.98rem;
-      max-width: 40rem;
-    }
-
-    .card-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 960px) {
-      .card-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .card-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .card {
-      background: rgba(5, 9, 15, 0.9);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 0.95rem 1rem;
-    }
-
-    .card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1rem;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .tagline-block {
-      margin-top: 1.4rem;
-      padding: 0.85rem 1rem;
-      border-radius: 12px;
-      border: 1px dashed rgba(68, 227, 177, 0.5);
-      background: var(--accent-soft);
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    .tagline-block strong {
-      color: var(--accent);
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 880px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .list-muted {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.25rem 0 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .list-muted li {
-      margin-bottom: 0.3rem;
-    }
-
-    .mono-label {
-      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .about-founder {
-      margin-top: 1.25rem;
-      padding: 1rem 1.05rem;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      background: rgba(5, 8, 13, 0.8);
-      display: grid;
-      grid-template-columns: 82px minmax(0, 1fr);
-      gap: 0.85rem;
-      align-items: center;
-    }
-
-    .about-founder img {
-      width: 82px;
-      height: 82px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      object-fit: cover;
-      background: #11151d;
-    }
-
-    .about-founder h3 {
-      margin: 0 0 0.25rem;
-      font-size: 1rem;
-    }
-
-    .about-founder p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    @media (min-width: 880px) {
-      .about-founder {
-        grid-template-columns: 96px minmax(0,1fr);
-      }
-      .about-founder img {
-        width: 96px;
-        height: 96px;
-      }
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      margin-top: 2.5rem;
-    }
-
-    .footer-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 1.1rem 1.25rem 1.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    .footer-inner a {
-      color: var(--muted);
-    }
-
-    .footer-inner a:hover {
-      color: var(--fg);
-      text-decoration: none;
-    }
+    :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 56rem; }
+    @media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a; } }
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .nav{ position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--hr); }
+    .nav .inner{ max-width:var(--maxw); margin:0 auto; padding:0.75rem 1.1rem; display:flex; align-items:center; justify-content:space-between; }
+    .brand{ font-weight:800; letter-spacing:0.2px; }
+    .menu a{ color:var(--muted); margin-left:1rem; }
+    .menu a:hover{ color:var(--fg); text-decoration:none; }
+
+    .btn{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; background:var(--accent); color:#00311f; font-weight:800; }
+    .btn-ghost{ display:inline-block; padding:0.9rem 1.15rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); }
+
+    .hero{ position:relative; width:100%; height:78vh; min-height:520px; max-height:940px; }
+    .hero img{ width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05); }
+
+    section{ max-width:var(--maxw); margin:2.25rem auto; padding:0 1.1rem; }
+    h2{ font-size:1.6rem; margin:0 0 0.75rem; }
+    p.lead{ font-size:1.12rem; color:var(--muted); margin:0.25rem 0 0.75rem; }
+    .card{ background:color-mix(in srgb, var(--bg) 92%, transparent); border:1px solid var(--hr); border-radius:16px; padding:1rem 1.1rem; }
+
+    .ladder{ display:grid; grid-template-columns: 1fr; gap:0.5rem; margin-top:0.5rem; }
+    .pill{ display:inline-block; padding:0.4rem 0.6rem; border:1px solid var(--hr); border-radius:999px; color:var(--muted); font-size:0.95rem; }
+
+    .about-me{ display:grid; grid-template-columns:96px 1fr; gap:1rem; align-items:center; margin-top:1.25rem; background:color-mix(in srgb, var(--bg) 92%, transparent); border:1px solid var(--hr); border-radius:16px; padding:1rem 1.1rem; }
+    .about-me img{ width:96px; height:96px; border-radius:999px; object-fit:cover; border:1px solid var(--hr); }
+    .about-me h3{ margin:0 0 0.25rem; font-size:1.15rem; }
+    .about-me p{ margin:0; color:var(--muted); }
+    @media (min-width: 800px){ .about-me{ grid-template-columns:120px 1fr; } .about-me img{ width:120px; height:120px; } }
+
+    footer{ border-top:1px solid var(--hr); margin-top:2.5rem; }
+    footer .inner{ max-width:var(--maxw); margin:0 auto; padding:1.1rem; color:var(--muted); font-size:0.95rem; display:flex; justify-content:space-between; gap:0.5rem; flex-wrap:wrap; }
   </style>
 </head>
+
 <body>
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <span>ASTROBIOTA</span>
-        <span>Institute for Biological Intelligence</span>
-      </div>
-      <nav class="nav-links">
+  <div class="nav">
+    <div class="inner">
+      <div class="brand">AstroBiota</div>
+      <div class="menu">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#manifesto">Manifesto</a>
-        <a href="#support">Support</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="hero">
-    <div>
-      <div class="hero-kicker">
-        <span>Internal Report · V0</span> Biological Intelligence Program
-      </div>
-      <h1>
-        We study <span class="highlight">intelligence in matter</span>, not in code.
-      </h1>
-      <p class="hero-lead">
-        Astrobiota is an independent institute investigating biological intelligence —
-        living substrates that compute, adapt, and remember. Our work begins with an
-        inverted proto-lichen state that computes externally, making its logic visible on
-        the Petri dish.
-      </p>
-      <p class="hero-sub">
-        We treat these systems not as metaphors for computation, but as
-        <strong>native intelligences</strong> — symbiotic architectures whose physical
-        reorganization in response to information reveals new laws of learning and memory.
-      </p>
-      <div class="hero-buttons">
-        <a href="#research" class="btn-primary">
-          <span class="icon">⬤</span>
-          <span>Explore the research track</span>
-        </a>
-        <a href="#manifesto" class="btn-ghost">
-          <span class="icon">☰</span>
-          <span>Read the internal manifesto</span>
-        </a>
-      </div>
-      <div class="hero-meta">
-        Independent · Donor-supported · Pre-publication
+        <a href="gallery.html">Gallery</a>
+        <a href="firstblog.html">Blog</a>
+        <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a>
       </div>
     </div>
-
-    <aside class="hero-card" aria-label="Biophotogram preview">
-      <div class="hero-card-header">
-        <div class="pill-nav">
-          <span class="pill-dot"></span>
-          <span>Symbiotic Compute Artifact</span>
-        </div>
-        <div class="hero-chip">
-          <span class="hero-chip-dot"></span>
-          <span>Externalized Photogram</span>
-        </div>
-      </div>
-      <div class="hero-plate">
-        <div class="hero-plate-img" role="img" aria-label="Proto-lichen biophotogram on agar"></div>
-        <div class="hero-plate-caption">
-          Inverted proto-lichen culture capturing a 2D light pattern as a stable biological
-          photogram. The symbiosis computes on the outside — its decisions are written directly
-          into morphology and pigment.
-        </div>
-      </div>
-      <div class="hero-metrics">
-        <div class="metric">
-          <span class="value">Externalized</span>
-          <span>symbiotic computation</span>
-        </div>
-        <div class="metric">
-          <span class="value">History-dependent</span>
-          <span>morphological memory</span>
-        </div>
-        <div class="metric">
-          <span class="value">Non-digital</span>
-          <span>intelligence substrate</span>
-        </div>
-      </div>
-    </aside>
   </div>
+
+  <header id="top" class="hero" role="banner">
+    <img src="images/hero-lichen.jpg" alt="Macro of proto-lichen morphology" loading="eager"/>
+  </header>
 
   <main>
     <section id="about">
-      <h2>About the Institute</h2>
-      <p class="section-lead">
-        Astrobiota operates as a small, focused intelligence institute, currently centered
-        on a single question: <strong>how does matter become intelligent?</strong> We approach
-        this by studying symbiotic systems that reorganize themselves in response to information,
-        starting with an inverted lichen morphology that reveals its computation externally.
+      <h2>About</h2>
+
+      <p class="lead">
+        AstroBiota is an independent, research-led initiative at the intersection of symbiosis, computation, and planetary conservation. We study intelligent compute systems expressed by Earth’s lifeforms across all kingdoms — subtle configurations where biology behaves as a distributed, adaptive processor.
       </p>
 
-      <div class="two-col">
-        <div>
-          <div class="mono-label">Mandate</div>
-          <div class="card" style="margin-top:0.4rem;">
-            <h3>Identify, study, and preserve intelligent compute systems in living matter.</h3>
-            <p>
-              We focus on biological states that:
-            </p>
-            <ul class="list-muted">
-              <li>• change structure in response to information,</li>
-              <li>• retain those changes as persistent memory,</li>
-              <li>• and use that memory to constrain future behavior.</li>
-            </ul>
-          </div>
-          <div class="tagline-block">
-            <strong>Working thesis:</strong> intelligence is not a metaphorical property of life,
-            but a thermodynamic behavior of certain substrates that reorganize themselves according
-            to information. Our role is to find those substrates and learn their rules.
-          </div>
-        </div>
-        <div>
-          <div class="mono-label">Current Focus</div>
-          <div class="card" style="margin-top:0.4rem;">
-            <h3>Inverted Proto-Lichen Compute State</h3>
-            <p>
-              We have recovered a non-natural symbiotic state where a lichen-derived mycobiont and
-              its photobiont no longer form a closed thallus. Instead, their interaction is projected
-              onto the agar surface: exudates, pigments, and photobiont positions together form a
-              visible compute layer.
-            </p>
-          </div>
-          <div class="card" style="margin-top:0.75rem;">
-            <h3>Why this matters</h3>
-            <p>
-              In classical lichens, computation is hidden inside the body. In our system, the logic
-              has been turned inside-out. It is the first biological intelligence we can watch
-              compute in real time without opening any cells.
-            </p>
-          </div>
-        </div>
-      </div>
+      <p class="lead">
+        Our framework, <strong>A-temporal Biology</strong>, focuses on symbiotic states and life phases that rarely persist in the wild, yet carry disproportionate importance for resilience, adaptation, and long-horizon stability. These non-persistent configurations reveal capacities that standard laboratory and ecological models overlook.
+      </p>
 
-      <div class="about-founder">
-        <img src="images/founder.jpg" alt="Founder portrait" />
-        <div>
-          <h3>Founder</h3>
-          <p>
-            Astrobiota is led by Hiram Dunn, a drug-delivery and biotech engineer developing
-            a new discipline around symbiotic computation and inverted lichen states. The work
-            is intentionally lean, quietly building the foundations of a biological intelligence
-            program before broad disclosure.
-          </p>
-          <p style="margin-top:0.45rem;">
-            <a href="https://www.linkedin.com/in/hiramdunn/" target="_blank" rel="noopener">LinkedIn</a>
-            · <a href="#manifesto">Internal manifesto</a>
-          </p>
-        </div>
-      </div>
+      <p class="lead">
+        AstroBiota documents, stabilizes, and preserves these systems in controlled conditions, contributing to emerging multi-institutional efforts to safeguard Earth’s distributed intelligence and to prepare resilient biological lineages for future environments, terrestrial and beyond.
+      </p>
+
+      <div class="card"><span class="pill">Independent · Research-led · Conservation-aligned</span></div>
     </section>
 
-    <section id="research">
-      <h2>Research Track</h2>
-      <p class="section-lead">
-        Public details are intentionally limited. The current program is organized around three
-        internal tracks that together define the Astrobiota roadmap for biological intelligence.
-      </p>
-
-      <div class="card-row">
-        <article class="card">
-          <h3>Track I — Externalized Symbiotic Computation</h3>
-          <p>
-            Characterizing the inverted proto-lichen compute state: photogram formation, pattern
-            fidelity, memory persistence, and boundary conditions. This is the core experimental
-            window into intelligence expressed on the plate.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Track II — Substrate Laws of Intelligence</h3>
-          <p>
-            Deriving thermodynamic and informational principles from the behavior of the system:
-            stimulus-dependent reorganization, history-dependent matter, and a working law of
-            intelligence grounded in physics rather than metaphor.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Track III — Future Interfaces (Non-Public)</h3>
-          <p>
-            Internal work on how to read and perturb these systems without collapsing their
-            intelligence — including optical, chemical, and eventual electrode-based methods.
-            Results from this track will be released after the underlying biology is secure.
-          </p>
-        </article>
-      </div>
+    <section id="blog">
+      <h2>Blog</h2>
+      <p class="lead">A-Temporal Biology: Non-Persistent Life States and Intelligent Compute Systems</p>
+      <p><a class="btn-ghost" href="firstblog.html">Read the Post</a></p>
     </section>
 
-    <section id="manifesto">
-      <h2>Internal Manifesto</h2>
-      <p class="section-lead">
-        The manifesto is written as an internal document, not a marketing asset. It formalizes
-        one claim: <strong>digital AI manipulates information; biological intelligence
-        reorganizes matter.</strong> The institute exists to study the latter.
+    <section id="donate">
+      <h2>Donate</h2>
+      <p class="lead">
+        Help build the California Lichen Biobank — a focused archive preserving fragile symbioses and intelligent biological substrates that cannot be replaced once lost.
       </p>
-
-      <div class="two-col">
-        <div>
-          <div class="card">
-            <h3>Working Law of Intelligence (Draft)</h3>
-            <p>
-              Intelligence is the capacity of a physical system to undergo stimulus-dependent,
-              persistent reorganization of its internal state such that future behavior is
-              constrained by past information.
-            </p>
-            <p style="margin-top:0.5rem;">
-              Under this definition, the inverted proto-lichen compute state qualifies as an
-              intelligent substrate. Its photograms are not just patterns; they are records of
-              decisions preserved in matter.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <h3>Why we stay quiet, for now</h3>
-            <p>
-              The phenomenon is real, but early. Premature explanation would force it into
-              categories that do not fit — AI, fungi, “bioart”, synthetic biology. Until the
-              underlying rules are understood, the institute’s role is to observe, preserve,
-              and think.
-            </p>
-            <p style="margin-top:0.5rem;">
-              The public sees plates. The institute sees a new class of intelligence taking
-              shape. The gap between those views is where Astrobiota does its work.
-            </p>
-          </div>
-        </div>
+      <div class="ladder">
+        <div>🌱 <strong>$100</strong> — Preserve <strong>1 species</strong></div>
+        <div>🌿 <strong>$500</strong> — Preserve <strong>5 species</strong></div>
+        <div>🌳 <strong>$1,000</strong> — Preserve <strong>10 species</strong></div>
+        <div>🌍 <strong>$5,000</strong> — Preserve <strong>50 species</strong></div>
+        <div>🚀 <strong>$10,000</strong> — Founding goal: <strong>100 species</strong></div>
       </div>
-    </section>
+      <p style="margin-top:0.75rem"><a class="btn" href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a></p>
 
-    <section id="support">
-      <h2>Support the Work</h2>
-      <p class="section-lead">
-        Astrobiota is intentionally small and donor-supported. Contributions extend the lifespan
-        of the current lineages, fund experimental time, and keep the institute independent while
-        the science matures.
-      </p>
-
-      <div class="two-col">
+      <div class="about-me">
+        <img src="images/your-photo.jpg" alt="Portrait of researcher" loading="lazy" />
         <div>
-          <div class="card">
-            <h3>Ways to support</h3>
-            <ul class="list-muted">
-              <li>• Sponsor a sequence of internal experiments.</li>
-              <li>• Back the ongoing culture maintenance and biobanking.</li>
-              <li>• Underwrite the first public white paper on biological intelligence.</li>
-            </ul>
-            <p style="margin-top:0.6rem;">
-              If you understand the stakes of biological intelligence, you already know why an
-              institute like this has to exist.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <h3>Contact</h3>
-            <p>
-              For quiet support, research questions, or future collaboration around biological
-              computation and symbiotic intelligence:
-            </p>
-            <p style="margin-top:0.6rem;">
-              <a href="mailto:contact@astrobiota.org">contact@astrobiota.org</a>
-            </p>
-            <p style="margin-top:0.35rem;">
-              A small number of aligned supporters will see more of the internal work as it
-              unfolds. Most will encounter it later, when the field already has a name.
-            </p>
-          </div>
+          <p>
+            Hi, I’m Hiram — a drug delivery and biotech engineer working as principal investigator for AstroBiota. My work focuses on Symbiology Engineering and A-temporal Biology: stabilizing rare symbiotic states, revealing intelligent compute behavior in living systems, and contributing to long-horizon conservation efforts.
+          </p>
+          <p style="margin-top:0.5rem">
+            <a href="https://www.linkedin.com/in/hiramdunn/" target="_blank" rel="noopener">LinkedIn</a> · 
+            <a href="firstblog.html">Read the Post</a> · 
+            <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a>
+          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-inner">
-      <div>© <span id="yr"></span> Astrobiota — Institute for Biological Intelligence</div>
-      <div>Independent · Donor-supported · No trackers</div>
+    <div class="inner">
+      <div>© <span id="yr"></span> AstroBiota</div>
+      <div>Independent, research-led, donor- and partner-supported · No trackers</div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
 </body>
 </html>
