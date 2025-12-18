@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — AstroBiota</title>
+  <meta name="description" content="AstroBiota blog: A-temporal biology, biological programming, and symbiology engineering." />
+
+  <style>
+    :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 56rem; }
+    @media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a; } }
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; line-height:1.6; }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .nav{ position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--hr); }
+    .nav .inner{ max-width:var(--maxw); margin:0 auto; padding:0.75rem 1.1rem; display:flex; align-items:center; justify-content:space-between; }
+    .brand{ font-weight:800; letter-spacing:0.2px; }
+    .menu a{ color:var(--muted); margin-left:1rem; }
+    .menu a:hover{ color:var(--fg); text-decoration:none; }
+
+    header, main, footer{ max-width:var(--maxw); margin:0 auto; padding:1.5rem 1.1rem; }
+    header h1{ margin:0; font-size:2.2rem; line-height:1.2; }
+    header p{ color:var(--muted); margin:0.25rem 0 0.75rem; }
+    .lead{ font-size:1.1rem; color:var(--muted); }
+
+    .post{
+      border:1px solid var(--hr);
+      border-radius:14px;
+      padding:1rem 1.1rem;
+      margin:0.85rem 0;
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+    }
+    .post h2{ margin:0 0 0.25rem; font-size:1.2rem; }
+    .meta{ color:var(--muted); font-size:0.95rem; margin:0 0 0.5rem; }
+    .btn-ghost{ display:inline-block; padding:0.75rem 1rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); }
+
+    footer{ border-top:1px solid var(--hr); font-size:0.95rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="inner">
+      <div class="brand"><a href="index.html">AstroBiota</a></div>
+      <div class="menu">
+        <a href="index.html#about">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Donate</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <p><a href="index.html">← Back to Home</a></p>
+    <h1>Blog</h1>
+    <p class="lead">Field notes from AstroBiota: A-temporal biology, symbiosis, and biological programming.</p>
+  </header>
+
+  <main>
+    <div class="post">
+      <h2>A-Temporal Biology: A Hidden Stage of Life Revealed</h2>
+      <p class="meta">September 24, 2025 · Proto-lichen morphology</p>
+      <p class="lead">Proto-Lichen — a reproducible symbiotic morphology where tomentose fungal mycelium carries algal partners as a dry biofilm.</p>
+      <p><a class="btn-ghost" href="firstblog.html">Read</a></p>
+    </div>
+
+    <div class="post">
+      <h2>Biological Programming: A Call to Reduce Variance in Filamentous Fungi Fermentation</h2>
+      <p class="meta">October 8, 2025 · Call for collaboration</p>
+      <p class="lead">A pilot invitation for mycelium and filamentous fungi teams: can history-dependent state conditioning reduce variance without changing DNA?</p>
+      <p><a class="btn-ghost" href="secondblog.html">Read</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:var(--maxw); margin:0 auto; padding:1.1rem; display:flex; justify-content:space-between; gap:0.5rem; flex-wrap:wrap;">
+      <div>© <span id="yr"></span> AstroBiota</div>
+      <div>Independent, research-led · No trackers</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
