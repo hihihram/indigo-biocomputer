@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog — AstroBiota</title>
-  <meta name="description" content="AstroBiota blog: A-temporal biology, biological programming, and symbiology engineering." />
+  <meta name="description" content="AstroBiota blog: biological programming, symbiosis, and history-dependent state conditioning in living systems." />
 
   <style>
     :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 56rem; }
@@ -28,17 +28,43 @@
     .post{
       border:1px solid var(--hr);
       border-radius:14px;
-      padding:1rem 1.1rem;
-      margin:0.85rem 0;
+      overflow:hidden;
       background:color-mix(in srgb, var(--bg) 92%, transparent);
+      margin:0.95rem 0;
     }
+
+    .post .thumb{
+      display:block;
+      aspect-ratio: 16/9;
+      overflow:hidden;
+      border-bottom:1px solid var(--hr);
+    }
+
+    .post .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .post .content{
+      padding:1rem 1.1rem;
+    }
+
     .post h2{ margin:0 0 0.25rem; font-size:1.2rem; }
+    .post h2 a{ color:var(--fg); }
+    .post h2 a:hover{ text-decoration:none; color:color-mix(in srgb, var(--fg) 88%, var(--link)); }
+
     .meta{ color:var(--muted); font-size:0.95rem; margin:0 0 0.5rem; }
     .btn-ghost{ display:inline-block; padding:0.75rem 1rem; border-radius:999px; border:1px solid var(--hr); color:var(--fg); }
 
     footer{ border-top:1px solid var(--hr); font-size:0.95rem; color:var(--muted); }
+
+    /* Optional: make cards feel clickable */
+    .post:hover{ border-color: color-mix(in srgb, var(--hr) 40%, var(--link)); }
   </style>
 </head>
+
 <body>
   <div class="nav">
     <div class="inner">
@@ -55,22 +81,34 @@
   <header>
     <p><a href="index.html">← Back to Home</a></p>
     <h1>Blog</h1>
-    <p class="lead">Field notes from AstroBiota: A-temporal biology, symbiosis, and biological programming.</p>
+    <p class="lead">Field notes from AstroBiota: biological programming, symbiosis, and history-dependent conditioning in living systems.</p>
   </header>
 
   <main>
+    <!-- NEWEST FIRST -->
     <div class="post">
-      <h2>A-Temporal Biology: A Hidden Stage of Life Revealed</h2>
-      <p class="meta">September 24, 2025 · Proto-lichen morphology</p>
-      <p class="lead">Proto-Lichen — a reproducible symbiotic morphology where tomentose fungal mycelium carries algal partners as a dry biofilm.</p>
-      <p><a class="btn-ghost" href="firstblog.html">Read</a></p>
+      <a class="thumb" href="secondblog.html">
+        <!-- Put a real fermentation image here when you have it -->
+        <img src="images/fermentation.jpg" alt="Filamentous fungi fermentation" loading="lazy" />
+      </a>
+      <div class="content">
+        <h2><a href="secondblog.html">Biological Programming: A Call to Reduce Variance in Filamentous Fungi Fermentation</a></h2>
+        <p class="meta">December 17, 2025 · Call for collaboration</p>
+        <p class="lead">A pilot invitation for mycelium and filamentous fungi teams: can history-dependent state conditioning reduce variance without changing DNA?</p>
+        <p><a class="btn-ghost" href="secondblog.html">Read</a></p>
+      </div>
     </div>
 
     <div class="post">
-      <h2>Biological Programming: A Call to Reduce Variance in Filamentous Fungi Fermentation</h2>
-      <p class="meta">October 8, 2025 · Call for collaboration</p>
-      <p class="lead">A pilot invitation for mycelium and filamentous fungi teams: can history-dependent state conditioning reduce variance without changing DNA?</p>
-      <p><a class="btn-ghost" href="secondblog.html">Read</a></p>
+      <a class="thumb" href="firstblog.html">
+        <img src="images/hero-lichen.jpg" alt="Proto-lichen morphology" loading="lazy" />
+      </a>
+      <div class="content">
+        <h2><a href="firstblog.html">Proto-Lichen: A Programmable Symbiotic State</a></h2>
+        <p class="meta">September 24, 2025 · Proto-lichen morphology</p>
+        <p class="lead">Proto-Lichen — a reproducible symbiotic morphology where tomentose fungal mycelium carries algal partners as a dry biofilm.</p>
+        <p><a class="btn-ghost" href="firstblog.html">Read</a></p>
+      </div>
     </div>
   </main>
 
