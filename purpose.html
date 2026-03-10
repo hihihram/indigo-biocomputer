@@ -109,20 +109,34 @@
 
     section{
       max-width:var(--maxw);
-      margin:2.4rem auto;
+      margin:0 auto;
+    }
+
+    .intro{
+      padding:3.2rem 0 2rem;
+    }
+
+    .eyebrow{
+      margin:0 0 1rem;
+      color:var(--accent);
+      font-size:0.95rem;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
     }
 
     h1{
-      font-size:clamp(2rem, 5vw, 3rem);
-      margin:0 0 1rem;
-      letter-spacing:-0.03em;
-      line-height:1;
+      margin:0;
+      max-width:11ch;
+      font-size:clamp(2.6rem, 7vw, 5rem);
+      line-height:0.95;
+      letter-spacing:-0.05em;
+      font-weight:800;
     }
 
-    h2{
-      font-size:1.2rem;
-      margin:2rem 0 0.65rem;
-      letter-spacing:-0.01em;
+    .intro-copy{
+      margin-top:1.5rem;
+      max-width:40rem;
     }
 
     p.lead{
@@ -132,49 +146,87 @@
       line-height:1.65;
     }
 
-    .card{
-      background:color-mix(in srgb, var(--bg) 92%, transparent);
-      border:1px solid var(--hr);
-      border-radius:16px;
-      padding:1rem 1.1rem;
-      margin:1.2rem 0 0;
+    .pill-row{
+      margin-top:1.25rem;
     }
 
     .pill{
       display:inline-block;
-      padding:0.4rem 0.65rem;
+      padding:0.45rem 0.7rem;
       border:1px solid var(--hr);
       border-radius:999px;
       color:var(--accent);
       font-size:0.95rem;
     }
 
-    .group{
-      margin-top:1.8rem;
-      padding-top:1.8rem;
-      border-top:1px solid var(--hr);
+    .pillars{
+      padding:1.5rem 0 1rem;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:1rem;
     }
 
-    .group:first-of-type{
-      border-top:none;
-      padding-top:0;
-      margin-top:1.6rem;
+    .pillar{
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      border:1px solid var(--hr);
+      border-radius:18px;
+      padding:1.15rem;
     }
 
-    ul{
-      margin:0.5rem 0 0;
-      padding-left:1.15rem;
+    .pillar h2{
+      margin:0 0 0.7rem;
+      font-size:1.08rem;
+      line-height:1.2;
+      letter-spacing:-0.02em;
+    }
+
+    .pillar p{
+      margin:0 0 0.85rem;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:0.98rem;
+    }
+
+    .pillar ul{
+      margin:0;
+      padding-left:1.05rem;
       color:var(--muted);
     }
 
-    li{
-      margin:0.45rem 0;
-      line-height:1.55;
+    .pillar li{
+      margin:0.38rem 0;
+      line-height:1.45;
+    }
+
+    .statement{
+      padding:2rem 0 0.5rem;
+    }
+
+    .statement-card{
+      border-top:1px solid var(--hr);
+      padding-top:2rem;
+    }
+
+    .statement-card h2{
+      margin:0 0 0.75rem;
+      font-size:1.35rem;
+      letter-spacing:-0.02em;
+    }
+
+    .closing{
+      padding:1.6rem 0 3rem;
+    }
+
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem 1.4rem;
+      margin-top:1rem;
     }
 
     footer{
       border-top:1px solid var(--hr);
-      margin-top:2.8rem;
+      margin-top:1rem;
     }
 
     footer .inner{
@@ -189,9 +241,23 @@
       flex-wrap:wrap;
     }
 
+    @media (max-width:900px){
+      .pillars{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        max-width:12ch;
+      }
+    }
+
     @media (max-width:700px){
       .menu a{
         margin-left:0.8rem;
+      }
+
+      .intro{
+        padding-top:2.4rem;
       }
 
       p.lead{
@@ -221,66 +287,91 @@
   </header>
 
   <main>
-    <section id="purpose">
-      <h1>Purpose</h1>
+    <section class="intro" id="purpose">
+      <p class="eyebrow">Purpose</p>
 
+      <h1>
+        AstroBiota studies what remains when systems carry their history.
+      </h1>
+
+      <div class="intro-copy">
+        <p class="lead">
+          AstroBiota exists to examine failure modes that emerge when systems are optimized without memory, scaled without recovery, or controlled without constraint.
+        </p>
+
+        <p class="lead">
+          Rather than treating history and irreversibility as implementation details, AstroBiota treats them as primary design variables.
+        </p>
+
+        <p class="lead">
+          The work focuses on systems where consequence cannot be externalized or reset — biological, technical, and institutional alike.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Memory · Constraint · Recovery</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" aria-label="Research pillars">
+      <article class="pillar">
+        <h2>Physical accountability via metabolic hysteresis</h2>
+        <p>
+          We explore biophysical systems that accumulate cost over time and recover only through slow physical processes.
+        </p>
+        <ul>
+          <li>Redox recovery as a measurable constraint signal</li>
+          <li>Hysteresis and fatigue as long-horizon memory</li>
+          <li>Accountability as a physical primitive</li>
+        </ul>
+      </article>
+
+      <article class="pillar">
+        <h2>An archive of reference artifacts for intelligence</h2>
+        <p>
+          We build and preserve artifacts that ground claims about intelligence in physics, state, irreversibility, and limit.
+        </p>
+        <ul>
+          <li>Intelligence framed as state propagation under limits</li>
+          <li>Artifacts as reference models, not metaphors</li>
+          <li>Long-horizon observation as evidence</li>
+        </ul>
+      </article>
+
+      <article class="pillar">
+        <h2>Regenerative production and conservation-first value</h2>
+        <p>
+          We develop biological systems designed for continuous operation, regeneration, and conservation-linked value.
+        </p>
+        <ul>
+          <li>Surface-area–scaled biological systems</li>
+          <li>Continuous harvest models</li>
+          <li>Economic forms compatible with long-term stability</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="statement">
+      <div class="statement-card">
+        <h2>An independent observatory</h2>
+        <p class="lead">
+          AstroBiota does not begin with optimization. It begins with observation.
+        </p>
+        <p class="lead">
+          The aim is not to prescribe solutions, but to establish reference conditions: points where memory, limits, and recovery are intrinsic to the system itself.
+        </p>
+      </div>
+    </section>
+
+    <section class="closing">
       <p class="lead">
-        AstroBiota exists to study what happens when systems lose memory, exceed recovery, or operate without constraint.
+        AstroBiota is research-led, artifact-driven, and intentionally upstream. Some outcomes may become products; others may remain purely foundational.
       </p>
 
-      <p class="lead">
-        It focuses on systems where history matters and consequence cannot be cleanly reset.
-      </p>
-
-      <div class="card">
-        <span class="pill">Memory · Constraint · Recovery</span>
-      </div>
-
-      <div class="group">
-        <h2>Physical accountability</h2>
-        <p class="lead">
-          AstroBiota explores biological and material systems that accumulate cost over time and recover through real physical processes.
-        </p>
-        <ul>
-          <li>Recovery as a measurable signal</li>
-          <li>Hysteresis and fatigue as memory</li>
-          <li>Constraint as a physical property</li>
-        </ul>
-      </div>
-
-      <div class="group">
-        <h2>Reference artifacts</h2>
-        <p class="lead">
-          The archive preserves real systems that exhibit state, drift, irreversibility, and limit.
-        </p>
-        <ul>
-          <li>Artifacts grounded in physics</li>
-          <li>State carried through time</li>
-          <li>Reference conditions for intelligence</li>
-        </ul>
-      </div>
-
-      <div class="group">
-        <h2>Regenerative production</h2>
-        <p class="lead">
-          AstroBiota studies living systems designed for continuity, regeneration, and long-horizon use.
-        </p>
-        <ul>
-          <li>Surface-based biological production</li>
-          <li>Continuous operation and harvest</li>
-          <li>Conservation tied to value</li>
-        </ul>
-      </div>
-
-      <div class="group">
-        <h2>What this is</h2>
-        <p class="lead">
-          AstroBiota is research-led and artifact-driven. Some outcomes may become products. Others remain foundational.
-        </p>
-
-        <p class="lead">
-          Start with the <a href="blog.html">Research</a> notes, browse the <a href="gallery.html">Archive</a>, or <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Support</a> the work.
-        </p>
+      <div class="links">
+        <a href="blog.html">Research →</a>
+        <a href="gallery.html">Archive →</a>
+        <a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Support →</a>
       </div>
     </section>
   </main>
