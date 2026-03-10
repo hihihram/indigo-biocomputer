@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AstroBiota — Biological Observatory</title>
 
-  <meta name="description" content="AstroBiota is an independent biological observatory studying continuity, memory, and consequence in living systems." />
+  <meta name="description" content="AstroBiota is an independent biological observatory." />
 
   <meta property="og:title" content="AstroBiota — Biological Observatory" />
-  <meta property="og:description" content="An independent observatory studying how living systems carry history, stabilize, and record consequence over time." />
+  <meta property="og:description" content="An independent biological observatory." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://simbiosis.bio/" />
   <meta property="og:image" content="images/hero-lichen.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AstroBiota — Biological Observatory" />
-  <meta name="twitter:description" content="Exploring continuity, memory, and ecological consequence through living systems." />
+  <meta name="twitter:description" content="An independent biological observatory." />
   <meta name="twitter:image" content="images/hero-lichen.jpg" />
 
   <style>
@@ -113,10 +113,10 @@
       background:
         linear-gradient(
           90deg,
-          rgba(36,15,63,0.78) 0%,
-          rgba(67,34,104,0.64) 35%,
-          rgba(125,88,195,0.28) 65%,
-          rgba(255,255,255,0.06) 100%
+          rgba(36,15,63,0.76) 0%,
+          rgba(67,34,104,0.60) 34%,
+          rgba(125,88,195,0.24) 65%,
+          rgba(255,255,255,0.05) 100%
         );
       z-index:1;
     }
@@ -132,7 +132,7 @@
 
     .eyebrow{
       margin:0 0 1rem;
-      font-size:1.05rem;
+      font-size:1rem;
       font-weight:700;
       letter-spacing:0.01em;
       color:var(--accent);
@@ -140,8 +140,8 @@
 
     .hero-content h1{
       margin:0;
-      max-width:11ch;
-      font-size:clamp(2.7rem, 7vw, 5.4rem);
+      max-width:10ch;
+      font-size:clamp(2.8rem, 7vw, 5.5rem);
       line-height:0.95;
       font-weight:800;
       letter-spacing:-0.04em;
@@ -202,12 +202,12 @@
     }
 
     h2{
-      font-size:1.6rem;
+      font-size:1.45rem;
       margin:0 0 0.75rem;
     }
 
     p.lead{
-      font-size:1.12rem;
+      font-size:1.06rem;
       color:var(--muted);
       margin:0.25rem 0 0.75rem;
     }
@@ -228,32 +228,20 @@
       font-size:0.95rem;
     }
 
-    .image-grid{
+    .home-images{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:1rem;
-      margin-top:1rem;
     }
 
-    .image-grid figure{
-      margin:0;
-      background:color-mix(in srgb, var(--bg) 92%, transparent);
-      border:1px solid var(--hr);
-      border-radius:16px;
-      overflow:hidden;
-    }
-
-    .image-grid img{
+    .home-images img{
       width:100%;
       aspect-ratio:4 / 3;
       object-fit:cover;
       display:block;
-    }
-
-    .image-grid figcaption{
-      padding:0.8rem 0.9rem;
-      color:var(--muted);
-      font-size:0.95rem;
+      border:1px solid var(--hr);
+      border-radius:16px;
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
     }
 
     .about-me{
@@ -299,7 +287,7 @@
     }
 
     @media (max-width: 800px){
-      .image-grid{
+      .home-images{
         grid-template-columns:1fr;
       }
     }
@@ -315,11 +303,11 @@
       }
 
       .hero-content h1{
-        max-width:12ch;
+        max-width:11ch;
       }
 
       .eyebrow{
-        font-size:0.96rem;
+        font-size:0.95rem;
       }
 
       .about-me{
@@ -350,10 +338,10 @@
       <p class="eyebrow">Independent Biological Observatory</p>
 
       <h1>
-        One observatory for<br />
-        biological continuity,<br />
-        ecological memory,<br />
-        <span>and living consequence</span>
+        A living observatory<br />
+        for continuity,<br />
+        memory,<br />
+        <span>and consequence</span>
       </h1>
 
       <div class="hero-actions">
@@ -368,63 +356,31 @@
       <h2>About AstroBiota</h2>
 
       <p class="lead">
-        AstroBiota is an independent biological observatory focused on continuity-preserving
-        living substrates and their role in recording ecological and technological
-        consequence across time.
+        AstroBiota is an independent biological observatory.
       </p>
 
       <p class="lead">
-        Much of modern biology and technology assumes that systems can be optimized without
-        consequence — that behavior can be reset, corrected, or scaled without accumulating
-        cost. In practice, this assumption repeatedly fails.
-      </p>
-
-      <p class="lead">
-        Biological systems operate differently. They carry history. Their present behavior
-        reflects prior exposure, stress, and recovery. Rather than treating this history as
-        noise, AstroBiota documents how it accumulates — and how it can be shaped deliberately
-        through environment and process, not genetic modification.
-      </p>
-
-      <p class="lead">
-        As an observatory, AstroBiota is concerned not only with what a living system is,
-        but what it remembers, what it records, and what becomes visible when it is followed
-        carefully through time.
+        It follows living systems through time and studies what remains:
+        stability, drift, memory, and change.
       </p>
 
       <div class="card">
-        <span class="pill">Observatory-led · History-aware · No genetic modification</span>
+        <span class="pill">Observatory-led · Process-led · No genetic modification</span>
       </div>
     </section>
 
-    <section id="observations">
-      <h2>Observations</h2>
-      <p class="lead">
-        Selected images from the observatory. Replace these placeholders with your uploaded files.
-      </p>
-
-      <div class="image-grid">
-        <figure>
-          <img src="images/observatory-image-1.jpg" alt="Observatory image 1" loading="lazy" />
-          <figcaption>Observation 01 · Placeholder caption</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/observatory-image-2.jpg" alt="Observatory image 2" loading="lazy" />
-          <figcaption>Observation 02 · Placeholder caption</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/observatory-image-3.jpg" alt="Observatory image 3" loading="lazy" />
-          <figcaption>Observation 03 · Placeholder caption</figcaption>
-        </figure>
+    <section id="images">
+      <div class="home-images">
+        <img src="images/home-image-1.jpg" alt="Home image 1" loading="lazy" />
+        <img src="images/home-image-2.jpg" alt="Home image 2" loading="lazy" />
+        <img src="images/home-image-3.jpg" alt="Home image 3" loading="lazy" />
       </div>
     </section>
 
     <section id="blog">
       <h2>Research</h2>
       <p class="lead">
-        Public writing and research notes related to AstroBiota’s work.
+        Public writing and research notes.
       </p>
       <p><a href="blog.html">View research</a></p>
     </section>
@@ -433,23 +389,11 @@
       <h2>Support</h2>
 
       <p class="lead">
-        AstroBiota maintains an independent <strong>Conservation–Observation–Operation Program</strong>
-        focused on some of the most difficult symbiotic systems known, including lichens and proto-lichen
-        morphologies.
+        AstroBiota maintains an independent conservation, observation, and cultivation program.
       </p>
 
       <p class="lead">
-        This program exists to culture, observe, and sustain long-lived symbiotic states that are rarely
-        accessible to industry or laboratory work. These systems function as both conservation targets
-        and experimental references — allowing us to study how highly wild partnerships stabilize,
-        reorganize, and retain history over extended time horizons.
-      </p>
-
-      <p class="lead">
-        Proto-lichen systems are cultivated not as products, but as <em>long-horizon symbiotic substrates</em>:
-        living systems that test the limits of domestication, memory, and behavioral stability. Insights
-        from this work inform broader process development while contributing to the preservation of
-        fragile biological lineages.
+        Support helps sustain long-horizon work with difficult living systems.
       </p>
 
       <p><a href="https://ko-fi.com/astrobiota" target="_blank" rel="noopener">Support the work</a></p>
@@ -458,10 +402,8 @@
         <img src="images/your-photo.jpg" alt="Portrait" loading="lazy" />
         <div>
           <p>
-            Hi, I’m Hiram — a drug delivery and biotech engineer.
-            I work on methods for conditioning wild biological systems into stable,
-            repeatable forms, using some of the most resistant organisms available
-            to understand what real domestication requires.
+            Hi, I’m Hiram — a drug delivery and biotech engineer working with wild
+            biological systems and process-based conditioning.
           </p>
         </div>
         <div class="brand">AstroBiota · <a href="https://www.linkedin.com/in/hiramdunn/" target="_blank" rel="noopener">LinkedIn</a></div>
