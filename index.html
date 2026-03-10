@@ -3,50 +3,329 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AstroBiota — Biological Programming</title>
+  <title>AstroBiota — Biological Observatory</title>
 
-  <meta name="description" content="AstroBiota is an independent research initiative exploring how living systems remember, stabilize, and remain governable over time." />
+  <meta name="description" content="AstroBiota is an independent biological observatory studying continuity, memory, and consequence in living systems." />
 
-  <meta property="og:title" content="AstroBiota — Biological Programming" />
-  <meta property="og:description" content="An independent research initiative studying history-dependent behavior in biological systems." />
+  <meta property="og:title" content="AstroBiota — Biological Observatory" />
+  <meta property="og:description" content="An independent observatory studying how living systems carry history, stabilize, and record consequence over time." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://simbiosis.bio/" />
   <meta property="og:image" content="images/hero-lichen.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AstroBiota — Biological Programming" />
-  <meta name="twitter:description" content="Exploring how living systems encode memory, stability, and constraint." />
+  <meta name="twitter:title" content="AstroBiota — Biological Observatory" />
+  <meta name="twitter:description" content="Exploring continuity, memory, and ecological consequence through living systems." />
   <meta name="twitter:image" content="images/hero-lichen.jpg" />
 
   <style>
-    :root{ --bg:#0b0c0d; --fg:#ebedef; --muted:#a7b0b8; --link:#3ee0a2; --hr:#1b1f24; --accent:#33d399; --maxw: 56rem; }
-    @media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --fg:#0b0c0d; --muted:#666; --link:#0aa36a; --hr:#e6e6e6; --accent:#10c28a; } }
+    :root{
+      --bg:#0b0c0d;
+      --fg:#ebedef;
+      --muted:#a7b0b8;
+      --link:#3ee0a2;
+      --hr:#1b1f24;
+      --accent:#f2b08f;
+      --maxw:56rem;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#ffffff;
+        --fg:#0b0c0d;
+        --muted:#666;
+        --link:#0aa36a;
+        --hr:#e6e6e6;
+        --accent:#d98b68;
+      }
+    }
+
     *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
-    .nav{ position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--hr); }
-    .nav .inner{ max-width:var(--maxw); margin:0 auto; padding:0.75rem 1.1rem; display:flex; align-items:center; justify-content:space-between; }
-    .brand{ font-weight:800; letter-spacing:0.2px; }
-    .menu a{ color:var(--muted); margin-left:1rem; }
-    .menu a:hover{ color:var(--fg); text-decoration:none; }
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter:saturate(160%) blur(10px);
+      background:color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom:1px solid var(--hr);
+    }
 
-    .hero{ position:relative; width:100%; height:78vh; min-height:520px; max-height:940px; }
-    .hero img{ width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05); }
+    .nav .inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:0.75rem 1.1rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
 
-    section{ max-width:var(--maxw); margin:2.25rem auto; padding:0 1.1rem; }
-    h2{ font-size:1.6rem; margin:0 0 0.75rem; }
-    p.lead{ font-size:1.12rem; color:var(--muted); margin:0.25rem 0 0.75rem; }
-    .card{ background:color-mix(in srgb, var(--bg) 92%, transparent); border:1px solid var(--hr); border-radius:16px; padding:1rem 1.1rem; }
-    .pill{ display:inline-block; padding:0.4rem 0.6rem; border:1px solid var(--hr); border-radius:999px; color:var(--muted); font-size:0.95rem; }
+    .brand{
+      font-weight:800;
+      letter-spacing:0.2px;
+    }
 
-    .about-me{ display:grid; grid-template-columns:96px 1fr; gap:1rem; align-items:center; margin-top:1.25rem; background:color-mix(in srgb, var(--bg) 92%, transparent); border:1px solid var(--hr); border-radius:16px; padding:1rem 1.1rem; }
-    .about-me img{ width:96px; height:96px; border-radius:999px; object-fit:cover; border:1px solid var(--hr); }
-    .about-me p{ margin:0; color:var(--muted); }
+    .menu a{
+      color:var(--muted);
+      margin-left:1rem;
+    }
 
-    footer{ border-top:1px solid var(--hr); margin-top:2.5rem; }
-    footer .inner{ max-width:var(--maxw); margin:0 auto; padding:1.1rem; color:var(--muted); font-size:0.95rem; display:flex; justify-content:space-between; gap:0.5rem; flex-wrap:wrap; }
+    .menu a:hover{
+      color:var(--fg);
+      text-decoration:none;
+    }
+
+    .hero{
+      position:relative;
+      width:100%;
+      min-height:78vh;
+      max-height:940px;
+      display:grid;
+      align-items:center;
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .hero img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter:contrast(1.03) saturate(1.02);
+    }
+
+    .hero-shade{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(36,15,63,0.78) 0%,
+          rgba(67,34,104,0.64) 35%,
+          rgba(125,88,195,0.28) 65%,
+          rgba(255,255,255,0.06) 100%
+        );
+      z-index:1;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:5.5rem 1.1rem 5rem;
+    }
+
+    .eyebrow{
+      margin:0 0 1rem;
+      font-size:1.05rem;
+      font-weight:700;
+      letter-spacing:0.01em;
+      color:var(--accent);
+    }
+
+    .hero-content h1{
+      margin:0;
+      max-width:11ch;
+      font-size:clamp(2.7rem, 7vw, 5.4rem);
+      line-height:0.95;
+      font-weight:800;
+      letter-spacing:-0.04em;
+      color:#fff;
+    }
+
+    .hero-content h1 span{
+      color:var(--accent);
+      display:inline-block;
+      margin-top:0.18em;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin-top:2rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0.9rem 1.4rem;
+      border-radius:999px;
+      font-weight:700;
+      font-size:1rem;
+      text-decoration:none;
+      transition:transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn:hover{
+      text-decoration:none;
+      transform:translateY(-1px);
+    }
+
+    .btn-solid{
+      background:#ffffff;
+      color:#5d35b0;
+      border:1px solid rgba(255,255,255,0.85);
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:#ffffff;
+      border:1.5px solid rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover{
+      border-color:rgba(255,255,255,0.95);
+    }
+
+    section{
+      max-width:var(--maxw);
+      margin:2.25rem auto;
+      padding:0 1.1rem;
+    }
+
+    h2{
+      font-size:1.6rem;
+      margin:0 0 0.75rem;
+    }
+
+    p.lead{
+      font-size:1.12rem;
+      color:var(--muted);
+      margin:0.25rem 0 0.75rem;
+    }
+
+    .card{
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      border:1px solid var(--hr);
+      border-radius:16px;
+      padding:1rem 1.1rem;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:0.4rem 0.6rem;
+      border:1px solid var(--hr);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .image-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:1rem;
+      margin-top:1rem;
+    }
+
+    .image-grid figure{
+      margin:0;
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      border:1px solid var(--hr);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .image-grid img{
+      width:100%;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+      display:block;
+    }
+
+    .image-grid figcaption{
+      padding:0.8rem 0.9rem;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .about-me{
+      display:grid;
+      grid-template-columns:96px 1fr;
+      gap:1rem;
+      align-items:center;
+      margin-top:1.25rem;
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      border:1px solid var(--hr);
+      border-radius:16px;
+      padding:1rem 1.1rem;
+    }
+
+    .about-me img{
+      width:96px;
+      height:96px;
+      border-radius:999px;
+      object-fit:cover;
+      border:1px solid var(--hr);
+    }
+
+    .about-me p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    footer{
+      border-top:1px solid var(--hr);
+      margin-top:2.5rem;
+    }
+
+    footer .inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:1.1rem;
+      color:var(--muted);
+      font-size:0.95rem;
+      display:flex;
+      justify-content:space-between;
+      gap:0.5rem;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 800px){
+      .image-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 700px){
+      .hero{
+        min-height:72vh;
+      }
+
+      .hero-content{
+        padding-top:5rem;
+        padding-bottom:4rem;
+      }
+
+      .hero-content h1{
+        max-width:12ch;
+      }
+
+      .eyebrow{
+        font-size:0.96rem;
+      }
+
+      .about-me{
+        grid-template-columns:1fr;
+      }
+    }
   </style>
 </head>
 
@@ -64,42 +343,81 @@
   </div>
 
   <header class="hero">
-    <img src="images/hero-lichen.jpg" alt="Wild symbiotic morphology" loading="eager"/>
+    <img src="images/hero-lichen.jpg" alt="Wild symbiotic morphology" loading="eager" />
+    <div class="hero-shade"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">Independent Biological Observatory</p>
+
+      <h1>
+        One observatory for<br />
+        biological continuity,<br />
+        ecological memory,<br />
+        <span>and living consequence</span>
+      </h1>
+
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="purpose.html">Learn More</a>
+        <a class="btn btn-outline" href="gallery.html">View Archive</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="about">
       <h2>About AstroBiota</h2>
 
-   <p class="lead">
-AstroBiota is an independent biological observatory focused on continuity-preserving
-living substrates and their role in recording ecological and technological 
-consequence across time.
+      <p class="lead">
+        AstroBiota is an independent biological observatory focused on continuity-preserving
+        living substrates and their role in recording ecological and technological
+        consequence across time.
+      </p>
 
-</p>
+      <p class="lead">
+        Much of modern biology and technology assumes that systems can be optimized without
+        consequence — that behavior can be reset, corrected, or scaled without accumulating
+        cost. In practice, this assumption repeatedly fails.
+      </p>
 
-<p class="lead">
-  Much of modern biology and technology assumes that systems can be optimized without
-  consequence — that behavior can be reset, corrected, or scaled without accumulating
-  cost. In practice, this assumption repeatedly fails.
-</p>
+      <p class="lead">
+        Biological systems operate differently. They carry history. Their present behavior
+        reflects prior exposure, stress, and recovery. Rather than treating this history as
+        noise, AstroBiota documents how it accumulates — and how it can be shaped deliberately
+        through environment and process, not genetic modification.
+      </p>
 
-<p class="lead">
-  Biological systems operate differently. They carry history. Their present behavior
-  reflects prior exposure, stress, and recovery. Rather than treating this history as
-  noise, AstroBiota documents how it accumulates — and how it can be shaped deliberately
-  through environment and process, not genetic modification.
-</p>
-
-<p class="lead">
-  Our work engages highly wild biological systems that resist standard domestication.
-  By operating at the edge of controllability, we record where variance collapses,
-  where stability emerges, and what real biological domestication actually requires.
-</p>
-
+      <p class="lead">
+        As an observatory, AstroBiota is concerned not only with what a living system is,
+        but what it remembers, what it records, and what becomes visible when it is followed
+        carefully through time.
+      </p>
 
       <div class="card">
-        <span class="pill">Process-led · History-aware · No genetic modification</span>
+        <span class="pill">Observatory-led · History-aware · No genetic modification</span>
+      </div>
+    </section>
+
+    <section id="observations">
+      <h2>Observations</h2>
+      <p class="lead">
+        Selected images from the observatory. Replace these placeholders with your uploaded files.
+      </p>
+
+      <div class="image-grid">
+        <figure>
+          <img src="images/observatory-image-1.jpg" alt="Observatory image 1" loading="lazy" />
+          <figcaption>Observation 01 · Placeholder caption</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/observatory-image-2.jpg" alt="Observatory image 2" loading="lazy" />
+          <figcaption>Observation 02 · Placeholder caption</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/observatory-image-3.jpg" alt="Observatory image 3" loading="lazy" />
+          <figcaption>Observation 03 · Placeholder caption</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -130,7 +448,7 @@ consequence across time.
       <p class="lead">
         Proto-lichen systems are cultivated not as products, but as <em>long-horizon symbiotic substrates</em>:
         living systems that test the limits of domestication, memory, and behavioral stability. Insights
-        from this work inform our broader process development while contributing to the preservation of
+        from this work inform broader process development while contributing to the preservation of
         fragile biological lineages.
       </p>
 
@@ -158,6 +476,8 @@ consequence across time.
     </div>
   </footer>
 
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
