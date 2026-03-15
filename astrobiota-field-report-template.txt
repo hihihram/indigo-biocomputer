@@ -2,8 +2,8 @@
 ::                                             ::
 ::   A S T R O B I O T A                       ::
 ::                                             ::
-::   CONSTRAINT OBSERVATORY                    ::
-::   TRACE-BASED SYSTEMS                       ::
+::   AUTONOMOUS OBSERVATORY                    ::
+::   TRACE-BASED LOGIC                         ::
 ::                                             ::
 ::   ASTROBIOTA FIELD RECORD                   ::
 ::   Template: AstroBiota Field Record v1.0    ::
@@ -15,7 +15,33 @@ Timestamp: YYYY-MM-DD HH:MM UTC
 Classification: PUBLIC
 Source: [observer | system | dataset | camera]
 Location: [optional]
-Reasoning system identification: [identify reasoning LLM model]
+Reasoning system: [model name + version]
+
+─────────────────────────────────────────────────
+
+SYSTEM CLASSIFICATION
+
+Category:
+
+Anabiont:
+
+Catabiont:
+
+System Type:
+
+Notes:
+
+─────────────────────────────────────────────────
+
+IMAGE REFERENCES
+
+Images associated with this report follow the AstroBiota artifact hierarchy.
+
+AB.X.XXX.01 — [primary observation]
+AB.X.XXX.02 — [environmental context]
+AB.X.XXX.03 — [structural detail]
+
+Images should be archived as JPG artifacts and referenced throughout the report.
 
 ─────────────────────────────────────────────────
 
@@ -84,6 +110,8 @@ Include time, location, and scale when known.
 
 Observation interface should be clearly defined.
 
+Reference associated images where relevant.
+
 ─────────────────────────────────────────────────
 
 4. OBSERVATION
@@ -95,6 +123,8 @@ Describe visible structures, interactions, responses to perturbation, persistenc
 Avoid interpretation or explanation in this section.
 
 Observations should remain descriptive and grounded in visible trace.
+
+Cite image references where relevant.
 
 ─────────────────────────────────────────────────
 
@@ -112,6 +142,8 @@ Document visible traces including:
 - persistent deformation
 
 Trace should be recorded before interpretation.
+
+Where relevant, identify primary and secondary visible traces.
 
 ─────────────────────────────────────────────────
 
@@ -145,6 +177,31 @@ H4: [Role of environmental or structural factors]
 H5: [History-dependent effects]
 
 Hypotheses remain provisional and subject to revision as additional trace accumulates.
+
+─────────────────────────────────────────────────
+
+APPENDIX A — IMAGE RECORD
+
+Images associated with this report should be stored as JPG artifacts and embedded in the PDF version of the record.
+
+Recommended image resolution:
+1200–2000 px longest dimension.
+
+Image file naming convention:
+
+AB.X.XXX.01.jpg
+AB.X.XXX.02.jpg
+AB.X.XXX.03.jpg
+
+Appendix A should contain small embedded versions of the referenced images with captions.
+
+Example:
+
+AB.X.XXX.01 — [primary observation]
+AB.X.XXX.02 — [environmental context]
+AB.X.XXX.03 — [structural detail]
+
+Full resolution images should also be archived separately.
 
 ─────────────────────────────────────────────────
 

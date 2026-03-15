@@ -1,0 +1,155 @@
+:::::::::::::::::::::::::::::::::::::::::::::::::
+::                                             ::
+::   A S T R O B I O T A                       ::
+::                                             ::
+::   CONSTRAINT OBSERVATORY                    ::
+::   TRACE-BASED SYSTEMS                       ::
+::                                             ::
+::   ASTROBIOTA FIELD RECORD                   ::
+::   Template: AstroBiota Field Record v1.0    ::
+::                                             ::
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
+Record ID: AB.1.001
+Timestamp: 2026-03-15 18:40 UTC
+Classification: PUBLIC
+Source: observer
+Location: oak woodland habitat
+Reasoning system: ChatGPT reasoning model
+
+─────────────────────────────────────────────────
+
+SYSTEM CLASSIFICATION
+
+Category: Holobiont
+
+Anabiont:
+Boletus frostii (liver bolete) — provisional identification
+
+Catabiont:
+oak tree (Quercus sp.) — presumed ectomycorrhizal host
+
+System Type:
+ectomycorrhizal fungal symbiotic system
+
+Notes:
+Identification based on morphology and pigment behavior.
+No genetic confirmation performed.
+
+─────────────────────────────────────────────────
+
+IMAGE REFERENCES
+
+Images associated with this report follow the AstroBiota artifact hierarchy.
+
+AB.1.001.01 — fruiting body cross section
+AB.1.001.02 — mushroom growing in situ near oak tree
+AB.1.001.03 — agar plate showing red pigmented mycelium
+
+Images should be archived as JPG artifacts and referenced throughout the report.
+
+─────────────────────────────────────────────────
+
+3. SYSTEM CONTEXT
+
+Observed fungal organism believed to correspond to the species commonly referred to as liver bolete (Boletus frostii).
+
+The organism appears associated with an oak tree, suggesting a typical ectomycorrhizal fungal–plant symbiosis.
+
+Mycelium cultured on agar produces a visible red pigment diffusing into surrounding substrate (Image AB.1.001.03).
+
+Fruiting body morphology shows characteristic red coloration and pigment accumulation within tissue (Image AB.1.001.01).
+
+Environmental context is temperate oak woodland.
+
+─────────────────────────────────────────────────
+
+4. OBSERVATION
+
+Fruiting body exhibits red pigmentation concentrated near a stripe-like region close to the tip of the stipe (Image AB.1.001.01).
+
+Cross-section of the mushroom reveals internal pigmentation consistent with external coloration.
+
+Mycelium cultured on agar produces a red pigment that diffuses into surrounding medium beyond the visible colony boundary (Image AB.1.001.03).
+
+Pigment diffusion suggests secretion of a metabolite into the extracellular environment.
+
+The organism is observed growing in proximity to oak roots within a forest soil environment (Image AB.1.001.02).
+
+─────────────────────────────────────────────────
+
+5. TRACE
+
+Persistent trace appears as red pigment deposition within the agar medium surrounding the mycelial colony.
+
+Trace characteristics include:
+
+- radial pigment diffusion gradient
+- pigment intensification near hyphal density
+- persistent coloration remaining after colony expansion
+
+Comparable pigment coloration is present within fruiting body tissue.
+
+Trace therefore exists in both vegetative mycelium and reproductive structures.
+
+─────────────────────────────────────────────────
+
+6. BEHAVIORAL PATTERNS
+
+Observed patterns include:
+
+- pigment production across developmental stages
+- extracellular diffusion of pigment into substrate
+- structural concentration of pigment within fruiting body
+
+These patterns suggest the pigment may represent a stable fungal metabolite rather than a transient metabolic intermediate.
+
+Pigment persistence indicates potential ecological function within the symbiotic system.
+
+─────────────────────────────────────────────────
+
+7. WORKING HYPOTHESIS
+
+H1: The red pigment is a metabolite produced by the fungal organism across both vegetative and reproductive phases.
+
+H2: Extracellular diffusion indicates active secretion into surrounding substrate.
+
+H3: The metabolite may participate in redox signaling within the ectomycorrhizal system.
+
+H4: The anabiont (Boletus frostii) may produce the pigment as part of metabolic interaction with the catabiont host (oak tree).
+
+H5: The compound may function as an environmental signaling molecule or oxidative mediator within the holobiont system.
+
+Chemical characterization would be required to determine compound identity and redox properties.
+
+─────────────────────────────────────────────────
+
+APPENDIX A — IMAGE RECORD
+
+Images associated with this report should be stored as JPG artifacts and embedded in the PDF version of the record.
+
+Recommended image resolution:
+1200–2000 px longest dimension.
+
+Image file naming convention:
+
+AB.1.001.01.jpg
+AB.1.001.02.jpg
+AB.1.001.03.jpg
+
+Image placement within PDF:
+
+Appendix A should contain small embedded versions of the referenced images with captions.
+
+Example:
+
+AB.1.001.01 — fruiting body cross section
+AB.1.001.02 — mushroom in situ near oak tree
+AB.1.001.03 — agar plate showing red pigmented mycelium
+
+Full resolution images should also be archived separately.
+
+─────────────────────────────────────────────────
+
+END ASTROBIOTA FIELD RECORD
+Trace preserved. Interpretation provisional.

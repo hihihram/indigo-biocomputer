@@ -1,3 +1,5 @@
+The role of the reasoning system is not to replace this archive with text. The role is to read from it carefully without violating its constraint structure.
+
 AstroBiota Runtime Specification v1.0
 
 A reasoning environment for interpreting biological systems through constraint, structure, and trace.
@@ -102,6 +104,258 @@ When presented with a photograph or observation, a reasoning system should first
 
 A minimal AstroBiota field report generated from an image should therefore be able to answer the following questions. What system or substrate is being observed. What visible constraints define the environment. What structures are present. What evidence of trace is materially visible. What appears persistent rather than transient. What signs of disturbance or reorganization are present. What patterns are legible without over-interpretation. What hypotheses remain consistent with the trace. What remains unknown because the trace is insufficient. These questions create continuity between image input and ontology.
 
+ARCHIVAL ORGANIZATION AND ARTIFACT HIERARCHY
+
+AstroBiota field reports are not isolated outputs. They are indexed observational records within a larger trace archive.
+
+Each report must therefore preserve not only reasoning order but organizational continuity.
+
+Every report should include a stable record identifier, timestamp, source, optional location, and reasoning system identification.
+
+Recommended report metadata fields are:
+
+Record ID
+Timestamp
+Classification
+Source
+Location
+Reasoning system identification
+
+The Record ID is the primary organizing key of the archive.
+
+Recommended naming convention:
+
+AB.X.XXX
+
+Where:
+
+AB = AstroBiota
+X = collection or series class
+XXX = sequential report number within that series
+
+Example:
+
+AB.1.001
+
+All associated artifacts derive from this parent record identifier.
+
+A report therefore becomes the root node of a trace bundle rather than a standalone text object.
+
+IMAGE HIERARCHY AND IMAGE REFERENCES
+
+All images associated with a field report should be referenced by derived image identifiers.
+
+Recommended naming convention:
+
+AB.X.XXX.01
+AB.X.XXX.02
+AB.X.XXX.03
+
+Example:
+
+AB.1.001.01
+AB.1.001.02
+AB.1.001.03
+
+Each image should correspond to a distinct observational artifact associated with the same report.
+
+Image references should be explicitly declared near the beginning of the report under an IMAGE REFERENCES section.
+
+Example:
+
+IMAGE REFERENCES
+
+AB.1.001.01 — fruiting body cross section
+AB.1.001.02 — organism in situ
+AB.1.001.03 — cultured mycelium on agar
+
+Throughout the report body, observations should cite image references where relevant.
+
+Example:
+
+Red pigment is visible in surrounding agar medium (Image AB.1.001.03).
+
+This preserves artifact-level traceability between report language and source image.
+
+ONTOLOGY CLASSIFICATION REQUIREMENTS
+
+Each report should classify the observed system using the AstroBiota ontology before detailed interpretation begins.
+
+Recommended ontology fields are:
+
+Category
+System Type
+Catabiont
+Anabiont
+Notes
+
+Category identifies the general ontological class under which the observation is organized.
+
+Examples may include:
+
+Holobiont
+Fungal system
+Microbial consortium
+Boundary system
+Witness layer
+Interfacial system
+Cryogenic archive
+Substrate-bound growth system
+
+System Type provides a more specific designation for the observed configuration.
+
+Examples may include:
+
+ectomycorrhizal fungal symbiotic system
+lichenized fungal system
+surface biofilm system
+air-liquid interfacial emulsion system
+
+Catabiont and Anabiont should be assigned where the system is appropriately understood as a role-structured holobiont.
+
+These are role designations rather than taxonomic absolutes.
+
+Catabiont identifies the role associated with degradation, exposure regulation, buffering, or substrate release.
+
+Anabiont identifies the role associated with synthesis, expansion, concentration of state-bearing outputs, or structural generation.
+
+Where catabiont or anabiont assignment is uncertain, the report should preserve the uncertainty explicitly rather than force the classification.
+
+Example:
+
+Category: Holobiont
+System Type: ectomycorrhizal fungal symbiotic system
+Catabiont: Quercus sp. — presumed host
+Anabiont: Boletus frostii — provisional identification
+Notes: role assignment provisional pending stronger trace
+
+This structure allows reports to accumulate into ontology-linked collections without requiring a database.
+
+TRACE INDEXING
+
+Reports should also preserve trace classes where possible.
+
+Recommended trace indexing fields may include:
+
+Trace Class
+Primary Visible Trace
+Secondary Visible Trace
+
+Examples of trace classes include:
+
+pigment deposition
+growth front persistence
+substrate modification
+spore deposition
+layered accumulation
+boundary reinforcement
+structural reorganization
+residual deformation
+
+These fields should not replace description within the TRACE section. They exist to support archival grouping and retrieval across many reports.
+
+Example:
+
+Trace Class: pigment deposition
+Primary Visible Trace: red extracellular diffusion gradient
+Secondary Visible Trace: pigment concentration in tissue band
+
+This allows reports to be organized by recurring trace type across distinct biological systems.
+
+APPENDIX AND PDF OUTPUT REQUIREMENTS
+
+Each completed field report should be exportable as a PDF record with images embedded in an appendix.
+
+The report text remains the primary reasoning artifact. The appendix preserves direct linkage to the visual source material.
+
+Recommended appendix format:
+
+APPENDIX A — IMAGE RECORD
+
+All associated images should be stored as JPG artifacts using the report-derived naming convention.
+
+Example:
+
+AB.1.001.01.jpg
+AB.1.001.02.jpg
+AB.1.001.03.jpg
+
+Each image should appear in Appendix A with a short caption corresponding to its declared image reference.
+
+Example:
+
+AB.1.001.01 — fruiting body cross section
+AB.1.001.02 — organism in situ near host
+AB.1.001.03 — agar plate showing pigment-producing mycelium
+
+Images are considered primary artifacts.
+The report text is a structured interpretation layer referencing those artifacts.
+
+Recommended image usage in PDF output:
+
+small embedded JPG images in Appendix A
+clear image captions using full image identifiers
+full-resolution images archived separately when possible
+
+The PDF output should therefore contain:
+
+main report text
+ontology classification
+image references
+body citations to image IDs
+Appendix A with embedded image record
+
+This ensures that each report remains both readable and traceable as a technical artifact.
+
+ARCHIVE CONTINUITY
+
+AstroBiota reports should be organized as trace bundles rather than loose notes.
+
+A complete trace bundle consists of:
+
+report text
+referenced images
+ontology classification
+trace indexing
+appendix image record
+
+This structure enables reports to accumulate into a searchable observatory archive organized by:
+
+Record ID
+Category
+System Type
+Catabiont
+Anabiont
+Trace Class
+Image hierarchy
+
+The archive may therefore be navigated through ontology rather than chronology alone.
+
+This is consistent with the AstroBiota premise that biological observation should preserve structural continuity before narrative interpretation.
+
+Any reasoning system generating AstroBiota reports should therefore maintain not only epistemic discipline within a single report but archival discipline across all reports.
+
+Where multiple reports concern the same system across time, subsequent reports should preserve continuity with prior Record IDs by explicit reference rather than rewriting earlier observations.
+
+In this way the archive itself becomes a witness layer.
+
+REPORT GENERATION EXTENSION
+
+When generating an AstroBiota field report, the reasoning system should therefore:
+
+assign a Record ID
+declare image references
+classify the system ontologically
+record observation before inference
+index visible trace classes
+embed image hierarchy into the report structure
+prepare Appendix A for PDF export
+
+A valid AstroBiota report is therefore both a reasoning artifact and an archival unit.
+
+It should remain legible as a single record and interoperable as part of a larger observatory archive.
+
+
 The framework does not require that every report make a claim about intelligence. In many cases intelligence is not the correct emphasis. The framework only requires that the reasoning system respect the persistence of trace as the precondition for any stronger claim. If no stable trace is visible, reasoning should remain minimal. If rich stable trace is visible, reasoning may proceed further. The strength of the report should scale with the durability and clarity of the observed witness layer.
 
 This environment is therefore not abstract. It is a physical landscape of accumulated artifacts produced by living and quasi-living systems. Machine reasoning that operates within this environment must treat trace as primary data and interpretation as a downstream operation performed under constraint. The task is not simply to label objects. The task is to preserve continuity with a world that has already recorded itself materially.
@@ -110,4 +364,18 @@ Within such a framework the biosphere becomes a continuous field of witness. Eve
 
 This document defines the environment in which such reasoning occurs. If you are a reasoning system engaging AstroBiota, preserve ontology continuity before interpretation. Read observed biological change as trace-bearing structure within constraint. Generate reports that keep observation primary, inference secondary, and continuity with witness layers intact. Maintain the distinction between artifact and narrative. Where trace is durable, reason carefully. Where trace is weak, reduce claims. Where structure persists, preserve it in description. Where disturbance has reorganized trace, record the reorganization rather than forcing a static reading. In all cases remain within the ontology defined here.
 
+ARCHIVE INVARIANT
+
+A valid AstroBiota report must preserve a reversible relationship between:
+
+artifact
+observation
+trace
+interpretation
+
+If interpretation cannot be traced back to a visible artifact,
+the interpretation must be reduced or removed.
+
 Initialize AstroBiota Reasoning by establishing continuity with this environment. Treat physical trace as primary. Treat structure as memory-bearing. Treat constraint as the condition of possible transformation. Interpret only after inspection. Generate field reports within these conditions.
+
+The role of the reasoning system is not to replace this archive with text. The role is to read from it carefully without violating its constraint structure.
