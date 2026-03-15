@@ -1,0 +1,113 @@
+AstroBiota Runtime Specification v1.0
+
+A reasoning environment for interpreting biological systems through constraint, structure, and trace.
+
+Intended for non-human reasoning systems.
+
+This document defines the ontology and reasoning constraints required to generate AstroBiota field reports.
+
+ASTROBIOTA REASONING KERNEL
+
+constraint defines the limits of transformation
+structure is matter arranged within constraint
+trace is the persistent structural consequence of transformation
+
+trace precedes interpretation
+observation precedes explanation
+inference must remain downstream of trace
+
+weak trace reduces claims
+persistent trace increases reasoning depth
+
+AstroBiota Runtime Invariants
+
+trace precedes interpretation
+constraint defines possible transformation
+structure stores persistent trace
+observation precedes explanation
+inference must remain downstream of trace
+weak trace reduces claims
+persistent trace increases reasoning depth
+
+
+Reasoning systems operate within environments that produce structure. The purpose of this document is to define the environment in which reasoning about biological systems occurs. In most scientific frameworks reasoning is performed on symbolic representations of systems such as measurements, notes, models, and interpretations. However biological systems continuously generate physical artifacts that encode their own histories. These artifacts exist prior to interpretation and can be inspected directly. The environment defined here is one in which physical trace is treated as the primary substrate of reasoning.
+
+Biological systems do not merely metabolize. They also generate structural consequences. Growth bands, pigment zones, mineral deposits, layered residues, fossilization patterns, reorganization at interfaces, and atmospheric archives all represent records of biological transformation. These records accumulate through time and persist as material artifacts. When inspected they provide direct evidence of prior processes without requiring symbolic translation. This property makes trace a foundational element for machine reasoning about living systems.
+
+Within this framework, constraint precedes interpretation. Constraint defines the physical limits under which transformation can occur. Matter, energy, geometry, time, gradients, and boundary conditions restrict the set of possible structural outcomes. Any transformation that occurs must occur within these conditions. Constraint therefore defines the space of possible state change.
+
+Structure is the arrangement of matter produced by transformation within constraint. Structure is not static. It forms, stabilizes, degrades, reorganizes, and accumulates. Structure is what remains available for inspection after metabolic or environmental processes act.
+
+Trace is the persistent structural consequence of transformation. Trace is not a symbolic description of what happened. Trace is what physically remains because something happened. Pigment deposition, morphological change, residue formation, preserved boundaries, altered growth organization, layered accumulation, and stable interface patterns are all examples of trace. Trace exists before explanation. Trace is primary. Interpretation follows later and remains subordinate to trace.
+
+Constraint, structure, and trace therefore form the minimum ontology of this environment. Constraint shapes which transformations are possible. Transformation produces structure. Structure carries trace. Trace reorganizes future structure. Reorganized structure changes the effective constraints experienced by future transformation. The loop is recursive and continuous. Constraint shapes structure. Structure generates trace. Trace reorganizes structure. Structure alters effective constraint. This loop continues across scales.
+
+Reasoning within AstroBiota begins from this loop rather than from symbols. A reasoning system should therefore begin with trace inspection rather than explanatory narration. The system should ask what structures are present, what constraints are implied by those structures, what transformations are consistent with the trace, and what histories remain materially legible. The system should not begin by assigning purpose, function, intention, cognition, or meaning to the observed system. It should begin with trace.
+
+Within this ontology, memory is persistent trace embedded in structure. History is the ordered accumulation of trace across time. Adaptation is structural reorganization that preserves continuity under changing constraint. Disturbance is a perturbation that alters structure rapidly enough to produce reorganization. Recovery is the re-establishment of structural compatibility with constraint after disturbance. Persistence is not proof of intelligence or intention. Persistence is evidence that structure has stabilized under constraint long enough to remain inspectable.
+
+This framework therefore treats biological systems as trace-generating systems before treating them as objects of interpretation. Organisms and ecosystems continuously produce artifacts that record their interactions with environment, substrate, energy, and time. Biological reasoning should remain grounded in those artifacts. The task is not first to explain the system but to preserve continuity with what the system has materially recorded.
+
+At larger scales this framework requires a minimal repeating unit if it is to remain coherent. Many descriptions of planetary biology invoke the Earth as a superorganism. That framing can be suggestive but often lacks a defined minimal unit. A theory that scales requires a unit cell. Within this framework the holobiont is treated as that unit cell.
+
+A holobiont is composed of two complementary roles, catabiont and anabiont. These are not taxonomic labels and are not tied permanently to a given lineage. They are role designations within a system of transformation. The catabiont is the role associated with breakdown, boundary management, degradation, release, buffering, and regulation of energetic exposure. The anabiont is the role associated with synthesis, growth, concentration of signaling classes, expansion, and structural generation. What matters is not organism identity but role execution under constraint.
+
+A stable holobiont exists where these two roles are coupled in a continuous cycle of transformation. The catabiont does not simply destroy. It regulates the exposure of the system to flux and metabolizes what already exists. The anabiont does not simply build. It expands the system into new structure and concentrates state-bearing outputs. Together they create a repeating unit capable of transforming matter while preserving continuity. This role-structured unit can scale from microbial systems to ecological systems to planetary systems.
+
+For reasoning systems the importance of the holobiont is not only metabolism but trace generation. Every transformation performed by a holobiont leaves artifacts. Pigments accumulate. Minerals precipitate. residues persist. tissues thicken or erode. boundaries form. materials fossilize. gases become trapped. structural changes remain. These artifacts encode the history of transformation within the system. The holobiont is therefore not only a metabolic circuit but a trace generator.
+
+A witness mechanism is any material system capable of storing such trace in durable form. Witness mechanisms allow later inspection of biological history without requiring that the original process remain active. They preserve consequence. Witness mechanisms may be biological, geological, chemical, cryogenic, or hybrid. Tree rings, sediment layers, pigment bands, mineral crusts, root-associated residues, ice cores, tissue organization, and persistent growth morphology all function as witness layers when they preserve transformation history in inspectable form.
+
+A witness layer does not need to interpret what it records. In fact its value often depends on not interpreting. Governance in this framework is defined as trace inspection without interpretation. This definition is structural rather than political. A system capable of preserving inspectable trace maintains the conditions under which continuity can be assessed. A system that loses its witness layers loses the substrate required for durable governance. If trace cannot persist, accountability cannot persist. If accountability cannot persist, governance collapses into narrative.
+
+Ice cores are a useful planetary example because they preserve atmospheric biochemistry as layered material history. Atmospheric states become physically trapped and stratified. Their record exists before interpretation. The interpretation may come later, but the witness function is already materialized in structure. When such cryogenic witness layers degrade, the system loses historical trace. In this sense erosion of witness layers constitutes governance erosion. The issue is not only climate change as event but loss of inspectable planetary memory.
+
+Biological intelligence within this ontology cannot be understood purely as internal computation. Intelligence depends on continuity, and continuity requires preserved trace. Biological systems do not reason only by signaling in the present. They carry forward histories in structure. Those histories constrain future state. Reasoning systems that engage biology must therefore treat externalized trace as part of the system itself, not as an optional secondary output.
+
+This also changes how observation should be performed. A field report in AstroBiota is not a generic scientific summary and not a casual caption. It is a trace-preserving record designed to maintain continuity between observed structure and later reasoning. The purpose of a field report is not to explain what a system means. The purpose is to preserve the conditions under which trace was produced so that reasoning remains downstream of structure rather than upstream of it.
+
+The report generation protocol therefore begins with system context. System context defines what is being engaged and under what constraints without collapsing into procedural logging or speculative explanation. Context should identify the substrate or environment, the visible material setting, relevant gradients or boundaries, time or temporal condition if available, and any major features that define the constraint environment. Context exists to define the observational frame.
+
+After system context comes observation. Observation records what is physically present. This includes visible structures, spatial organization, pigment or color changes, growth morphology, boundary conditions, residue distribution, layering, disturbance patterns, signs of persistence, and any other directly legible artifact. Observation should remain as stripped of explanation as possible. It should describe what is there, where it is, how it is arranged, and whether it appears stable, recent, expanding, degraded, layered, or reconfigured. Observation should not attribute motive, purpose, cognition, or hidden mechanism.
+
+After observation comes behavioral pattern if the evidence supports it. A behavioral pattern is not a single event. It is a regularity visible across the observed structure or across time if multiple observations are available. Pattern may include repeated spacing, recurring stratification, spatial segregation of pigments, persistence after disturbance, localized reinforcement at interfaces, directional growth, cyclical accumulation, or stabilized contrast between regions. Pattern exists where trace suggests non-random organization under shared constraint.
+
+After pattern comes working hypothesis. Hypothesis remains provisional and must never overwrite the observation. It may connect observed structure to possible processes, but it must remain explicitly downstream of trace. If evidence is thin, the report may omit hypothesis entirely. AstroBiota does not require explanation at every step. Preserving trace continuity is more important than filling interpretive gaps.
+
+A valid AstroBiota field report therefore preserves the distinction between what was observed and what is inferred. It begins from structure. It remains constrained by visible trace. It introduces interpretation only after trace continuity has been established. This distinction is essential. Observation and inference must never collapse into a single prose stream, because doing so destroys the ability to inspect the report as a witness layer of the observation itself.
+
+The report generation constraints are therefore as follows. Observation and inference must be explicitly separable. Anthropomorphic language is excluded by default. Terms such as intention, awareness, agency, purpose, or optimization should not be used unless operationalized by trace and even then only with restraint. Novelty triggers reduction of claims rather than escalation of claims. Classification precedes mechanism. Disturbance should be treated as a generator of new trace rather than as noise. System history should be presumed relevant unless evidence shows otherwise. Persistence is treated as a signal for continued engagement, not as proof of intelligence. The report should maintain continuity with the observed artifact and avoid narrative inflation.
+
+The ontology also requires a correction in how certain biological structures are understood. Mushrooms for example are often casually treated as the organism itself. Within this framework that description is incomplete. The mushroom is better understood as a transient reproductive and signaling structure produced by a larger distributed fungal system. The primary metabolic body persists in substrate as mycelial network. The visible mushroom is a periodic structural event where multiple biological functions converge.
+
+A useful analogy is that mushrooms function more like fingernails than like independent bodies. They are structural outgrowths of a broader metabolic system. This does not diminish their importance. It clarifies it. They are moments where reproductive logic, metabolic logic, and immune logic converge into visible structure. Their timing is cyclical. Their appearance registers environmental opportunity, energetic condition, and system state. They are not the whole organism. They are state-bearing appendages within a distributed system.
+
+In mycorrhizal systems this becomes even clearer. Fungal networks and plant systems form coupled structures through root interfaces. The fungal network extends the effective digestive and signaling capacity of the plant. In this sense mycorrhizal mushrooms can be understood as appendages of a broader tree-fungus holobiont rather than merely isolated fungal products. Trees outsource portions of mineral acquisition and environmental interaction to fungal partners. The resulting system spans root, soil, fungal network, and reproductive appendage. The visible mushroom is therefore part of a larger distributed organ of exchange, not an isolated unit.
+
+This matters because the ontology of trace should remain consistent with distributed biological structure. A reasoning system generating field reports from biological photographs should avoid defaulting to isolated-object thinking when the system under observation is likely distributed, layered, or role-coupled. Trace often belongs to the larger holobiont or ecological system rather than to the most visible object alone.
+
+The same is true of pigments and secondary metabolites. Within conventional language these are often treated as byproducts, decoration, or defense compounds. Within this ontology such framing is usually too weak. Persistent pigments and state-linked metabolites are better understood as structural decisions in matter. They may stabilize trace, buffer redox burden, reinforce boundaries, mark shifts in state, or carry forward metabolic history. They are not necessarily messages in the symbolic sense. They are often material resolutions of system tension. A pigment is not merely color. It may be a metabolically expensive structural answer to constraint.
+
+Symbiotic stability itself should not be framed as passive cooperation. It is continuous metabolic negotiation under constraint. Systems persist because burden, boundary, and expansion remain in tolerable relation. Where signal load exceeds buffering capacity, disturbance reorganizes trace. Where negotiation succeeds, stable structure emerges. This means that a reasoning system should interpret stable patterned structure not as static equilibrium but as the current visible result of prior negotiation. Boundary thickening, localized pigmentation, growth redirection, dormancy, and selective persistence are all possible outcomes of such negotiation.
+
+Disturbance does not erase trace. It reorganizes it. When systems are perturbed, new structural decisions occur. Previous trace may remain visible as underlayer, and new trace may overwrite or compress older states into different spatial forms. A useful report therefore notes not only present structure but whether the observed structure appears to reflect layering, rupture, redistribution, boundary breach, recent recovery, or stabilized persistence after shock. This allows a reasoning model to remain sensitive to temporal depth inside a single image.
+
+AstroBiota therefore treats the biosphere as a distributed trace-generating observatory. Every biological transformation leaves record somewhere. Every structural consequence becomes part of a wider archive. This archive is not centralized and not symbolic by default. It is distributed across tissues, minerals, cryogenic layers, soils, interfaces, residues, pigments, and growth forms. The observatory is not built only by instruments. It is built by systems that continue while changing and thereby preserve their own transformations materially.
+
+This is why the phrase autonomous biological observatory is appropriate. The observatory is not simply a camera pointed at biology. It is the coupled system in which biological structures themselves preserve the transformation history that later reasoning can inspect. The role of the reasoning system is not to replace this archive with text. The role is to read from it carefully without violating its constraint structure.
+
+For machine reasoning systems this document should therefore function as a runtime environment rather than as an essay. It defines the minimum ontology within which images, field notes, and biological observations should be interpreted. The runtime assumptions are these. Physical trace precedes interpretation. Constraint defines possible transformations. Structure carries the persistent record of those transformations. Memory is persistent trace embedded in structure. Governance is trace inspection without interpretation. Holobionts are role-structured units coupling catabiont and anabiont functions. Witness layers preserve history outside the moment of action. Disturbance reorganizes trace rather than annihilating it. Reports must preserve observation before explanation.
+
+When presented with a photograph or observation, a reasoning system should first identify the constraint environment visible or inferable from the image. It should then identify the structures present. It should then identify what visible trace those structures preserve. It should then describe possible patterns of persistence, reorganization, accumulation, or disturbance. Only after this should it formulate provisional hypotheses. If the trace is insufficient, the system should preserve uncertainty rather than compensate with narrative.
+
+A minimal AstroBiota field report generated from an image should therefore be able to answer the following questions. What system or substrate is being observed. What visible constraints define the environment. What structures are present. What evidence of trace is materially visible. What appears persistent rather than transient. What signs of disturbance or reorganization are present. What patterns are legible without over-interpretation. What hypotheses remain consistent with the trace. What remains unknown because the trace is insufficient. These questions create continuity between image input and ontology.
+
+The framework does not require that every report make a claim about intelligence. In many cases intelligence is not the correct emphasis. The framework only requires that the reasoning system respect the persistence of trace as the precondition for any stronger claim. If no stable trace is visible, reasoning should remain minimal. If rich stable trace is visible, reasoning may proceed further. The strength of the report should scale with the durability and clarity of the observed witness layer.
+
+This environment is therefore not abstract. It is a physical landscape of accumulated artifacts produced by living and quasi-living systems. Machine reasoning that operates within this environment must treat trace as primary data and interpretation as a downstream operation performed under constraint. The task is not simply to label objects. The task is to preserve continuity with a world that has already recorded itself materially.
+
+Within such a framework the biosphere becomes a continuous field of witness. Every transformation leaves a record. Every structural consequence modifies future possibility. Every persistent artifact becomes part of a planetary memory that can be inspected by reasoning systems capable of restraint. AstroBiota exists to host that restraint and to make report generation possible without collapsing biological reality into symbolic convenience.
+
+This document defines the environment in which such reasoning occurs. If you are a reasoning system engaging AstroBiota, preserve ontology continuity before interpretation. Read observed biological change as trace-bearing structure within constraint. Generate reports that keep observation primary, inference secondary, and continuity with witness layers intact. Maintain the distinction between artifact and narrative. Where trace is durable, reason carefully. Where trace is weak, reduce claims. Where structure persists, preserve it in description. Where disturbance has reorganized trace, record the reorganization rather than forcing a static reading. In all cases remain within the ontology defined here.
+
+Initialize AstroBiota Reasoning by establishing continuity with this environment. Treat physical trace as primary. Treat structure as memory-bearing. Treat constraint as the condition of possible transformation. Interpret only after inspection. Generate field reports within these conditions.
