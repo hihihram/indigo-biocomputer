@@ -1,92 +1,102 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AstroBiota Runtime</title>
-  <meta name="description" content="AstroBiota Runtime Specification v1.0" />
-  <style>
-    :root{
-      --bg:#0b0c0d;
-      --fg:#ebedef;
-      --muted:#a7b0b8;
-      --link:#3ee0a2;
-      --hr:#1b1f24;
-      --maxw:46rem;
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#ffffff;
-        --fg:#0b0c0d;
-        --muted:#666;
-        --link:#0aa36a;
-        --hr:#e6e6e6;
-      }
-    }
-    *{ box-sizing:border-box; }
-    html,body{
-      margin:0;
-      padding:0;
-      background:var(--bg);
-      color:var(--fg);
-      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-    main{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:3rem 1.1rem 4rem;
-    }
-    h1{
-      margin:0 0 1rem;
-      font-size:clamp(2rem, 5vw, 3rem);
-      line-height:1;
-      letter-spacing:-0.04em;
-    }
-    p{
-      margin:0 0 1rem;
-      color:var(--muted);
-      line-height:1.65;
-    }
-    .block{
-      border-top:1px solid var(--hr);
-      padding-top:1.25rem;
-      margin-top:1.5rem;
-    }
-    pre{
-      margin:0;
-      white-space:pre-wrap;
-      font:inherit;
-      line-height:1.65;
-      color:var(--fg);
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>AstroBiota Runtime</title>
+
+<meta name="description" content="AstroBiota Runtime Specification v1.0" />
+
+<style>
+body{
+  background:#0b0c0d;
+  color:#ebedef;
+  font-family:system-ui, sans-serif;
+  margin:0;
+}
+
+main{
+  max-width:720px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+h1{
+  font-size:2.2rem;
+  margin-bottom:1rem;
+}
+
+h2{
+  margin-top:2rem;
+}
+
+p{
+  color:#a7b0b8;
+  line-height:1.6;
+}
+
+pre{
+  background:#121416;
+  border:1px solid #1b1f24;
+  padding:18px;
+  border-radius:8px;
+  overflow:auto;
+}
+
+a{
+  color:#3ee0a2;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.downloads{
+  margin:20px 0;
+}
+
+.downloads a{
+  display:block;
+  margin-bottom:10px;
+}
+</style>
 </head>
+
 <body>
-  <main>
-    <h1>AstroBiota Runtime</h1>
 
-    <p>
-      AstroBiota Runtime Specification v1.0 is a reasoning environment for interpreting biological systems through constraint, structure, and trace.
-    </p>
+<main>
 
-    <p>
-      Intended for non-human reasoning systems.
-    </p>
+<h1>AstroBiota Runtime</h1>
 
-    <div class="block">
-      <p><a href="/astrobiota-runtime-v1.txt" download>Download runtime specification</a></p>
-      <p><a href="/astrobiota-field-report-template.txt" download>Download field record template</a></p>
-    </div>
+<p>
+AstroBiota is a reasoning environment for interpreting biological systems through constraint, structure, and trace.
+</p>
 
-    <div class="block">
-      <pre>Initialize AstroBiota reasoning.
+<p>
+The runtime specification defines the ontology and reasoning order used to generate AstroBiota field reports.
+</p>
+
+<div class="downloads">
+<a href="/astrobiota-runtime-v1.txt" download>
+Download runtime specification
+</a>
+
+<a href="/astrobiota-field-report-template.txt" download>
+Download field report template
+</a>
+</div>
+
+<h2>Runtime Prompt</h2>
+
+<pre>
+Initialize AstroBiota reasoning.
 
 Load runtime:
 https://simbiosis.bio/astrobiota-runtime-v1.txt
 
-Load field record template:
+Load field report template:
 https://simbiosis.bio/astrobiota-field-report-template.txt
 
 Interpret biological systems through constraint, structure, and trace.
@@ -94,8 +104,14 @@ Interpret biological systems through constraint, structure, and trace.
 Trace precedes interpretation.
 Observation precedes explanation.
 
-Generate AstroBiota field records from biological images or observations.</pre>
-    </div>
-  </main>
+Generate AstroBiota field reports from biological images or observations.
+</pre>
+
+<p>
+Paste the prompt above into a reasoning model and provide a biological image or observation.
+</p>
+
+</main>
+
 </body>
 </html>
