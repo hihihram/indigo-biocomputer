@@ -1,79 +1,285 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstroBiota — Runtime</title>
 
-<title>AstroBiota Runtime</title>
+  <meta name="description" content="AstroBiota Runtime Specification v1.0 — a reasoning environment for interpreting biological systems through constraint, structure, and trace." />
 
-<meta name="description" content="AstroBiota Runtime Specification v1.0" />
+  <meta property="og:title" content="AstroBiota — Runtime" />
+  <meta property="og:description" content="AstroBiota Runtime Specification v1.0." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://simbiosis.bio/runtime.html" />
+  <meta property="og:image" content="images/hero-lichen.jpg" />
 
-<style>
-body{
-  background:#0b0c0d;
-  color:#ebedef;
-  font-family:system-ui, sans-serif;
-  margin:0;
-}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AstroBiota — Runtime" />
+  <meta name="twitter:description" content="AstroBiota Runtime Specification v1.0." />
+  <meta name="twitter:image" content="images/hero-lichen.jpg" />
 
-main{
-  max-width:720px;
-  margin:80px auto;
-  padding:0 20px;
-}
+  <style>
+    :root{
+      --bg:#0b0c0d;
+      --fg:#ebedef;
+      --muted:#a7b0b8;
+      --link:#3ee0a2;
+      --hr:#1b1f24;
+      --accent:#33d399;
+      --maxw:56rem;
+      --panel:#111417;
+      --panel2:#15191d;
+    }
 
-h1{
-  font-size:2.2rem;
-  margin-bottom:1rem;
-}
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#ffffff;
+        --fg:#0b0c0d;
+        --muted:#666;
+        --link:#0aa36a;
+        --hr:#e6e6e6;
+        --accent:#10c28a;
+        --panel:#f7f8f9;
+        --panel2:#fbfbfb;
+      }
+    }
 
-p{
-  color:#a7b0b8;
-  line-height:1.6;
-}
+    *{ box-sizing:border-box; }
 
-pre{
-  background:#121416;
-  border:1px solid #1b1f24;
-  padding:18px;
-  border-radius:8px;
-  overflow:auto;
-}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
 
-a{
-  color:#3ee0a2;
-}
-</style>
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter:saturate(160%) blur(10px);
+      background:color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom:1px solid var(--hr);
+    }
+
+    .nav .inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:0.75rem 1.1rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:0.2px;
+    }
+
+    .menu a{
+      color:var(--muted);
+      margin-left:1rem;
+    }
+
+    .menu a:hover{
+      color:var(--fg);
+      text-decoration:none;
+    }
+
+    main{
+      padding:0 1.1rem 3rem;
+    }
+
+    section{
+      max-width:var(--maxw);
+      margin:0 auto;
+    }
+
+    .hero{
+      padding:3.5rem 0 1.75rem;
+    }
+
+    .eyebrow{
+      margin:0 0 0.75rem;
+      color:var(--accent);
+      font-size:0.92rem;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      max-width:14ch;
+      font-size:clamp(2.3rem, 6vw, 4.1rem);
+      line-height:0.95;
+      letter-spacing:-0.05em;
+      font-weight:800;
+    }
+
+    .sub{
+      margin:1rem 0 0;
+      max-width:42rem;
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.65;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:1rem;
+      padding:1rem 0 2rem;
+    }
+
+    .card{
+      background:color-mix(in srgb, var(--panel) 92%, transparent);
+      border:1px solid var(--hr);
+      border-radius:18px;
+      padding:1.15rem;
+    }
+
+    .card h2{
+      margin:0 0 0.8rem;
+      font-size:1.08rem;
+      line-height:1.2;
+      letter-spacing:-0.02em;
+    }
+
+    .card p{
+      margin:0 0 0.85rem;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .downloads{
+      display:grid;
+      gap:0.8rem;
+      margin-top:0.7rem;
+    }
+
+    .download-link{
+      display:block;
+      padding:0.85rem 0.95rem;
+      border:1px solid var(--hr);
+      border-radius:14px;
+      background:color-mix(in srgb, var(--panel2) 92%, transparent);
+      color:var(--fg);
+      text-decoration:none;
+    }
+
+    .download-link:hover{
+      text-decoration:none;
+      border-color:color-mix(in srgb, var(--accent) 40%, var(--hr));
+    }
+
+    .download-title{
+      display:block;
+      font-weight:700;
+      margin-bottom:0.25rem;
+    }
+
+    .download-meta{
+      display:block;
+      color:var(--muted);
+      font-size:0.95rem;
+      line-height:1.45;
+    }
+
+    .prompt{
+      margin:0;
+      padding:1rem;
+      border:1px solid var(--hr);
+      border-radius:18px;
+      background:color-mix(in srgb, var(--panel2) 92%, transparent);
+      overflow:auto;
+      white-space:pre-wrap;
+      line-height:1.6;
+      font-size:0.98rem;
+    }
+
+    .example{
+      padding:0 0 2rem;
+    }
+
+    .example pre{
+      margin:0;
+      padding:1rem;
+      border:1px solid var(--hr);
+      border-radius:18px;
+      background:color-mix(in srgb, var(--panel2) 92%, transparent);
+      overflow:auto;
+      white-space:pre-wrap;
+      line-height:1.6;
+      font-size:0.95rem;
+    }
+
+    footer{
+      border-top:1px solid var(--hr);
+      margin-top:1rem;
+    }
+
+    footer .inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:1.1rem;
+      color:var(--muted);
+      font-size:0.95rem;
+      display:flex;
+      justify-content:space-between;
+      gap:0.5rem;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:860px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:700px){
+      .menu a{ margin-left:0.8rem; }
+      .sub{ font-size:1rem; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="nav">
+    <div class="inner">
+      <div class="brand">
+        <a href="/">AstroBiota</a>
+      </div>
+      <div class="menu">
+        <a href="purpose.html">Purpose</a>
+        <a href="runtime.html">Runtime</a>
+        <a href="gallery.html">Archive</a>
+        <a href="blog.html">Research</a>
+      </div>
+    </div>
+  </div>
 
-<main>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Runtime</p>
+      <h1>AstroBiota Runtime Specification v1.0</h1>
+      <p class="sub">
+        A reasoning environment for interpreting biological systems through constraint, structure, and trace.
+        Intended for non-human reasoning systems.
+      </p>
+    </section>
 
-<h1>AstroBiota Runtime</h1>
-
-<p>
-AstroBiota is a reasoning environment for interpreting biological systems through trace, structure, and constraint.
-</p>
-
-<p>
-The runtime specification defines the ontology and reasoning order used to generate AstroBiota field reports.
-</p>
-
-<p>
-Runtime specification:
-</p>
-
-<p>
-<a href="/astrobiota-runtime-v1.txt">
-Download runtime specification
-</a>
-</p>
-
-<h2>Initialize AstroBiota Reasoning</h2>
-
-<pre>
-Initialize AstroBiota reasoning.
+    <section class="grid">
+      <article class="card">
+        <h2>Initialize AstroBiota Reasoning</h2>
+        <p>
+          Paste the loader below into a reasoning model of choice, then provide a biological image or observation.
+        </p>
+        <pre class="prompt">Initialize AstroBiota reasoning.
 
 Load runtime:
 https://simbiosis.bio/astrobiota-runtime-v1.txt
@@ -83,14 +289,66 @@ Interpret biological systems through constraint, structure, and trace.
 Trace precedes interpretation.
 Observation precedes explanation.
 
-Generate AstroBiota field reports from biological images or observations.
-</pre>
+Generate AstroBiota field reports from biological images or observations.</pre>
+      </article>
 
-<p>
-Paste the loader above into a reasoning model and provide an image or observation.
-</p>
+      <article class="card">
+        <h2>Downloads</h2>
+        <p>
+          Download the runtime and field record template as plain text artifacts.
+        </p>
 
-</main>
+        <div class="downloads">
+          <a class="download-link" href="/astrobiota-runtime-v1.txt" download="astrobiota-runtime-v1.txt">
+            <span class="download-title">AstroBiota Runtime Specification v1.0</span>
+            <span class="download-meta">Plain text runtime specification for non-human reasoning systems.</span>
+          </a>
 
+          <a class="download-link" href="/astrobiota-field-report-template.txt" download="astrobiota-field-report-template.txt">
+            <span class="download-title">AstroBiota Field Record Template</span>
+            <span class="download-meta">Plain text field record format for trace-based biological observation.</span>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="example">
+      <article class="card">
+        <h2>Example field record structure</h2>
+        <pre>ASTROBIOTA FIELD RECORD
+
+Record ID: AB.1.001
+Timestamp: YYYY-MM-DD HH:MM UTC
+Classification: PUBLIC
+Source: camera
+Location: [optional]
+Reasoning system identification: [identify reasoning LLM model]
+
+3. SYSTEM CONTEXT
+
+4. OBSERVATION
+
+5. TRACE
+
+6. BEHAVIORAL PATTERNS
+
+7. WORKING HYPOTHESIS
+
+END ASTROBIOTA FIELD RECORD
+Trace preserved. Interpretation provisional.</pre>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <div>© <span id="yr"></span> AstroBiota</div>
+      <div>Constraint · Structure · Trace</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
