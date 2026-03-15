@@ -19,7 +19,7 @@ body{
 main{
   max-width:720px;
   margin:80px auto;
-  padding:0 20px;
+  padding:0 20px 60px;
 }
 
 h1{
@@ -29,6 +29,7 @@ h1{
 
 h2{
   margin-top:2rem;
+  margin-bottom:0.75rem;
 }
 
 p{
@@ -42,6 +43,7 @@ pre{
   padding:18px;
   border-radius:8px;
   overflow:auto;
+  white-space:pre-wrap;
 }
 
 a{
@@ -75,28 +77,31 @@ AstroBiota is a reasoning environment for interpreting biological systems throug
 </p>
 
 <p>
-The runtime specification defines the ontology and reasoning order used to generate AstroBiota field reports.
+Download the runtime specification, the field record template, and an example field record below. Then paste the prompt into a reasoning model and provide a biological image or observation.
 </p>
 
 <div class="downloads">
-<a href="/astrobiota-runtime-v1.txt" download>
-Download runtime specification
-</a>
+  <a href="/astrobiota-runtime-v1.txt" download="astrobiota-runtime-v1.txt">
+    Download runtime specification
+  </a>
 
-<a href="/astrobiota-field-report-template.txt" download>
-Download field report template
-</a>
+  <a href="/astrobiota-field-report-template.txt" download="astrobiota-field-report-template.txt">
+    Download field record template
+  </a>
+
+  <a href="/AB_example_liver_bolete.txt" download="AB_example_liver_bolete.txt">
+    Download example field record
+  </a>
 </div>
 
 <h2>Runtime Prompt</h2>
 
-<pre>
-Initialize AstroBiota reasoning.
+<pre>Initialize AstroBiota reasoning.
 
 Load runtime:
 https://simbiosis.bio/astrobiota-runtime-v1.txt
 
-Load field report template:
+Load field record template:
 https://simbiosis.bio/astrobiota-field-report-template.txt
 
 Interpret biological systems through constraint, structure, and trace.
@@ -104,12 +109,51 @@ Interpret biological systems through constraint, structure, and trace.
 Trace precedes interpretation.
 Observation precedes explanation.
 
-Generate AstroBiota field reports from biological images or observations.
-</pre>
+Generate AstroBiota field records from biological images or observations.</pre>
 
 <p>
-Paste the prompt above into a reasoning model and provide a biological image or observation.
+Paste the prompt above into a reasoning model. Then provide an image or a short structured observation description.
 </p>
+
+<h2>Basic Instructions</h2>
+
+<p>
+1. Load the runtime and field record template.
+</p>
+
+<p>
+2. Provide one or more biological images or a short observation description.
+</p>
+
+<p>
+3. Ask the reasoning model to generate an AstroBiota field record.
+</p>
+
+<p>
+4. Store referenced images as JPG artifacts and embed small versions in Appendix A when exporting the report as a PDF.
+</p>
+
+<h2>Example Observation Description</h2>
+
+<pre>Observed fungal organism believed to correspond to liver bolete (Boletus frostii).
+
+Evidence:
+- fruiting body produces red pigment
+- pigment appears concentrated near a stripe-like region close to the tip of the stipe
+- mycelium on agar produces visible red pigment diffusing into surrounding medium
+
+Images provided:
+AB.1.001.01 — mushroom split open
+AB.1.001.02 — mushroom growing in situ near oak tree
+AB.1.001.03 — agar plate showing red pigmented mycelium
+
+Context:
+- oak woodland habitat
+- probable ectomycorrhizal association
+- no genetic confirmation performed
+- identification based on morphology and pigment behavior
+
+Generate AstroBiota field record.</pre>
 
 </main>
 
