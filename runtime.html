@@ -213,16 +213,111 @@ h1{
 
 pre{
   margin:0;
-  background:linear-gradient(180deg, #ffffff, #f8fafc);
-  border:1px solid var(--line);
-  padding:1rem;
-  border-radius:16px;
   overflow:auto;
   white-space:pre-wrap;
-  line-height:1.58;
-  color:#22303a;
   font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size:0.94rem;
+  line-height:1.58;
+}
+
+/* runtime prompt box */
+
+.runtime-box{
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  box-shadow:0 8px 24px rgba(18,36,56,0.06);
+}
+
+.runtime-box-head{
+  display:flex;
+  align-items:center;
+  gap:0.55rem;
+  flex-wrap:wrap;
+  padding:0.8rem 0.9rem;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(90deg, var(--navy-soft) 0%, #ffffff 45%, var(--green-soft) 100%);
+}
+
+.runtime-dot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  display:inline-block;
+}
+
+.runtime-title{
+  margin-left:0.2rem;
+  color:var(--muted);
+  font-size:0.84rem;
+  font-weight:700;
+  letter-spacing:0.01em;
+}
+
+.runtime-pre{
+  padding:1.15rem 1.1rem 1.2rem;
+  background:linear-gradient(180deg, #ffffff 0%, rgba(236,248,241,0.22) 100%);
+  color:#22303a;
+}
+
+/* example prompt box */
+
+.prompt-box{
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  box-shadow:0 8px 24px rgba(18,36,56,0.06);
+}
+
+.prompt-box-head{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  flex-wrap:wrap;
+  padding:0.8rem 0.9rem;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(90deg, var(--navy-soft) 0%, #ffffff 45%, var(--green-soft) 100%);
+}
+
+.prompt-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:28px;
+  padding:0.3rem 0.65rem;
+  border-radius:999px;
+  font-size:0.78rem;
+  font-weight:800;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  border:1px solid transparent;
+}
+
+.prompt-pill-green{
+  background:var(--green-soft);
+  color:var(--green-deep);
+  border-color:#cfeedd;
+}
+
+.prompt-pill-navy{
+  background:var(--navy-soft);
+  color:var(--navy);
+  border-color:#d9e4ef;
+}
+
+.prompt-pill-red{
+  background:var(--red-soft);
+  color:var(--red);
+  border-color:#f4d6da;
+}
+
+.prompt-pre{
+  padding:1.15rem 1.1rem 1.2rem;
+  background:linear-gradient(180deg, #ffffff 0%, rgba(236,248,241,0.22) 100%);
+  color:var(--fg);
 }
 
 .steps{
@@ -305,6 +400,12 @@ footer .inner{
   .brand img{
     height:36px;
   }
+
+  .runtime-pre,
+  .prompt-pre{
+    font-size:0.9rem;
+    padding:1rem 0.95rem 1.05rem;
+  }
 }
 </style>
 </head>
@@ -350,7 +451,16 @@ footer .inner{
             <span class="card-tag">v1.0</span>
           </div>
           <div class="card-body">
-<pre>Initialize AstroBiota reasoning.
+
+            <div class="runtime-box">
+              <div class="runtime-box-head">
+                <span class="runtime-dot" style="background: var(--red);"></span>
+                <span class="runtime-dot" style="background: var(--green);"></span>
+                <span class="runtime-dot" style="background: var(--navy);"></span>
+                <span class="runtime-title">astrobiota_runtime_prompt.txt</span>
+              </div>
+
+<pre class="runtime-pre">Initialize AstroBiota reasoning.
 
 Load runtime:
 https://simbiosis.bio/astrobiota-runtime-v1.txt
@@ -367,6 +477,8 @@ Generate AstroBiota field records from biological images or observations.
 
 SPAM this until it meets standards:
 adhere to the guidelines astrobiota reasoning. that is all i can say. I inspected your work and it is not adhered to the guidelines. Adhere to the guidelines astrobiota reasoning. that is all i can say so just do it right.</pre>
+            </div>
+
           </div>
         </div>
 
@@ -377,12 +489,12 @@ adhere to the guidelines astrobiota reasoning. that is all i can say. I inspecte
           </div>
           <div class="card-body">
             <p class="lead" style="margin-top:0;">
-              Paste the runtime prompt into a reasoning model, then provide biological images or a short observation description.
+              Paste the runtime prompt into any reasoning model, then provide biological images or a short observation description.
             </p>
 
             <div class="note">
               <p>
-                The runtime is meant to keep observation anchored to biological trace and to produce consistent AstroBiota field records.
+                The runtime keeps observation anchored to biological trace and helps produce consistent AstroBiota field records.
               </p>
             </div>
           </div>
@@ -414,7 +526,14 @@ adhere to the guidelines astrobiota reasoning. that is all i can say. I inspecte
     <section class="section">
       <h2 class="section-title">Example observation description</h2>
 
-<pre>Observed fungal organism believed to correspond to liver bolete.
+      <div class="prompt-box">
+        <div class="prompt-box-head">
+          <span class="prompt-pill prompt-pill-green">AstroBiota</span>
+          <span class="prompt-pill prompt-pill-navy">Observation Prompt</span>
+          <span class="prompt-pill prompt-pill-red">Example</span>
+        </div>
+
+<pre class="prompt-pre">Observed fungal organism believed to correspond to liver bolete.
 
 Evidence:
 - fruiting body produces red pigment
@@ -433,6 +552,7 @@ Context:
 - identification based on morphology and pigment behavior
 
 Generate AstroBiota field record.</pre>
+      </div>
     </section>
 
     <section class="section">
