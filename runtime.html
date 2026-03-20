@@ -16,6 +16,8 @@
   --line:#1b1f24;
 
   --green:#3cb371;
+  --green-deep:#0f6c4f;
+
   --navy:#122438;
   --red:#d84b55;
 
@@ -41,16 +43,20 @@ a:hover{
   text-decoration:underline;
 }
 
-/* NAV */
+/* NAV — MATCH HOME */
 
 .nav{
-  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:linear-gradient(90deg, var(--green-deep), var(--green));
+  border-bottom:1px solid rgba(0,0,0,0.2);
 }
 
 .nav .inner{
   max-width:var(--maxw);
   margin:0 auto;
-  padding:0.9rem 1rem;
+  padding:0.85rem 1rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -64,15 +70,16 @@ a:hover{
 
 .menu{
   display:flex;
-  gap:1rem;
+  gap:1.1rem;
 }
 
 .menu a{
-  color:var(--muted);
+  color:rgba(255,255,255,0.85);
 }
 
 .menu a:hover{
   color:#fff;
+  text-decoration:none;
 }
 
 /* MAIN */
@@ -172,6 +179,8 @@ footer{
 
 <body>
 
+<!-- NAV -->
+
 <div class="nav">
   <div class="inner">
     <div class="brand">
@@ -186,6 +195,8 @@ footer{
     </div>
   </div>
 </div>
+
+<!-- MAIN -->
 
 <main>
 
