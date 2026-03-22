@@ -10,23 +10,27 @@
 
 <style>
 :root{
-  --bg:#0b0c0d;
-  --fg:#ebedef;
-  --muted:#a7b0b8;
-  --line:#1b1f24;
+  --bg:#ffffff;
+  --fg:#0b0c0d;
+  --muted:#5f6770;
+  --line:#e6e8eb;
 
   --green:#3cb371;
   --green-deep:#0f6c4f;
-  --green-soft:#123126;
+  --green-soft:#ecf8f1;
 
   --navy:#122438;
+  --navy-soft:#eef3f8;
+
   --red:#d84b55;
   --red-deep:#bf3b46;
 
-  --panel:#0f1113;
-  --panel-2:#111418;
+  --panel:#0b0c0d;
+  --panel-2:#15181b;
+  --panel-line:#262b31;
 
-  --maxw:720px;
+  --maxw:58rem;
+  --radius:18px;
 }
 
 *{ box-sizing:border-box; }
@@ -36,11 +40,11 @@ html,body{
   padding:0;
   background:var(--bg);
   color:var(--fg);
-  font-family:system-ui, sans-serif;
+  font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 a{
-  color:var(--green);
+  color:var(--green-deep);
   text-decoration:none;
 }
 
@@ -54,12 +58,12 @@ a:hover{
   position:sticky;
   top:0;
   z-index:50;
-  background:#050607;
-  border-bottom:1px solid rgba(255,255,255,0.08);
+  background:#ffffff;
+  border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
 .nav .inner{
-  max-width:58rem;
+  max-width:var(--maxw);
   margin:0 auto;
   padding:0.75rem 1rem;
   display:grid;
@@ -117,7 +121,6 @@ a:hover{
 .menu a[href="runtime.html"]{
   background:var(--red);
   color:#ffffff;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.04) inset;
 }
 
 .menu a[href="runtime.html"]:hover{
@@ -128,63 +131,115 @@ a:hover{
 
 main{
   max-width:var(--maxw);
-  margin:56px auto;
-  padding:0 1rem 64px;
+  margin:0 auto;
+  padding:2.2rem 1.1rem 4.2rem;
+}
+
+.hero{
+  margin-bottom:2rem;
+}
+
+.kicker{
+  display:inline-block;
+  margin:0 0 0.75rem;
+  padding:0.38rem 0.68rem;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff5f6;
+  color:var(--red);
+  font-size:0.82rem;
+  font-weight:800;
+  letter-spacing:0.03em;
 }
 
 h1{
-  font-size:2.15rem;
-  line-height:1.02;
-  letter-spacing:-0.03em;
-  margin:0 0 1rem;
+  margin:0 0 0.7rem;
+  font-size:clamp(2.2rem, 5vw, 3.6rem);
+  line-height:0.96;
+  letter-spacing:-0.04em;
+  font-weight:850;
 }
 
-h2{
-  margin-top:2rem;
-  margin-bottom:0.7rem;
-  font-size:1.08rem;
-  color:#ffffff;
-  letter-spacing:0.01em;
-}
-
-p{
+.hero-sub{
+  max-width:42rem;
   color:var(--muted);
-  line-height:1.65;
-  margin:0 0 1rem;
+  line-height:1.72;
+  font-size:1.05rem;
+  margin:0;
 }
 
 .intro{
+  margin-top:1.3rem;
+  padding:1rem 1.05rem;
   border:1px solid var(--line);
   border-left:4px solid var(--red);
   border-radius:14px;
-  padding:1rem 1rem 0.15rem;
-  background:linear-gradient(180deg, rgba(216,75,85,0.08), rgba(216,75,85,0.02));
-  margin-bottom:1.5rem;
+  background:linear-gradient(180deg, #ffffff, #fff7f8);
 }
 
-/* CODE BOX */
+.intro p{
+  margin:0 0 0.8rem;
+  color:var(--muted);
+  line-height:1.65;
+}
 
-.code-box{
+.intro p:last-child{
+  margin-bottom:0;
+}
+
+section{
+  margin-top:2rem;
+}
+
+.section-title{
+  margin:0 0 0.65rem;
+  font-size:1.35rem;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+}
+
+.lead{
+  margin:0 0 1rem;
+  color:var(--muted);
+  line-height:1.68;
+}
+
+/* COPY BOX */
+
+.copy-card{
   border:1px solid var(--line);
-  border-radius:12px;
+  border-radius:20px;
   overflow:hidden;
-  margin-top:1rem;
-  background:var(--panel);
-  box-shadow:0 8px 28px rgba(0,0,0,0.22);
+  background:#ffffff;
+  box-shadow:0 12px 34px rgba(10,12,13,0.07);
 }
 
-.code-head{
+.copy-top{
   display:flex;
   align-items:center;
-  gap:6px;
-  padding:0.7rem 0.8rem;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0.9rem 1rem;
   border-bottom:1px solid var(--line);
-  background:var(--panel-2);
+  background:linear-gradient(180deg, #ffffff, #f8fafb);
+}
+
+.copy-meta{
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
+  min-width:0;
+}
+
+.dots{
+  display:flex;
+  align-items:center;
+  gap:0.35rem;
 }
 
 .dot{
-  width:8px;
-  height:8px;
+  width:9px;
+  height:9px;
   border-radius:50%;
 }
 
@@ -192,50 +247,78 @@ p{
 .dot.green{ background:var(--green); }
 .dot.navy{ background:var(--navy); }
 
-.code-title{
-  margin-left:6px;
-  font-size:0.75rem;
-  color:var(--muted);
+.copy-label{
+  font-size:0.82rem;
+  color:#6b7480;
+  font-weight:700;
   letter-spacing:0.03em;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.copy-btn{
+  appearance:none;
+  border:1px solid var(--line);
+  background:#ffffff;
+  color:var(--fg);
+  border-radius:999px;
+  padding:0.55rem 0.8rem;
+  font-weight:700;
+  cursor:pointer;
+  line-height:1;
+  transition:background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.copy-btn:hover{
+  background:#f4f7f8;
+  transform:translateY(-1px);
+}
+
+.code-shell{
+  background:var(--panel);
 }
 
 pre{
   margin:0;
-  padding:16px;
-  background:#0b0c0d;
-  color:#d6dde3;
+  padding:1.15rem 1.1rem 1.2rem;
+  color:#ecf1f5;
   overflow:auto;
   white-space:pre-wrap;
-  line-height:1.55;
+  line-height:1.58;
   font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size:0.9rem;
+  font-size:0.94rem;
 }
-
-/* STEPS */
 
 .steps{
   display:grid;
-  gap:0.75rem;
-  margin-top:0.9rem;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
 }
 
 .step{
   border:1px solid var(--line);
-  border-radius:14px;
-  padding:0.9rem 1rem;
-  background:linear-gradient(180deg, #0d1012, #0b0c0d);
+  border-radius:16px;
+  padding:1rem;
+  background:#fff;
 }
 
 .step strong{
-  color:#ffffff;
+  display:block;
+  margin-bottom:0.35rem;
+  color:var(--navy);
+  font-size:1rem;
 }
 
-/* DOWNLOADS */
+.step p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.58;
+}
 
 .downloads{
-  margin-top:1.5rem;
   display:grid;
-  gap:0.7rem;
+  gap:0.75rem;
 }
 
 .downloads a{
@@ -243,25 +326,29 @@ pre{
   padding:0.95rem 1rem;
   border:1px solid var(--line);
   border-radius:14px;
-  background:#0d1012;
-  color:#ffffff;
-  font-weight:600;
+  background:#fff;
+  color:var(--fg);
+  font-weight:700;
+  transition:transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
 .downloads a:hover{
-  border-color:#273039;
-  background:#111418;
+  transform:translateY(-1px);
+  background:#fafcfc;
+  border-color:#d8dee4;
 }
 
 .downloads a:first-child{
   border-left:4px solid var(--green);
 }
 
-.downloads a:last-child{
+.downloads a:nth-child(2){
   border-left:4px solid var(--red);
 }
 
-/* FOOTER */
+.downloads a:nth-child(3){
+  border-left:4px solid var(--navy);
+}
 
 footer{
   border-top:1px solid var(--line);
@@ -269,7 +356,7 @@ footer{
 }
 
 footer .inner{
-  max-width:58rem;
+  max-width:var(--maxw);
   margin:0 auto;
   padding:1rem 1.1rem 1.2rem;
   color:var(--muted);
@@ -280,7 +367,11 @@ footer .inner{
   flex-wrap:wrap;
 }
 
-/* MOBILE */
+@media (max-width:900px){
+  .steps{
+    grid-template-columns:1fr;
+  }
+}
 
 @media (max-width:820px){
   .nav .inner{
@@ -303,10 +394,6 @@ footer .inner{
     padding:0.42rem 0.62rem;
     font-size:0.78rem;
     min-height:32px;
-  }
-
-  main{
-    margin:42px auto;
   }
 }
 
@@ -331,11 +418,21 @@ footer .inner{
   }
 
   main{
-    padding:0 0.9rem 56px;
+    padding:1.6rem 0.9rem 3.5rem;
   }
 
-  h1{
-    font-size:1.85rem;
+  .copy-top{
+    padding:0.8rem 0.85rem;
+  }
+
+  .copy-btn{
+    padding:0.5rem 0.72rem;
+    font-size:0.82rem;
+  }
+
+  pre{
+    padding:1rem 0.9rem 1.05rem;
+    font-size:0.88rem;
   }
 }
 </style>
@@ -361,30 +458,42 @@ footer .inner{
 </div>
 
 <main>
-
-  <h1>AstroBiota Runtime</h1>
-
-  <div class="intro">
-    <p>
-      AstroBiota is a reasoning environment for interpreting biological systems through constraint, structure, and trace.
+  <div class="hero">
+    <span class="kicker">Runtime</span>
+    <h1>AstroBiota Runtime</h1>
+    <p class="hero-sub">
+      A utility layer for interpreting biological systems through constraint, structure, and trace. Copy the prompt, paste it into a reasoning model, add biological observations or images, and generate a structured field record.
     </p>
 
-    <p>
-      Use the runtime prompt below in any reasoning model. Provide biological images or a short observation description to generate a structured field record.
-    </p>
+    <div class="intro">
+      <p>
+        This page is meant to be functional. The prompt blocks below are the core utility surface.
+      </p>
+      <p>
+        Keep the page clean, copy the text directly, and use Runtime as the red-accented utility layer of the site.
+      </p>
+    </div>
   </div>
 
-  <h2>Runtime Prompt</h2>
+  <section>
+    <h2 class="section-title">Runtime Prompt</h2>
+    <p class="lead">Copy this block directly into ChatGPT, Claude, or another reasoning model.</p>
 
-  <div class="code-box">
-    <div class="code-head">
-      <span class="dot red"></span>
-      <span class="dot green"></span>
-      <span class="dot navy"></span>
-      <span class="code-title">astrobiota_runtime_prompt.txt</span>
-    </div>
+    <div class="copy-card">
+      <div class="copy-top">
+        <div class="copy-meta">
+          <div class="dots">
+            <span class="dot red"></span>
+            <span class="dot green"></span>
+            <span class="dot navy"></span>
+          </div>
+          <span class="copy-label">astrobiota_runtime_prompt.txt</span>
+        </div>
+        <button class="copy-btn" onclick="copyBlock('runtimePrompt', this)">Copy</button>
+      </div>
 
-<pre>Initialize AstroBiota reasoning.
+      <div class="code-shell">
+<pre id="runtimePrompt">Initialize AstroBiota reasoning.
 
 Load runtime:
 https://simbiosis.bio/astrobiota-runtime-v1.txt
@@ -401,27 +510,50 @@ Generate AstroBiota field records from biological images or observations.
 
 SPAM this until it meets standards:
 adhere to the guidelines astrobiota reasoning. that is all i can say. I inspected your work and it is not adhered to the guidelines. Adhere to the guidelines astrobiota reasoning. that is all i can say so just do it right.</pre>
-  </div>
-
-  <h2>Basic Instructions</h2>
-
-  <div class="steps">
-    <div class="step"><strong>1.</strong> Copy the runtime prompt into a reasoning model like ChatGPT or Claude.</div>
-    <div class="step"><strong>2.</strong> Provide biological images or a short observation description.</div>
-    <div class="step"><strong>3.</strong> Generate an AstroBiota field record and export it as PDF.</div>
-  </div>
-
-  <h2>Example Observation</h2>
-
-  <div class="code-box">
-    <div class="code-head">
-      <span class="dot red"></span>
-      <span class="dot green"></span>
-      <span class="dot navy"></span>
-      <span class="code-title">observation_example.txt</span>
+      </div>
     </div>
+  </section>
 
-<pre>Observed fungal organism believed to correspond to liver bolete.
+  <section>
+    <h2 class="section-title">Basic Instructions</h2>
+
+    <div class="steps">
+      <div class="step">
+        <strong>1. Paste prompt</strong>
+        <p>Copy the runtime prompt into a reasoning model like ChatGPT or Claude.</p>
+      </div>
+
+      <div class="step">
+        <strong>2. Add observation</strong>
+        <p>Provide biological images or a short observation description.</p>
+      </div>
+
+      <div class="step">
+        <strong>3. Generate record</strong>
+        <p>Produce an AstroBiota field record and export it as PDF.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Example Observation</h2>
+    <p class="lead">Use a concise observation block like this after the runtime prompt.</p>
+
+    <div class="copy-card">
+      <div class="copy-top">
+        <div class="copy-meta">
+          <div class="dots">
+            <span class="dot red"></span>
+            <span class="dot green"></span>
+            <span class="dot navy"></span>
+          </div>
+          <span class="copy-label">observation_example.txt</span>
+        </div>
+        <button class="copy-btn" onclick="copyBlock('observationExample', this)">Copy</button>
+      </div>
+
+      <div class="code-shell">
+<pre id="observationExample">Observed fungal organism believed to correspond to liver bolete.
 
 Evidence:
 - fruiting body produces red pigment
@@ -440,14 +572,19 @@ Context:
 - identification based on morphology and pigment behavior
 
 Generate AstroBiota field record.</pre>
-  </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="downloads">
-    <a href="/astrobiota-runtime-v1.txt" download>Download runtime specification</a>
-    <a href="/astrobiota-field-report-template.txt" download>Download field record template</a>
-    <a href="/astrobiota_field_record_AB.1.001_liver_bolete.pdf" download>Download example field record</a>
-  </div>
+  <section>
+    <h2 class="section-title">Downloads</h2>
 
+    <div class="downloads">
+      <a href="/astrobiota-runtime-v1.txt" download>Download runtime specification</a>
+      <a href="/astrobiota-field-report-template.txt" download>Download field record template</a>
+      <a href="/astrobiota_field_record_AB.1.001_liver_bolete.pdf" download>Download example field record</a>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -459,6 +596,19 @@ Generate AstroBiota field record.</pre>
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+async function copyBlock(id, button){
+  const text = document.getElementById(id).innerText;
+  try{
+    await navigator.clipboard.writeText(text);
+    const original = button.textContent;
+    button.textContent = 'Copied';
+    setTimeout(() => button.textContent = original, 1200);
+  } catch (e){
+    button.textContent = 'Copy failed';
+    setTimeout(() => button.textContent = 'Copy', 1400);
+  }
+}
 </script>
 
 </body>
