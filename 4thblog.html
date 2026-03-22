@@ -391,51 +391,99 @@
     <a class="back-link" href="blog.html">← Back to Research</a>
     <div class="kicker">Research</div>
     <h1>Artifact-First Science</h1>
-    <p>Published on <time datetime="2026-04-18">April 18, 2026</time> · <span class="pill">Essay</span> <span class="pill">Metascience</span></p>
+    <p>Published on <time datetime="2026-03-22">March 22, 2026</time> · <span class="pill">Essay</span> <span class="pill">Metascience</span></p>
     <p class="lead">
-      Trace Invariance Logic as missing infrastructure for scientific observation in the age of AI.
+      A core bottleneck in biology is that early visual observations are rarely captured in a structured, reusable form before they are compressed into interpretation. Trace Invariance Logic is a proposal to fix that bottleneck by making inspectable artifact the primary data layer for scientific reporting.
     </p>
 
     <p>
-      Science records conclusions far better than it records observations.
+      Science has become very good at producing interpretation.
     </p>
 
     <p>
-      This essay proposes a simple shift: treat physical artifacts as the primary data layer, and structure reasoning around them.
+      It is still surprisingly bad at preserving the earliest observational layer from which interpretation arises.
     </p>
 
     <p>
-      Trace Invariance Logic is a minimal ontology and constraint-based grammar designed for machine reasoning systems. It forces observation to be recorded from inspectable trace before interpretation is allowed.
+      This essay argues that artifact-first reporting is now missing scientific infrastructure: a lightweight protocol that forces observation to be recorded from inspectable trace before explanation is allowed.
     </p>
   </header>
 
   <main>
-    <p>
-      Scientific publishing is entering a structural transition.
-    </p>
+    <h2>The Bottleneck</h2>
 
     <p>
-      AI systems can now generate scientific text, analysis, and interpretation at unprecedented speed. While this promises to accelerate discovery, it also exposes a deeper weakness in how modern science records evidence.
+      In my own work with fungal specimens, cultures, and long-horizon biological systems, the same bottleneck appears repeatedly:
     </p>
 
     <p><strong>
-      The problem is not AI.
+      early observations are noticed, but not recorded in a structured form that remains portable, inspectable, and reusable.
     </strong></p>
+
+    <p>
+      A researcher sees a pigment band, a morphological anomaly, a repeated structure across field and culture, or a subtle environmental pattern. That signal may matter a great deal. But it is usually captured informally: in a photo roll, in scattered notebook fragments, in memory, or in a narrative written much later.
+    </p>
+
+    <p>
+      By the time a result becomes a paper, much of the original observational reasoning has already been compressed into interpretation.
+    </p>
+
+    <p>
+      This is not a minor inconvenience. It is a genuine bottleneck in discovery, especially in fields where early visual anomaly detection matters: biology, mycology, microbiology, ecology, developmental systems, and field-to-lab work more broadly.
+    </p>
 
     <p><strong>
-      The problem is that scientific infrastructure is still organized around interpretation rather than observation.
+      Science records conclusions far better than it records observations.
+    </strong></p>
+
+    <h2>Why This Becomes Urgent Now</h2>
+
+    <p>
+      AI changes the urgency of this bottleneck.
+    </p>
+
+    <p>
+      We are entering a period in which scientific text, analysis, and interpretation can be generated extremely quickly. That creates obvious upside, but it also creates a structural asymmetry:
+    </p>
+
+    <ul>
+      <li>interpretation is becoming abundant</li>
+      <li>observation remains weakly structured</li>
+      <li>the link between evidence and claim is at risk of becoming looser rather than tighter</li>
+    </ul>
+
+    <p>
+      The problem is not that AI exists.
+    </p>
+
+    <p><strong>
+      The problem is that the infrastructure for disciplined observation has not improved at the same pace as the infrastructure for generated interpretation.
     </strong></p>
 
     <p>
-      The infrastructure for capturing observations has changed far less than the infrastructure for generating interpretation.
+      If science gets much faster at writing before it gets better at preserving evidence, it risks drifting toward narrative fluency rather than evidence-anchored discovery.
+    </p>
+
+    <h2>What Is Missing</h2>
+
+    <p>
+      Science already has many structures for results:
+    </p>
+
+    <ul>
+      <li>papers</li>
+      <li>grants</li>
+      <li>methods sections</li>
+      <li>supplementary data</li>
+      <li>figures and captions</li>
+    </ul>
+
+    <p>
+      What it lacks is a lightweight, public, portable structure for recording artifact-first observations before they harden into narrative.
     </p>
 
     <p>
-      Most scientific papers are structured around hypotheses, analysis, and narrative explanation. Yet the earliest stages of discovery rarely begin with theory. They begin with <strong>artifacts — observable traces produced by natural systems.</strong>
-    </p>
-
-    <p>
-      These artifacts include:
+      In many disciplines, especially biology, discovery starts from artifacts:
     </p>
 
     <ul>
@@ -443,30 +491,22 @@
       <li>cultures and colonies</li>
       <li>microscopy images</li>
       <li>morphological structures</li>
-      <li>environmental patterns</li>
+      <li>field patterns</li>
       <li>behavioral traces</li>
     </ul>
 
-    <p>
-      In many disciplines, especially biology, discovery begins when a researcher notices a pattern within these artifacts. Yet our documentation systems rarely capture this stage of reasoning in a structured way.
-    </p>
-
-    <p>
-      Instead, early observations remain scattered across notebooks, image folders, or informal notes. By the time a discovery becomes a publication, much of the original observational reasoning has already been compressed or lost.
-    </p>
-
-    <p>
-      As AI accelerates the generation of scientific text, this imbalance becomes increasingly problematic. If interpretation becomes easy to produce while observations remain poorly structured, scientific communication risks drifting toward narrative generation rather than evidence-anchored discovery.
-    </p>
-
     <p><strong>
-      Science lacks a lightweight framework for artifact-first observation.
+      The artifact is the dataset.
     </strong></p>
+
+    <p>
+      Yet scientific infrastructure is still mostly organized as though the primary scientific object were the explanation rather than the trace.
+    </p>
 
     <h2>Trace Invariance Logic</h2>
 
     <p>
-      I propose a minimal documentation framework organized around a simple principle:
+      I propose a minimal documentation framework organized around one rule:
     </p>
 
     <p><strong>
@@ -474,39 +514,35 @@
     </strong></p>
 
     <p>
-      Trace refers to the physical or visual artifacts produced by the system under study.
+      Trace refers to the inspectable artifact produced by the system under study. It is not language, metadata, or labeling convention. It is the physical or visual residue available for inspection.
     </p>
 
     <p>
-      Trace is not language. It is not metadata. It is not sample identifiers.
+      From that starting point, a report should separate three layers clearly:
+    </p>
+
+    <ul>
+      <li><strong>Artifact</strong> — what exists to be inspected</li>
+      <li><strong>Observation</strong> — what can be said directly from the artifact</li>
+      <li><strong>Interpretation</strong> — hypotheses or explanations downstream of the observation</li>
+    </ul>
+
+    <p>
+      Trace Invariance Logic is a minimal ontology and constraint grammar for enforcing that separation.
+    </p>
+
+    <p>
+      It is designed especially well for machine reasoning systems operating on visual data, because it does not ask the model to be creative. It asks the model to stay disciplined.
     </p>
 
     <p><strong>
-      Trace is the inspectable record produced by the biological system itself.
+      The point is not to help AI write science faster. The point is to constrain AI so that it must stay anchored to inspectable artifact.
     </strong></p>
 
-    <p><strong>
-      The artifact is the dataset.
-    </strong></p>
+    <h2>The Reasoning Pattern It Formalizes</h2>
 
     <p>
-      From this starting point, observations are derived directly from the artifact, while interpretations remain clearly separated and downstream.
-    </p>
-
-    <p>
-      To structure this process, I introduce <strong>Trace Invariance Logic</strong>.
-    </p>
-
-    <p>
-      Trace Invariance Logic is a minimal ontology and constraint-based grammar for recording observation. It is designed not for human reasoning, but for machine reasoning systems operating on visual data.
-    </p>
-
-    <p>
-      Its role is simple: enforce that observations are derived from inspectable trace before interpretation is generated.
-    </p>
-
-    <p>
-      Within this constraint, a common reasoning pattern emerges: identifying invariant patterns across artifacts.
+      A common pattern in real biological work is recognizing invariance across contexts.
     </p>
 
     <p>
@@ -514,77 +550,31 @@
     </p>
 
     <ul>
-      <li>a pigment band in a mushroom that also appears in cultured mycelium</li>
-      <li>a structural feature visible in both field samples and laboratory cultures</li>
-      <li>a repeated morphological trait across environmental observations</li>
+      <li>a pigment band visible in a fruiting body that also appears in cultured mycelium</li>
+      <li>a morphology observed in the field that persists under laboratory isolation</li>
+      <li>a repeated visual trait across multiple environmental observations</li>
     </ul>
 
     <p>
-      When a recognizable pattern persists across contexts, confidence in the observation increases even before molecular confirmation.
-    </p>
-
-    <p>
-      This reasoning pattern is common in practice but rarely formalized as a recordable structure.
+      Researchers use this type of reasoning constantly. But it is usually informal, local, and hard to preserve as a portable record.
     </p>
 
     <p><strong>
-      Trace Invariance Logic provides a simple grammar for doing so.
+      Trace Invariance Logic provides a simple way to make that reasoning legible.
     </strong></p>
 
-    <h2>Why Existing Structures Do Not Solve This Well</h2>
-
     <p>
-      Existing scientific structures are poorly suited to this kind of reasoning.
+      When an invariant visual pattern persists across contexts, confidence in the observation can increase even before molecular confirmation.
     </p>
 
-    <p>
-      The main incentives in science sit at the level of papers, grants, and conclusions rather than at the level of preserving early observational evidence. Individual researchers can improvise local note-taking systems, but there is no widely shared public protocol for recording artifact-first observations in a way that remains portable, inspectable, and useful across contexts.
-    </p>
-
-    <p>
-      As a result, early-stage reasoning is often either lost entirely or compressed into narrative long before it can be evaluated as evidence in its own right.
-    </p>
-
-    <p>
-      This gap becomes more consequential as AI accelerates the production of interpretation.
-    </p>
-
-    <h2>Artifact-First Scientific Reports</h2>
-
-    <p>
-      Using modern AI systems, Trace Invariance Logic functions as a surprisingly efficient prompting and reasoning environment for artifact-first scientific reporting.
-    </p>
-
-    <p>
-      Rather than generating conclusions, AI can assist in structuring observations into standardized reports that follow a strict hierarchy:
-    </p>
-
-    <ul>
-      <li><strong>Artifact</strong> — the observable trace</li>
-      <li><strong>Observation</strong> — patterns derived directly from the artifact</li>
-      <li><strong>Interpretation</strong> — hypotheses downstream of the observation</li>
-    </ul>
-
-    <p>
-      This structure preserves a clear separation between evidence and reasoning.
-    </p>
-
-    <p>
-      Because artifacts remain central, the validity of the report can always be inspected by revisiting the underlying images, specimens, or cultures.
-    </p>
-
-    <p><strong>
-      In this way, AI-generated interpretation becomes auditable rather than opaque.
-    </strong></p>
-
-    <h2>Example: Fungal Isolation Without Genetic Sequencing</h2>
+    <h2>Example: Fungal Isolation Without Sequencing Every Culture</h2>
 
     <p>
       This framework emerged from my own experience isolating fungal strains from wild specimens.
     </p>
 
     <p>
-      Like many independent mycologists, I do not perform genetic sequencing on every culture I isolate. Instead, identification often relies on recognizing correspondences between the fruiting body and the cultured mycelium.
+      Like many independent mycologists, I do not sequence every culture. Identification often relies on recognizing correspondences between the original specimen and the cultured mycelium.
     </p>
 
     <p>
@@ -607,14 +597,10 @@
         alt="Fungal culture plate showing red pigmented colonies derived from wild specimen"
       />
       <figcaption>
-        Laboratory artifact showing pigmented colonies corresponding to traits observed in the original specimen (top page image - Liver Bolete).
+        Laboratory artifact showing pigmented colonies corresponding to traits observed in the original specimen.
         Example of trace expressed across contexts.
       </figcaption>
     </figure>
-
-    <p>
-      In some cases these traits appear naturally. In other cases, controlled perturbations can help elicit visible responses that make latent phenotype easier to record.
-    </p>
 
     <p>
       A simple artifact-first report might look like this:
@@ -631,133 +617,170 @@
       Mycelium culture exhibiting diffuse red pigmentation.</p>
 
       <p><strong>Invariant Pattern</strong><br />
-      Red pigmentation is present in both the stipe base and cultured mycelium.</p>
+      Red pigmentation is present in both the specimen and the cultured mycelium.</p>
 
       <p><strong>Interpretation</strong><br />
       The culture likely derives from the collected specimen.</p>
 
       <p><strong>Hypothesis</strong><br />
-      Pigment concentration near the stipe base, closest to the underlying mycelial mat, may indicate that the mycelium readily produces this compound under culture conditions.</p>
+      Pigment concentration near the stipe base may indicate a production zone that remains accessible in culture.</p>
     </div>
 
     <p>
-      These signals are often subtle but highly informative. However, documenting them consistently is surprisingly difficult. Traditional notebooks rarely preserve structured links between artifacts and observations.
+      This is not a substitute for sequencing or formal analysis. It is a better way to preserve the observation layer that usually disappears before later validation happens.
+    </p>
+
+    <h2>The Hypothesis</h2>
+
+    <p><strong>
+      Hypothesis: a structured artifact-first reporting protocol will improve the reproducibility, retrieval, and downstream usefulness of early-stage biological observations compared with conventional notebook-and-narrative documentation.
+    </strong></p>
+
+    <p>
+      This is intentionally narrow. The claim is not that artifact-first reporting solves science in general. The claim is that it improves one neglected stage of science: the preservation of early observational evidence.
+    </p>
+
+    <h2>A Concrete Pilot</h2>
+
+    <p>
+      The strongest place to test this idea is a domain where visual correspondence matters and early observations are often under-structured.
+    </p>
+
+    <p><strong>
+      Proposed pilot domain: fungal field-specimen to culture workflows.
+    </strong></p>
+
+    <p>
+      A modest pilot could compare conventional notes against artifact-first reports generated with Trace Invariance Logic across a small number of practitioners.
     </p>
 
     <p>
-      Artifact-first reporting makes these relationships explicit and converts visual phenotype into portable scientific records.
+      The test would ask whether artifact-first reports improve:
+    </p>
+
+    <ul>
+      <li>time to produce a usable observation record</li>
+      <li>clarity of the link between artifact and interpretation</li>
+      <li>ability of a second reader to recover the key observation</li>
+      <li>consistency of report structure across repeated use</li>
+      <li>usefulness of the report for later hypothesis generation or culture follow-up</li>
+    </ul>
+
+    <p>
+      This pilot can fail informatively. If artifact-first reports do not improve clarity, retrieval, or downstream usefulness, then the bottleneck has been overstated. But that is exactly why it is a good experiment.
+    </p>
+
+    <h2>Why This Is Not Just an AI Convenience Tool</h2>
+
+    <p>
+      There is a meaningful difference between using AI to accelerate existing scientific habits and using AI to impose better evidentiary discipline.
     </p>
 
     <p>
-      This example illustrates the core principle: the artifact carries the evidence, and reasoning follows from inspecting it.
-      More generally, spatial concentration of visible trace within a biological structure may reveal underlying production zones that can be accessed in culture.
+      This proposal is in the second category.
     </p>
+
+    <p>
+      The system I am building is not meant to be a generic writing assistant. It is meant to be a constrained observation layer. In its current form, the “Runtime” already acts as a structured reasoning environment that can turn images and observations into artifact-first field records.
+    </p>
+
+    <p>
+      The next step is to make that reporting layer better, more consistent, and eventually compatible with camera-based systems.
+    </p>
+
+    <p><strong>
+      The long-term aim is not AI-generated prose. It is open observation infrastructure.
+    </strong></p>
 
     <h2>Three Open-Source Goals</h2>
 
     <p>
-      Rather than proposing a closed pilot around a single lab or workflow, I propose an open scientific infrastructure with three linked goals:
+      The broader program has three linked goals:
     </p>
 
     <ul>
-      <li><strong>Develop a camera-based AI observation system</strong> trained around Trace Invariance Logic, capable of turning visual artifacts into structured reports.</li>
-      <li><strong>Open source a universal biological reporting protocol</strong> for field reports, notebook pages, SOP-style documentation, and visual observation records that can travel easily across disciplines.</li>
-      <li><strong>Build an open repository of reports</strong> that functions both as a public scientific archive and as training data for future camera-based observation systems.</li>
+      <li><strong>Build an open artifact-first reporting protocol</strong> for field reports, notebook pages, SOP-style observation records, and visual scientific documentation.</li>
+      <li><strong>Build an open repository of artifact-first reports</strong> that functions both as a scientific archive and as training data for future observation systems.</li>
+      <li><strong>Develop a camera-based observation layer</strong> capable of turning visual artifacts into structured reports under the same evidentiary constraints.</li>
     </ul>
 
     <p>
-      This is especially important for the richest layer of scientific discovery: early observations, visual anomalies, phenotypic correspondences, and field-to-lab transitions that are often too informal for publication but too valuable to lose.
-    </p>
-
-    <p>
-      Open infrastructure matters here because the scientists most likely to benefit from artifact-first reporting are often the least well supported by existing systems: youth scientists, underfunded researchers, field naturalists, independent biologists, and researchers working outside highly resourced institutional settings.
+      This matters especially for the parts of science that are richest in discovery and weakest in infrastructure: field observations, phenotypic anomalies, culture transitions, and independent or underfunded biological work that rarely fits neatly into publication-first systems.
     </p>
 
     <h2>Toward an Autonomous Biological Observatory</h2>
 
     <p>
-      Once observation is structured around artifacts, automation becomes possible.
+      Once observation is structured around artifact, automation becomes much more realistic.
     </p>
 
     <p>
-      A camera system no longer needs to understand biology in the abstract. It only needs to detect, compare, and structure visual trace.
+      A camera system does not need to understand biology in the abstract. It needs to detect, compare, and structure trace.
     </p>
 
     <p>
-      From this, it can generate artifact-anchored reports in real time.
+      From that, it can generate artifact-anchored reports at a rate far beyond what most humans can sustain manually.
     </p>
 
     <p>
-      Such a system could function as an <strong>autonomous biological observatory:</strong>
+      This suggests a larger possibility:
     </p>
 
     <ul>
-      <li>imaging biological artifacts in natural environments</li>
-      <li>identifying recurring visual patterns</li>
-      <li>generating artifact-anchored reports</li>
+      <li>imaging biological artifacts continuously</li>
+      <li>identifying recurring invariant patterns</li>
+      <li>generating artifact-first reports in real time</li>
       <li>separating observation from interpretation automatically</li>
     </ul>
 
-    <p>
-      Rather than replacing scientists, such systems would dramatically increase the rate at which structured observations can be recorded.
-    </p>
+    <p><strong>
+      In other words: an autonomous biological observatory.
+    </strong></p>
 
     <p>
-      A researcher moving from field to laboratory could generate dozens of artifact-anchored reports in a single day, preserving early discovery signals that would otherwise disappear.
+      Not a system that replaces scientists, but one that dramatically increases the rate at which structured observations can be preserved before they disappear.
     </p>
 
     <h2>A Testable Path Forward</h2>
 
     <p>
-      The first step is to build and release the reporting layer itself as open infrastructure: templates, prompting interfaces, notebook formats, SOP-style documents, and report repositories.
-    </p>
-
-    <p>
-      Once released, the framework can be evaluated across artifact-rich disciplines such as mycology, microbiology, and ecology.
-    </p>
-
-    <p>
-      Metrics could include:
+      The first step is simple and practical:
     </p>
 
     <ul>
-      <li>number of observations recorded</li>
-      <li>time required to document discoveries</li>
-      <li>reproducibility of observations</li>
-      <li>clarity of the link between artifacts and interpretations</li>
-      <li>cross-disciplinary portability of the reporting format</li>
+      <li>release the reporting layer itself</li>
+      <li>use it on real artifact-rich workflows</li>
+      <li>compare it against conventional documentation</li>
+      <li>publish the reports and their outcomes openly</li>
     </ul>
 
     <p>
-      A modest budget (~$30k) could support development of:
+      A modest budget could support:
     </p>
 
     <ul>
-      <li>an open artifact-first reporting template and reasoning environment (v1 already available — see “Runtime” above)</li>
-      <li>a repository of artifact-anchored reports for public inspection and reuse</li>
-      <li>preliminary camera-based experiments for invariant pattern detection</li>
+      <li>further development of the Runtime as an artifact-first reporting environment</li>
+      <li>an open repository of artifact-anchored reports</li>
+      <li>a small pilot in fungal observation workflows</li>
+      <li>initial camera-based experiments for invariant pattern detection</li>
     </ul>
 
     <p>
-      The goal would not be to replace traditional publications, but to create an <strong>open pre-publication layer of structured observation.</strong>
-    </p>
-
-    <p>
-      Trace Invariance Logic does not generate knowledge. It constrains how knowledge can be formed.
+      The goal is not to replace publications. It is to create an open pre-publication layer of structured observation that science currently lacks.
     </p>
 
     <h2>Rebuilding the Observation Layer of Science</h2>
 
     <p>
-      Scientific publishing systems were designed for an era in which generating analysis and text was slow and expensive.
+      Scientific publishing systems were built for an era in which generating interpretation was slow and expensive.
     </p>
 
     <p><strong>
-      Today the opposite is true.
+      Today the opposite is becoming true.
     </strong></p>
 
     <p>
-      Interpretation is becoming abundant, while reliable documentation of observations remains scarce.
+      Interpretation is abundant. Reliable observation is not.
     </p>
 
     <p><strong>
@@ -765,19 +788,19 @@
     </strong></p>
 
     <p>
-      If AI is going to transform science, it must be paired with systems that preserve the connection between claims and evidence.
+      If AI is going to reshape scientific practice, then science needs tools that preserve the connection between claims and inspectable evidence.
     </p>
 
     <p>
-      Trace Invariance Logic proposes a minimal infrastructure for doing exactly that.
+      Trace Invariance Logic is one proposal for that missing layer.
     </p>
 
     <p><strong>
-      Its goal is simple: capture discovery at the moment it occurs while keeping scientific reasoning anchored to inspectable artifacts.
+      Its goal is simple: capture discovery at the moment it occurs while keeping reasoning anchored to artifact.
     </strong></p>
 
     <p>
-      In an age of accelerating information production, the most valuable scientific records may still follow the oldest rule of empirical inquiry:
+      In an age of accelerating scientific text production, the most valuable rule may still be the oldest one:
     </p>
 
     <p><strong>
@@ -787,10 +810,10 @@
     <div class="callout">
       <h2>About this essay</h2>
       <p>
-        This essay was written for the Astera 026 Essay Competition on systemic bottlenecks in science.
+        This essay was written for the Astera essay competition on bottlenecks in science.
       </p>
       <p>
-        If you’d like to discuss artifact-first reporting, observation infrastructure, or AI-assisted scientific documentation, you can reach me at
+        If you’d like to discuss artifact-first reporting, open observation infrastructure, or camera-based biological observatories, you can reach me at
         <a href="mailto:hiramdunn61@gmail.com">hiramdunn61@gmail.com</a>.
       </p>
     </div>
