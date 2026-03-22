@@ -17,9 +17,14 @@
 
   --green:#3cb371;
   --green-deep:#0f6c4f;
+  --green-soft:#123126;
 
   --navy:#122438;
   --red:#d84b55;
+  --red-deep:#bf3b46;
+
+  --panel:#0f1113;
+  --panel-2:#111418;
 
   --maxw:720px;
 }
@@ -40,89 +45,141 @@ a{
 }
 
 a:hover{
-  text-decoration:underline;
+  text-decoration:none;
 }
 
-/* NAV — MATCH HOME */
+/* NAV */
 
 .nav{
   position:sticky;
   top:0;
   z-index:50;
-  background:linear-gradient(90deg, var(--green-deep), var(--green));
-  border-bottom:1px solid rgba(0,0,0,0.2);
+  background:#050607;
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .nav .inner{
-  max-width:var(--maxw);
+  max-width:58rem;
   margin:0 auto;
-  padding:0.85rem 1rem;
-  display:flex;
-  justify-content:space-between;
+  padding:0.75rem 1rem;
+  display:grid;
+  grid-template-columns:auto 1fr;
   align-items:center;
+  gap:0.9rem;
+}
+
+.brand{
+  min-width:0;
 }
 
 .brand a{
-  color:#fff;
-  font-weight:700;
-  letter-spacing:0.02em;
+  display:inline-flex;
+  align-items:center;
+}
+
+.brand img{
+  height:38px;
+  width:auto;
+  filter:none;
 }
 
 .menu{
   display:flex;
-  gap:1.1rem;
+  justify-content:flex-end;
+  align-items:center;
+  gap:0.55rem;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+  min-width:0;
+  overflow:hidden;
 }
 
 .menu a{
-  color:rgba(255,255,255,0.85);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:0.5rem 0.8rem;
+  border-radius:999px;
+  background:var(--green);
+  color:#ffffff;
+  font-weight:700;
+  font-size:0.92rem;
+  letter-spacing:0.01em;
+  line-height:1;
 }
 
 .menu a:hover{
-  color:#fff;
-  text-decoration:none;
+  background:var(--green-deep);
+  color:#ffffff;
+}
+
+.menu a[href="runtime.html"]{
+  background:var(--red);
+  color:#ffffff;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.04) inset;
+}
+
+.menu a[href="runtime.html"]:hover{
+  background:var(--red-deep);
 }
 
 /* MAIN */
 
 main{
   max-width:var(--maxw);
-  margin:60px auto;
-  padding:0 1rem 60px;
+  margin:56px auto;
+  padding:0 1rem 64px;
 }
 
 h1{
-  font-size:2.1rem;
-  margin-bottom:1rem;
+  font-size:2.15rem;
+  line-height:1.02;
+  letter-spacing:-0.03em;
+  margin:0 0 1rem;
 }
 
 h2{
   margin-top:2rem;
   margin-bottom:0.7rem;
-  font-size:1.1rem;
-  color:#fff;
+  font-size:1.08rem;
+  color:#ffffff;
+  letter-spacing:0.01em;
 }
 
 p{
   color:var(--muted);
-  line-height:1.6;
+  line-height:1.65;
+  margin:0 0 1rem;
+}
+
+.intro{
+  border:1px solid var(--line);
+  border-left:4px solid var(--red);
+  border-radius:14px;
+  padding:1rem 1rem 0.15rem;
+  background:linear-gradient(180deg, rgba(216,75,85,0.08), rgba(216,75,85,0.02));
+  margin-bottom:1.5rem;
 }
 
 /* CODE BOX */
 
 .code-box{
   border:1px solid var(--line);
-  border-radius:10px;
+  border-radius:12px;
   overflow:hidden;
   margin-top:1rem;
+  background:var(--panel);
+  box-shadow:0 8px 28px rgba(0,0,0,0.22);
 }
 
 .code-head{
   display:flex;
   align-items:center;
   gap:6px;
-  padding:0.6rem 0.7rem;
+  padding:0.7rem 0.8rem;
   border-bottom:1px solid var(--line);
-  background:#0f1113;
+  background:var(--panel-2);
 }
 
 .dot{
@@ -154,37 +211,144 @@ pre{
   font-size:0.9rem;
 }
 
+/* STEPS */
+
+.steps{
+  display:grid;
+  gap:0.75rem;
+  margin-top:0.9rem;
+}
+
+.step{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:0.9rem 1rem;
+  background:linear-gradient(180deg, #0d1012, #0b0c0d);
+}
+
+.step strong{
+  color:#ffffff;
+}
+
 /* DOWNLOADS */
 
 .downloads{
   margin-top:1.5rem;
+  display:grid;
+  gap:0.7rem;
 }
 
 .downloads a{
   display:block;
-  margin-bottom:0.6rem;
+  padding:0.95rem 1rem;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#0d1012;
+  color:#ffffff;
+  font-weight:600;
+}
+
+.downloads a:hover{
+  border-color:#273039;
+  background:#111418;
+}
+
+.downloads a:first-child{
+  border-left:4px solid var(--green);
+}
+
+.downloads a:last-child{
+  border-left:4px solid var(--red);
 }
 
 /* FOOTER */
 
 footer{
   border-top:1px solid var(--line);
-  padding:1rem;
-  text-align:center;
+  margin-top:2rem;
+}
+
+footer .inner{
+  max-width:58rem;
+  margin:0 auto;
+  padding:1rem 1.1rem 1.2rem;
   color:var(--muted);
-  font-size:0.9rem;
+  font-size:0.95rem;
+  display:flex;
+  justify-content:space-between;
+  gap:0.6rem;
+  flex-wrap:wrap;
+}
+
+/* MOBILE */
+
+@media (max-width:820px){
+  .nav .inner{
+    grid-template-columns:auto 1fr;
+    align-items:center;
+    gap:0.65rem;
+    padding:0.65rem 0.75rem;
+  }
+
+  .brand img{
+    height:30px;
+  }
+
+  .menu{
+    gap:0.35rem;
+    justify-content:flex-end;
+  }
+
+  .menu a{
+    padding:0.42rem 0.62rem;
+    font-size:0.78rem;
+    min-height:32px;
+  }
+
+  main{
+    margin:42px auto;
+  }
+}
+
+@media (max-width:560px){
+  .nav .inner{
+    padding:0.55rem 0.45rem;
+    gap:0.45rem;
+  }
+
+  .brand img{
+    height:26px;
+  }
+
+  .menu{
+    gap:0.22rem;
+  }
+
+  .menu a{
+    padding:0.38rem 0.5rem;
+    font-size:0.72rem;
+    min-height:30px;
+  }
+
+  main{
+    padding:0 0.9rem 56px;
+  }
+
+  h1{
+    font-size:1.85rem;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-
 <div class="nav">
   <div class="inner">
     <div class="brand">
-      <a href="/">AstroBiota</a>
+      <a href="/" aria-label="AstroBiota home">
+        <img src="images/astrobiota-logo.png" alt="AstroBiota">
+      </a>
     </div>
 
     <div class="menu">
@@ -196,29 +360,29 @@ footer{
   </div>
 </div>
 
-<!-- MAIN -->
-
 <main>
 
-<h1>AstroBiota Runtime</h1>
+  <h1>AstroBiota Runtime</h1>
 
-<p>
-AstroBiota is a reasoning environment for interpreting biological systems through constraint, structure, and trace.
-</p>
+  <div class="intro">
+    <p>
+      AstroBiota is a reasoning environment for interpreting biological systems through constraint, structure, and trace.
+    </p>
 
-<p>
-Use the runtime prompt below in any reasoning model. Provide biological images or a short observation description to generate a structured field record.
-</p>
-
-<h2>Runtime Prompt</h2>
-
-<div class="code-box">
-  <div class="code-head">
-    <span class="dot red"></span>
-    <span class="dot green"></span>
-    <span class="dot navy"></span>
-    <span class="code-title">astrobiota_runtime_prompt.txt</span>
+    <p>
+      Use the runtime prompt below in any reasoning model. Provide biological images or a short observation description to generate a structured field record.
+    </p>
   </div>
+
+  <h2>Runtime Prompt</h2>
+
+  <div class="code-box">
+    <div class="code-head">
+      <span class="dot red"></span>
+      <span class="dot green"></span>
+      <span class="dot navy"></span>
+      <span class="code-title">astrobiota_runtime_prompt.txt</span>
+    </div>
 
 <pre>Initialize AstroBiota reasoning.
 
@@ -237,23 +401,25 @@ Generate AstroBiota field records from biological images or observations.
 
 SPAM this until it meets standards:
 adhere to the guidelines astrobiota reasoning. that is all i can say. I inspected your work and it is not adhered to the guidelines. Adhere to the guidelines astrobiota reasoning. that is all i can say so just do it right.</pre>
-</div>
-
-<h2>Basic Instructions</h2>
-
-<p>1. Copy the runtime prompt into a reasoning model (ChatGPT, Claude, etc.)</p>
-<p>2. Provide biological images or a short observation description</p>
-<p>3. Generate an AstroBiota field record and export as PDF</p>
-
-<h2>Example Observation</h2>
-
-<div class="code-box">
-  <div class="code-head">
-    <span class="dot red"></span>
-    <span class="dot green"></span>
-    <span class="dot navy"></span>
-    <span class="code-title">observation_example.txt</span>
   </div>
+
+  <h2>Basic Instructions</h2>
+
+  <div class="steps">
+    <div class="step"><strong>1.</strong> Copy the runtime prompt into a reasoning model like ChatGPT or Claude.</div>
+    <div class="step"><strong>2.</strong> Provide biological images or a short observation description.</div>
+    <div class="step"><strong>3.</strong> Generate an AstroBiota field record and export it as PDF.</div>
+  </div>
+
+  <h2>Example Observation</h2>
+
+  <div class="code-box">
+    <div class="code-head">
+      <span class="dot red"></span>
+      <span class="dot green"></span>
+      <span class="dot navy"></span>
+      <span class="code-title">observation_example.txt</span>
+    </div>
 
 <pre>Observed fungal organism believed to correspond to liver bolete.
 
@@ -274,18 +440,21 @@ Context:
 - identification based on morphology and pigment behavior
 
 Generate AstroBiota field record.</pre>
-</div>
+  </div>
 
-<div class="downloads">
-  <a href="/astrobiota-runtime-v1.txt" download>Download runtime specification</a>
-  <a href="/astrobiota-field-report-template.txt" download>Download field record template</a>
-  <a href="/astrobiota_field_record_AB.1.001_liver_bolete.pdf" download>Download example field record</a>
-</div>
+  <div class="downloads">
+    <a href="/astrobiota-runtime-v1.txt" download>Download runtime specification</a>
+    <a href="/astrobiota-field-report-template.txt" download>Download field record template</a>
+    <a href="/astrobiota_field_record_AB.1.001_liver_bolete.pdf" download>Download example field record</a>
+  </div>
 
 </main>
 
 <footer>
-© <span id="yr"></span> AstroBiota
+  <div class="inner">
+    <div>© <span id="yr"></span> AstroBiota</div>
+    <div>Runtime · Utility layer · No trackers</div>
+  </div>
 </footer>
 
 <script>
