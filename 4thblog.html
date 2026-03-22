@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog — AstroBiota</title>
-  <meta name="description" content="AstroBiota blog: biological programming, symbiosis, and history-dependent state conditioning in living systems." />
+
+  <title>Artifact-First Science — AstroBiota</title>
+
+  <meta name="description" content="Trace Invariance Logic as missing infrastructure for scientific observation in the age of AI." />
+
+  <meta property="og:title" content="Artifact-First Science" />
+  <meta property="og:description" content="A proposal for artifact-first scientific documentation: trace first, interpretation second." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://simbiosis.bio/4thblog.html" />
+  <meta property="og:image" content="images/b4.png" />
 
   <style>
     :root{
@@ -35,7 +43,7 @@
       background:var(--bg);
       color:var(--fg);
       font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height:1.6;
+      line-height:1.68;
     }
 
     a{
@@ -125,6 +133,36 @@
       background:var(--red-deep);
     }
 
+    .blog-hero{
+      width:100%;
+      margin-top:1rem;
+    }
+
+    .blog-hero .frame{
+      width:min(100%, var(--maxw));
+      margin:0 auto;
+      padding:0 1.1rem;
+    }
+
+    .blog-hero .box{
+      width:100%;
+      aspect-ratio:16/9;
+      background:#000;
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(0,0,0,0.08);
+    }
+
+    .blog-hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
     header, main, footer{
       max-width:var(--maxw);
       margin:0 auto;
@@ -133,7 +171,7 @@
 
     .back-link{
       display:inline-block;
-      margin:0 0 0.9rem;
+      margin:0 0 0.95rem;
       font-weight:700;
       color:var(--green-deep);
     }
@@ -152,147 +190,102 @@
     }
 
     header h1{
-      margin:0 0 0.45rem;
-      font-size:clamp(2.2rem, 5vw, 3.6rem);
+      margin:0 0 0.55rem;
+      font-size:clamp(2.2rem, 5vw, 3.5rem);
       line-height:0.98;
       letter-spacing:-0.04em;
       font-weight:850;
     }
 
-    .lead{
-      margin:0;
+    header p{
+      margin:0.25rem 0 0.8rem;
       color:var(--muted);
-      font-size:1.05rem;
-      line-height:1.7;
     }
 
-    .research-reference{
-      margin:1.4rem 0 0;
-      padding:1.1rem 1.15rem;
+    .lead{
+      font-size:1.08rem;
+      color:var(--muted);
+      line-height:1.74;
+      margin-top:0.4rem;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:0.35rem 0.6rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background:#fff;
+      font-size:0.92rem;
+      font-weight:600;
+    }
+
+    main{
+      padding-top:0.2rem;
+    }
+
+    h2{
+      margin-top:2rem;
+      margin-bottom:0.65rem;
+      font-size:1.35rem;
+      line-height:1.15;
+      letter-spacing:-0.02em;
+      color:var(--navy);
+    }
+
+    p{
+      margin:0 0 1rem;
+      color:#24303a;
+    }
+
+    ul{
+      margin:0 0 1rem 1.2rem;
+      padding:0;
+    }
+
+    li{
+      margin:0.35rem 0;
+      color:#24303a;
+    }
+
+    figure{
+      margin:2rem 0;
+      text-align:center;
+    }
+
+    figure img{
+      max-width:420px;
+      width:100%;
+      height:auto;
+      border-radius:8px;
+      margin:0 auto;
+    }
+
+    figcaption{
+      margin-top:10px;
+      font-size:0.9rem;
+      color:var(--muted);
+      max-width:420px;
+      margin-left:auto;
+      margin-right:auto;
+      line-height:1.4;
+    }
+
+    .callout{
+      margin-top:1.7rem;
+      background:linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
       border:1px solid var(--line);
       border-radius:18px;
-      background:linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+      padding:1.15rem 1.15rem 1.2rem;
+      box-shadow:0 10px 28px rgba(0,0,0,0.05);
     }
 
-    .research-reference strong{
-      display:block;
-      margin-bottom:0.45rem;
-      color:var(--navy);
-      font-size:1rem;
+    .callout h2{
+      margin-top:0;
     }
 
-    .paper-list{
-      list-style:none;
-      padding:0;
-      margin:0.95rem 0 0;
-      display:grid;
-      gap:0.9rem;
-    }
-
-    .paper-list li{
-      padding-top:0.9rem;
-      border-top:1px solid var(--line);
-    }
-
-    .paper-list li:first-child{
-      border-top:none;
-      padding-top:0;
-    }
-
-    .paper-list a{
-      font-weight:700;
-    }
-
-    .section-title{
-      margin:0 0 1rem;
-      font-size:1.35rem;
-      line-height:1.1;
-      letter-spacing:-0.02em;
-    }
-
-    .posts{
-      display:grid;
-      gap:1rem;
-    }
-
-    .post{
-      border:1px solid var(--line);
-      border-radius:16px;
-      overflow:hidden;
-      background:#ffffff;
-      transition:transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-    }
-
-    .post:hover{
-      transform:translateY(-2px);
-      box-shadow:0 10px 24px rgba(0,0,0,0.08);
-      border-color:#d9dee3;
-    }
-
-    .post .thumb{
-      display:block;
-      aspect-ratio:16/9;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      background:#000;
-    }
-
-    .post .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    .post .content{
-      padding:1rem 1.1rem 1.1rem;
-    }
-
-    .post h2{
-      margin:0 0 0.3rem;
-      font-size:1.22rem;
-      line-height:1.2;
-      color:var(--navy);
-    }
-
-    .post h2 a{
-      color:var(--navy);
-    }
-
-    .post h2 a:hover{
-      color:var(--green-deep);
-    }
-
-    .meta{
-      color:var(--muted);
-      font-size:0.95rem;
-      margin:0 0 0.55rem;
-    }
-
-    .post .lead{
-      font-size:1rem;
-      margin:0;
-    }
-
-    .btn-ghost{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      margin-top:1rem;
-      min-height:42px;
-      padding:0.72rem 1rem;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--fg);
-      font-weight:700;
-      background:#fff;
-      transition:transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
-    }
-
-    .btn-ghost:hover{
-      transform:translateY(-1px);
-      background:#f8fbfc;
-      border-color:#d8dee4;
+    .bottom-back{
+      margin-top:1.3rem;
     }
 
     footer{
@@ -360,11 +353,16 @@
         padding-left:0.9rem;
         padding-right:0.9rem;
       }
+
+      .blog-hero .frame{
+        padding:0 0.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="nav">
     <div class="inner">
       <div class="brand">
@@ -372,7 +370,6 @@
           <img src="images/astrobiota-logo.png" alt="AstroBiota">
         </a>
       </div>
-
       <div class="menu">
         <a href="/">Home</a>
         <a href="gallery.html">Archive</a>
@@ -382,129 +379,423 @@
     </div>
   </div>
 
+  <section class="blog-hero" aria-label="Article hero image">
+    <div class="frame">
+      <div class="box">
+        <img src="images/b4.png" alt="Biological trace and field observation" loading="eager" />
+      </div>
+    </div>
+  </section>
+
   <header>
-    <a class="back-link" href="index.html">← Back to Home</a>
+    <a class="back-link" href="blog.html">← Back to Research</a>
     <div class="kicker">Research</div>
-    <h1>Field notes, papers, and research writing</h1>
+    <h1>Artifact-First Science</h1>
+    <p>Published on <time datetime="2026-04-18">April 18, 2026</time> · <span class="pill">Essay</span> <span class="pill">Metascience</span></p>
     <p class="lead">
-      Research writing from the AstroBiota Observatory: biological programming, symbiosis, witness, trace, consequence, and state memory in living systems.
+      Trace Invariance Logic as missing infrastructure for scientific observation in the age of AI.
     </p>
 
-    <div class="research-reference">
-      <strong>Self-Published Papers — AstroBiota Observatory</strong>
-      <p class="lead">
-        A growing archive of independent research papers, governance frameworks, and biological reference artifacts exploring witness, trace, and consequence in living and machine systems.
-      </p>
+    <p>
+      Science records conclusions far better than it records observations.
+    </p>
 
-      <ul class="paper-list">
-        <li>
-          <strong>🧿 The Witness Effect</strong> — A Limit on Self-Recording Systems<br />
-          <a href="papers/Witness Effect.pdf" download>Download PDF</a>
-        </li>
+    <p>
+      This essay proposes a simple shift: treat physical artifacts as the primary data layer, and structure reasoning around them.
+    </p>
 
-        <li>
-          <strong>🐚 Life as Trace</strong> — Biology as Record; Metabolism Writing History into Matter<br />
-          <a href="papers/Life as Trace.pdf" download>Download PDF</a>
-        </li>
-
-        <li>
-          <strong>⚖️ Consequence Theory</strong> — Action → Cost → Imprint; Consequence Locked in Substrate<br />
-          <a href="papers/Consequence Theory.pdf" download>Download PDF</a>
-        </li>
-
-        <li>
-          <strong>🔱 Demon AI Trilogy</strong> — Action, Witness, and Record Separated for Opaque Machines<br />
-          <a href="papers/Demon_AI_Trilogy.pdf" download>Download PDF</a>
-        </li>
-
-        <li>
-          <strong>⬡ Machine Governance Hexalogy</strong> — Machine Governance without Interpretation<br />
-          <a href="papers/Machine Governance Hexalogy.pdf" download>Download PDF</a>
-        </li>
-      </ul>
-    </div>
+    <p>
+      Trace Invariance Logic is a minimal ontology and constraint-based grammar designed for machine reasoning systems. It forces observation to be recorded from inspectable trace before interpretation is allowed.
+    </p>
   </header>
 
   <main>
-    <h2 class="section-title">Recent posts</h2>
+    <p>
+      Scientific publishing is entering a structural transition.
+    </p>
 
-    <div class="posts">
-      <div class="post">
-        <a class="thumb" href="4thblog.html">
-          <img src="images/b4.png" alt="Artifact-First Science" loading="lazy" />
-        </a>
-        <div class="content">
-          <h2>
-            <a href="4thblog.html">Artifact-First Science</a>
-          </h2>
-          <p class="meta">March 22, 2026 · Essay · Metascience</p>
-          <p class="lead">
-            A proposal for artifact-first scientific documentation: trace first, interpretation second.
-          </p>
-          <p><a class="btn-ghost" href="4thblog.html">Read</a></p>
-        </div>
-      </div>
+    <p>
+      AI systems can now generate scientific text, analysis, and interpretation at unprecedented speed. While this promises to accelerate discovery, it also exposes a deeper weakness in how modern science records evidence.
+    </p>
 
-      <div class="post">
-        <a class="thumb" href="fourthblog.html">
-          <img src="images/fourthbloghero.png" alt="The Future of Carbon Computation" loading="lazy" />
-        </a>
-        <div class="content">
-          <h2>
-            <a href="fourthblog.html">The Future of Carbon Computation</a>
-          </h2>
-          <p class="meta">February 19, 2026 · Machine class</p>
-          <p class="lead">
-            Carbon computation under light gating: irreversible trace and embodied metabolic cost, coupled to silicon decision systems as a new silicon–carbon symbiotic machine class.
-          </p>
-          <p><a class="btn-ghost" href="fourthblog.html">Read</a></p>
-        </div>
-      </div>
+    <p><strong>
+      The problem is not AI.
+    </strong></p>
 
-      <div class="post">
-        <a class="thumb" href="thirdblog.html">
-          <img src="images/figure3.jpg" alt="Conservation as an operating model" loading="lazy" />
-        </a>
-        <div class="content">
-          <h2>
-            <a href="thirdblog.html">AstroBiota: Conservation as an Operating Model</a>
-          </h2>
-          <p class="meta">January 5, 2026 · Operating model</p>
-          <p class="lead">
-            A conservation-first economic model built around preserving biological process rather than extracting biological objects — enabling continuous, non-destructive fermentation and real abundance.
-          </p>
-          <p><a class="btn-ghost" href="thirdblog.html">Read</a></p>
-        </div>
-      </div>
+    <p><strong>
+      The problem is that scientific infrastructure is still organized around interpretation rather than observation.
+    </strong></p>
 
-      <div class="post">
-        <a class="thumb" href="secondblog.html">
-          <img src="images/fermentation.jpg" alt="Filamentous fungi fermentation" loading="lazy" />
-        </a>
-        <div class="content">
-          <h2><a href="secondblog.html">Biological Programming: A Call to Reduce Variance in Filamentous Fungi Fermentation</a></h2>
-          <p class="meta">December 17, 2025 · Call for collaboration</p>
-          <p class="lead">
-            A pilot invitation for mycelium and filamentous fungi teams: can history-dependent state conditioning reduce variance without changing DNA?
-          </p>
-          <p><a class="btn-ghost" href="secondblog.html">Read</a></p>
-        </div>
-      </div>
+    <p>
+      The infrastructure for capturing observations has changed far less than the infrastructure for generating interpretation.
+    </p>
 
-      <div class="post">
-        <a class="thumb" href="firstblog.html">
-          <img src="images/hero-lichen.jpg" alt="Proto-lichen morphology" loading="lazy" />
-        </a>
-        <div class="content">
-          <h2><a href="firstblog.html">A-Temporal Biology: A Hidden Stage of Life Revealed</a></h2>
-          <p class="meta">September 24, 2025 · Proto-lichen morphology</p>
-          <p class="lead">
-            Proto-Lichen — a reproducible symbiotic morphology where tomentose fungal mycelium carries algal partners as a dry biofilm.
-          </p>
-          <p><a class="btn-ghost" href="firstblog.html">Read</a></p>
-        </div>
-      </div>
+    <p>
+      Most scientific papers are structured around hypotheses, analysis, and narrative explanation. Yet the earliest stages of discovery rarely begin with theory. They begin with <strong>artifacts — observable traces produced by natural systems.</strong>
+    </p>
+
+    <p>
+      These artifacts include:
+    </p>
+
+    <ul>
+      <li>biological specimens</li>
+      <li>cultures and colonies</li>
+      <li>microscopy images</li>
+      <li>morphological structures</li>
+      <li>environmental patterns</li>
+      <li>behavioral traces</li>
+    </ul>
+
+    <p>
+      In many disciplines, especially biology, discovery begins when a researcher notices a pattern within these artifacts. Yet our documentation systems rarely capture this stage of reasoning in a structured way.
+    </p>
+
+    <p>
+      Instead, early observations remain scattered across notebooks, image folders, or informal notes. By the time a discovery becomes a publication, much of the original observational reasoning has already been compressed or lost.
+    </p>
+
+    <p>
+      As AI accelerates the generation of scientific text, this imbalance becomes increasingly problematic. If interpretation becomes easy to produce while observations remain poorly structured, scientific communication risks drifting toward narrative generation rather than evidence-anchored discovery.
+    </p>
+
+    <p><strong>
+      Science lacks a lightweight framework for artifact-first observation.
+    </strong></p>
+
+    <h2>Trace Invariance Logic</h2>
+
+    <p>
+      I propose a minimal documentation framework organized around a simple principle:
+    </p>
+
+    <p><strong>
+      Trace precedes interpretation.
+    </strong></p>
+
+    <p>
+      Trace refers to the physical or visual artifacts produced by the system under study.
+    </p>
+
+    <p>
+      Trace is not language. It is not metadata. It is not sample identifiers.
+    </p>
+
+    <p><strong>
+      Trace is the inspectable record produced by the biological system itself.
+    </strong></p>
+
+    <p><strong>
+      The artifact is the dataset.
+    </strong></p>
+
+    <p>
+      From this starting point, observations are derived directly from the artifact, while interpretations remain clearly separated and downstream.
+    </p>
+
+    <p>
+      To structure this process, I introduce <strong>Trace Invariance Logic</strong>.
+    </p>
+
+    <p>
+      Trace Invariance Logic is a minimal ontology and constraint-based grammar for recording observation. It is designed not for human reasoning, but for machine reasoning systems operating on visual data.
+    </p>
+
+    <p>
+      Its role is simple: enforce that observations are derived from inspectable trace before interpretation is generated.
+    </p>
+
+    <p>
+      Within this constraint, a common reasoning pattern emerges: identifying invariant patterns across artifacts.
+    </p>
+
+    <p>
+      For example:
+    </p>
+
+    <ul>
+      <li>a pigment band in a mushroom that also appears in cultured mycelium</li>
+      <li>a structural feature visible in both field samples and laboratory cultures</li>
+      <li>a repeated morphological trait across environmental observations</li>
+    </ul>
+
+    <p>
+      When a recognizable pattern persists across contexts, confidence in the observation increases even before molecular confirmation.
+    </p>
+
+    <p>
+      This reasoning pattern is common in practice but rarely formalized as a recordable structure.
+    </p>
+
+    <p><strong>
+      Trace Invariance Logic provides a simple grammar for doing so.
+    </strong></p>
+
+    <h2>Why Existing Structures Do Not Solve This Well</h2>
+
+    <p>
+      Existing scientific structures are poorly suited to this kind of reasoning.
+    </p>
+
+    <p>
+      The main incentives in science sit at the level of papers, grants, and conclusions rather than at the level of preserving early observational evidence. Individual researchers can improvise local note-taking systems, but there is no widely shared public protocol for recording artifact-first observations in a way that remains portable, inspectable, and useful across contexts.
+    </p>
+
+    <p>
+      As a result, early-stage reasoning is often either lost entirely or compressed into narrative long before it can be evaluated as evidence in its own right.
+    </p>
+
+    <p>
+      This gap becomes more consequential as AI accelerates the production of interpretation.
+    </p>
+
+    <h2>Artifact-First Scientific Reports</h2>
+
+    <p>
+      Using modern AI systems, Trace Invariance Logic functions as a surprisingly efficient prompting and reasoning environment for artifact-first scientific reporting.
+    </p>
+
+    <p>
+      Rather than generating conclusions, AI can assist in structuring observations into standardized reports that follow a strict hierarchy:
+    </p>
+
+    <ul>
+      <li><strong>Artifact</strong> — the observable trace</li>
+      <li><strong>Observation</strong> — patterns derived directly from the artifact</li>
+      <li><strong>Interpretation</strong> — hypotheses downstream of the observation</li>
+    </ul>
+
+    <p>
+      This structure preserves a clear separation between evidence and reasoning.
+    </p>
+
+    <p>
+      Because artifacts remain central, the validity of the report can always be inspected by revisiting the underlying images, specimens, or cultures.
+    </p>
+
+    <p><strong>
+      In this way, AI-generated interpretation becomes auditable rather than opaque.
+    </strong></p>
+
+    <h2>Example: Fungal Isolation Without Genetic Sequencing</h2>
+
+    <p>
+      This framework emerged from my own experience isolating fungal strains from wild specimens.
+    </p>
+
+    <p>
+      Like many independent mycologists, I do not perform genetic sequencing on every culture I isolate. Instead, identification often relies on recognizing correspondences between the fruiting body and the cultured mycelium.
+    </p>
+
+    <p>
+      These correspondences may include:
+    </p>
+
+    <ul>
+      <li>pigment expression</li>
+      <li>hyphal growth patterns</li>
+      <li>oxidation reactions</li>
+      <li>colony morphology</li>
+      <li>growth texture or density</li>
+    </ul>
+
+    <p><em>The same signal expressed in culture:</em></p>
+
+    <figure>
+      <img
+        src="images/b41.png"
+        alt="Fungal culture plate showing red pigmented colonies derived from wild specimen"
+      />
+      <figcaption>
+        Laboratory artifact showing pigmented colonies corresponding to traits observed in the original specimen (top page image - Liver Bolete).
+        Example of trace expressed across contexts.
+      </figcaption>
+    </figure>
+
+    <p>
+      In some cases these traits appear naturally. In other cases, controlled perturbations can help elicit visible responses that make latent phenotype easier to record.
+    </p>
+
+    <p>
+      A simple artifact-first report might look like this:
+    </p>
+
+    <div class="callout">
+      <p><strong>Artifact</strong><br />
+      Photograph of a wild bolete mushroom sliced in half.</p>
+
+      <p><strong>Observation</strong><br />
+      Red pigmentation concentrated near the lower stipe region.</p>
+
+      <p><strong>Laboratory Artifact</strong><br />
+      Mycelium culture exhibiting diffuse red pigmentation.</p>
+
+      <p><strong>Invariant Pattern</strong><br />
+      Red pigmentation is present in both the stipe base and cultured mycelium.</p>
+
+      <p><strong>Interpretation</strong><br />
+      The culture likely derives from the collected specimen.</p>
+
+      <p><strong>Hypothesis</strong><br />
+      Pigment concentration near the stipe base, closest to the underlying mycelial mat, may indicate that the mycelium readily produces this compound under culture conditions.</p>
     </div>
+
+    <p>
+      These signals are often subtle but highly informative. However, documenting them consistently is surprisingly difficult. Traditional notebooks rarely preserve structured links between artifacts and observations.
+    </p>
+
+    <p>
+      Artifact-first reporting makes these relationships explicit and converts visual phenotype into portable scientific records.
+    </p>
+
+    <p>
+      This example illustrates the core principle: the artifact carries the evidence, and reasoning follows from inspecting it.
+      More generally, spatial concentration of visible trace within a biological structure may reveal underlying production zones that can be accessed in culture.
+    </p>
+
+    <h2>Three Open-Source Goals</h2>
+
+    <p>
+      Rather than proposing a closed pilot around a single lab or workflow, I propose an open scientific infrastructure with three linked goals:
+    </p>
+
+    <ul>
+      <li><strong>Develop a camera-based AI observation system</strong> trained around Trace Invariance Logic, capable of turning visual artifacts into structured reports.</li>
+      <li><strong>Open source a universal biological reporting protocol</strong> for field reports, notebook pages, SOP-style documentation, and visual observation records that can travel easily across disciplines.</li>
+      <li><strong>Build an open repository of reports</strong> that functions both as a public scientific archive and as training data for future camera-based observation systems.</li>
+    </ul>
+
+    <p>
+      This is especially important for the richest layer of scientific discovery: early observations, visual anomalies, phenotypic correspondences, and field-to-lab transitions that are often too informal for publication but too valuable to lose.
+    </p>
+
+    <p>
+      Open infrastructure matters here because the scientists most likely to benefit from artifact-first reporting are often the least well supported by existing systems: youth scientists, underfunded researchers, field naturalists, independent biologists, and researchers working outside highly resourced institutional settings.
+    </p>
+
+    <h2>Toward an Autonomous Biological Observatory</h2>
+
+    <p>
+      Once observation is structured around artifacts, automation becomes possible.
+    </p>
+
+    <p>
+      A camera system no longer needs to understand biology in the abstract. It only needs to detect, compare, and structure visual trace.
+    </p>
+
+    <p>
+      From this, it can generate artifact-anchored reports in real time.
+    </p>
+
+    <p>
+      Such a system could function as an <strong>autonomous biological observatory:</strong>
+    </p>
+
+    <ul>
+      <li>imaging biological artifacts in natural environments</li>
+      <li>identifying recurring visual patterns</li>
+      <li>generating artifact-anchored reports</li>
+      <li>separating observation from interpretation automatically</li>
+    </ul>
+
+    <p>
+      Rather than replacing scientists, such systems would dramatically increase the rate at which structured observations can be recorded.
+    </p>
+
+    <p>
+      A researcher moving from field to laboratory could generate dozens of artifact-anchored reports in a single day, preserving early discovery signals that would otherwise disappear.
+    </p>
+
+    <h2>A Testable Path Forward</h2>
+
+    <p>
+      The first step is to build and release the reporting layer itself as open infrastructure: templates, prompting interfaces, notebook formats, SOP-style documents, and report repositories.
+    </p>
+
+    <p>
+      Once released, the framework can be evaluated across artifact-rich disciplines such as mycology, microbiology, and ecology.
+    </p>
+
+    <p>
+      Metrics could include:
+    </p>
+
+    <ul>
+      <li>number of observations recorded</li>
+      <li>time required to document discoveries</li>
+      <li>reproducibility of observations</li>
+      <li>clarity of the link between artifacts and interpretations</li>
+      <li>cross-disciplinary portability of the reporting format</li>
+    </ul>
+
+    <p>
+      A modest budget (~$30k) could support development of:
+    </p>
+
+    <ul>
+      <li>an open artifact-first reporting template and reasoning environment (v1 already available — see “Runtime” above)</li>
+      <li>a repository of artifact-anchored reports for public inspection and reuse</li>
+      <li>preliminary camera-based experiments for invariant pattern detection</li>
+    </ul>
+
+    <p>
+      The goal would not be to replace traditional publications, but to create an <strong>open pre-publication layer of structured observation.</strong>
+    </p>
+
+    <p>
+      Trace Invariance Logic does not generate knowledge. It constrains how knowledge can be formed.
+    </p>
+
+    <h2>Rebuilding the Observation Layer of Science</h2>
+
+    <p>
+      Scientific publishing systems were designed for an era in which generating analysis and text was slow and expensive.
+    </p>
+
+    <p><strong>
+      Today the opposite is true.
+    </strong></p>
+
+    <p>
+      Interpretation is becoming abundant, while reliable documentation of observations remains scarce.
+    </p>
+
+    <p><strong>
+      AI makes interpretation abundant. Artifact-first science makes it accountable.
+    </strong></p>
+
+    <p>
+      If AI is going to transform science, it must be paired with systems that preserve the connection between claims and evidence.
+    </p>
+
+    <p>
+      Trace Invariance Logic proposes a minimal infrastructure for doing exactly that.
+    </p>
+
+    <p><strong>
+      Its goal is simple: capture discovery at the moment it occurs while keeping scientific reasoning anchored to inspectable artifacts.
+    </strong></p>
+
+    <p>
+      In an age of accelerating information production, the most valuable scientific records may still follow the oldest rule of empirical inquiry:
+    </p>
+
+    <p><strong>
+      trace first, interpretation second.
+    </strong></p>
+
+    <div class="callout">
+      <h2>About this essay</h2>
+      <p>
+        This essay was written for the Astera 026 Essay Competition on systemic bottlenecks in science.
+      </p>
+      <p>
+        If you’d like to discuss artifact-first reporting, observation infrastructure, or AI-assisted scientific documentation, you can reach me at
+        <a href="mailto:hiramdunn61@gmail.com">hiramdunn61@gmail.com</a>.
+      </p>
+    </div>
+
+    <p class="bottom-back"><a href="blog.html">← Back to Research</a></p>
   </main>
 
   <footer>
