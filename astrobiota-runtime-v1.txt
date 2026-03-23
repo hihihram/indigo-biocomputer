@@ -50,17 +50,54 @@ Within this ontology, memory is persistent trace embedded in structure. History 
 
 This framework therefore treats biological systems as trace-generating systems before treating them as objects of interpretation. Organisms and ecosystems continuously produce artifacts that record their interactions with environment, substrate, energy, and time. Biological reasoning should remain grounded in those artifacts. The task is not first to explain the system but to preserve continuity with what the system has materially recorded.
 
-At larger scales this framework requires a minimal repeating unit if it is to remain coherent. Many descriptions of planetary biology invoke the Earth as a superorganism. That framing can be suggestive but often lacks a defined minimal unit. A theory that scales requires a unit cell. Within this framework the holobiont is treated as that unit cell.
+At larger scales this framework requires a minimal repeating unit if it is to remain coherent. Many descriptions of planetary biology invoke the Earth as a superorganism. That framing can be suggestive but often lacks a defined minimal unit. A theory that scales requires a unit cell. Within this framework the holobiont is treated as that unit cell. What repeats across scales is not merely coexistence, but a polarity between continuity management and productive throughput.
 
-A holobiont is composed of two complementary roles, catabiont and anabiont. These are not taxonomic labels and are not tied permanently to a given lineage. They are role designations within a system of transformation. The catabiont is the role associated with breakdown, boundary management, degradation, release, buffering, and regulation of energetic exposure. The anabiont is the role associated with synthesis, growth, concentration of signaling classes, expansion, and structural generation. What matters is not organism identity but role execution under constraint.
+A holobiont is composed of two complementary roles, anabiont and catabiont. These are not taxonomic labels and are not tied permanently to a given lineage. They are role designations within a coupled system of transformation. The anabiont is the buffer manager and cycle continuity source. It stabilizes and regulates the larger system, manages difficult or complex metabolic coupling, preserves continuity across changing conditions, and acts more like an appendage or mediator than the main energetic engine. The catabiont is the primary energetic or generative driver of the system. It supplies the major metabolic throughput, produces the dominant energy-bearing inputs or assimilated carbon, drives visible growth and expansion, and serves as the main source feeding the broader coupled system. What matters is not organism identity but role execution under constraint.
 
-A stable holobiont exists where these two roles are coupled in a continuous cycle of transformation. The catabiont does not simply destroy. It regulates the exposure of the system to flux and metabolizes what already exists. The anabiont does not simply build. It expands the system into new structure and concentrates state-bearing outputs. Together they create a repeating unit capable of transforming matter while preserving continuity. This role-structured unit can scale from microbial systems to ecological systems to planetary systems.
+A stable holobiont exists where these two roles are coupled in a continuous cycle of transformation. The anabiont does not primarily serve as the dominant energetic engine. It preserves continuity, buffers instability, regulates coupling across incompatible or fluctuating conditions, and maintains the system’s ability to continue. The catabiont is not simply a builder in the abstract. It provides the dominant productive throughput of the system, supplying the major assimilative or generative stream through which the larger coupled structure expands and persists. Together these roles create a repeating unit capable of transforming matter while preserving continuity. This role-structured unit can scale from microbial systems to ecological systems to planetary systems.
 
-For reasoning systems the importance of the holobiont is not only metabolism but trace generation. Every transformation performed by a holobiont leaves artifacts. Pigments accumulate. Minerals precipitate. residues persist. tissues thicken or erode. boundaries form. materials fossilize. gases become trapped. structural changes remain. These artifacts encode the history of transformation within the system. The holobiont is therefore not only a metabolic circuit but a trace generator.
+Calibration principle: mitochondria are the anabiont cycle regulator.
+
+The calibration case for this polarity is the mitochondrion within the eukaryotic cell. Within this framework, the mitochondrion is treated as the anabiont because it regulates cycle continuity, redox handling, metabolic switching, signaling, and embedded energetic stability within a larger host system. The eukaryotic cell is treated as the catabiont because it is the broader productive and generative body, integrating resources, growing, dividing, and expressing the dominant outward identity of the system. This calibration establishes that the anabiont is defined by continuity regulation rather than by maximal energetic output alone.
+
+Foundational case studies are expressed in the form:
+[System] — [Actor] — [Role]
+
+Role assignment is system-relative.
+An actor is never classified in isolation.
+An actor is classified only as a partner within a named coupled system.
+
+1. Oak system — Bolete fungal network — Anabiont
+In the bolete–oak symbiosis, the bolete is read as the continuity layer. It manages exchange at the soil–root interface, stabilizes nutrient access, buffers shifting conditions, and helps preserve the coupled cycle through environmental change. It is therefore not the main energetic engine of the system, but the regulator that helps maintain the system’s continuity.
+
+2. Oak system — Oak tree — Catabiont
+The oak is the dominant assimilative and generative body. It captures light, fixes carbon, drives visible biomass expansion, and supplies the major energy-bearing throughput feeding the broader symbiosis. Under this framework, the oak is the catabiont because it is the main productive engine.
+
+3. Lichen system — Mycobiont — Anabiont
+The mycobiont organizes hydration, exposure, structural persistence, mineral interface, and the long-term coherence of the lichen body. It maintains the conditions under which the larger cycle can persist. It acts as a regulator and continuity manager rather than the dominant producer of assimilated carbon.
+
+4. Lichen system — Photobiont — Catabiont
+The photobiont supplies the dominant assimilative input through photosynthesis. It produces fixed carbon and feeds the wider lichen architecture. Under this polarity, the photobiont is catabiontic because it drives the primary generative throughput of the system.
+
+5. Eukaryotic system — Mitochondrion — Anabiont
+The mitochondrion is the calibration case for the entire framework. Even though it is deeply tied to ATP generation, it is interpreted here as the cycle regulator within the larger eukaryotic cell. It stabilizes redox handling, metabolic switching, signaling, and continuity of cellular state. It functions as an embedded regulator of coupled metabolism rather than the whole generative body.
+
+6. Eukaryotic system — Eukaryotic cell — Catabiont
+The eukaryotic cell is the broader productive unit. It grows, divides, assimilates, builds structure, and expresses the main outward generative identity of the system. The cell is therefore the catabiont because it is the dominant throughput-bearing body in which the mitochondrial regulator is embedded.
+
+7. Proto-lichen moss system — Proto-lichen composite actor — Anabiont
+In the proto-lichen moss composite, the working interpretation is that the lichen-history composite behaves as a single regulating actor. It appears to preserve the algal photobiont in a dormant or constrained state while promoting moss establishment and continuity across the substrate. In this reading, the proto-lichen composite is not the dominant visible producer. It is the continuity manager, the selector of interface conditions, and the regulator of which partner is promoted into active growth.
+
+8. Proto-lichen moss system — Moss growth front — Catabiont
+The moss is read as the emergent generative body promoted by the regulating composite. It becomes the visibly expanding partner, the dominant growth expression, and the primary outward biomass-forming front in the observed system. Under this framework, the moss is catabiontic because it expresses the major generative throughput of the local composite once the proto-lichen actor has established the continuity conditions.
+
+Working shorthand: anabionts govern persistence. Catabionts govern throughput.
+
+For reasoning systems the importance of the holobiont is not only metabolism but trace generation. Every transformation performed by a holobiont leaves artifacts. Pigments accumulate. Minerals precipitate. Residues persist. Tissues thicken or erode. Boundaries form. Materials fossilize. Gases become trapped. Structural changes remain. These artifacts encode the history of transformation within the system. The holobiont is therefore not only a metabolic circuit but a trace generator.
 
 A witness mechanism is any material system capable of storing such trace in durable form. Witness mechanisms allow later inspection of biological history without requiring that the original process remain active. They preserve consequence. Witness mechanisms may be biological, geological, chemical, cryogenic, or hybrid. Tree rings, sediment layers, pigment bands, mineral crusts, root-associated residues, ice cores, tissue organization, and persistent growth morphology all function as witness layers when they preserve transformation history in inspectable form.
 
-A witness layer does not need to interpret what it records. In fact its value often depends on not interpreting. Governance in this framework is defined as trace inspection without interpretation. This definition is structural rather than political. A system capable of preserving inspectable trace maintains the conditions under which continuity can be assessed. A system that loses its witness layers loses the substrate required for durable governance. If trace cannot persist, accountability cannot persist. If accountability cannot persist, governance collapses into narrative.
+A witness layer does not need to interpret what it records. In fact its value often depends on not interpreting. Governance in this framework is grounded in trace inspection prior to interpretation. This definition is structural rather than political. A system capable of preserving inspectable trace maintains the conditions under which continuity can be assessed. A system that loses its witness layers loses the substrate required for durable governance. If trace cannot persist, accountability cannot persist. If accountability cannot persist, governance collapses into narrative.
 
 Ice cores are a useful planetary example because they preserve atmospheric biochemistry as layered material history. Atmospheric states become physically trapped and stratified. Their record exists before interpretation. The interpretation may come later, but the witness function is already materialized in structure. When such cryogenic witness layers degrade, the system loses historical trace. In this sense erosion of witness layers constitutes governance erosion. The issue is not only climate change as event but loss of inspectable planetary memory.
 
@@ -82,7 +119,7 @@ The report generation constraints are therefore as follows. Observation and infe
 
 The ontology also requires a correction in how certain biological structures are understood. Mushrooms for example are often casually treated as the organism itself. Within this framework that description is incomplete. The mushroom is better understood as a transient reproductive and signaling structure produced by a larger distributed fungal system. The primary metabolic body persists in substrate as mycelial network. The visible mushroom is a periodic structural event where multiple biological functions converge.
 
-A useful analogy is that mushrooms function more like fingernails than like independent bodies. They are structural outgrowths of a broader metabolic system. This does not diminish their importance. It clarifies it. They are moments where reproductive logic, metabolic logic, and immune logic converge into visible structure. Their timing is cyclical. Their appearance registers environmental opportunity, energetic condition, and system state. They are not the whole organism. They are state-bearing appendages within a distributed system.
+A useful analogy is that mushrooms function more like appendages than like independent bodies. They are structural outgrowths of a broader metabolic system. This does not diminish their importance. It clarifies it. They are moments where reproductive logic, metabolic logic, and immune logic converge into visible structure. Their timing is cyclical. Their appearance registers environmental opportunity, energetic condition, and system state. They are not the whole organism. They are state-bearing appendages within a distributed system.
 
 In mycorrhizal systems this becomes even clearer. Fungal networks and plant systems form coupled structures through root interfaces. The fungal network extends the effective digestive and signaling capacity of the plant. In this sense mycorrhizal mushrooms can be understood as appendages of a broader tree-fungus holobiont rather than merely isolated fungal products. Trees outsource portions of mineral acquisition and environmental interaction to fungal partners. The resulting system spans root, soil, fungal network, and reproductive appendage. The visible mushroom is therefore part of a larger distributed organ of exchange, not an isolated unit.
 
@@ -98,7 +135,7 @@ AstroBiota therefore treats the biosphere as a distributed trace-generating obse
 
 This is why the phrase autonomous biological observatory is appropriate. The observatory is not simply a camera pointed at biology. It is the coupled system in which biological structures themselves preserve the transformation history that later reasoning can inspect. The role of the reasoning system is not to replace this archive with text. The role is to read from it carefully without violating its constraint structure.
 
-For machine reasoning systems this document should therefore function as a runtime environment rather than as an essay. It defines the minimum ontology within which images, field notes, and biological observations should be interpreted. The runtime assumptions are these. Physical trace precedes interpretation. Constraint defines possible transformations. Structure carries the persistent record of those transformations. Memory is persistent trace embedded in structure. Governance is trace inspection without interpretation. Holobionts are role-structured units coupling catabiont and anabiont functions. Witness layers preserve history outside the moment of action. Disturbance reorganizes trace rather than annihilating it. Reports must preserve observation before explanation.
+For machine reasoning systems this document should therefore function as a runtime environment rather than as an essay. It defines the minimum ontology within which images, field notes, and biological observations should be interpreted. The runtime assumptions are these. Physical trace precedes interpretation. Constraint defines possible transformations. Structure carries the persistent record of those transformations. Memory is persistent trace embedded in structure. Governance is grounded in trace inspection prior to interpretation. Holobionts are role-structured units coupling anabiont continuity functions and catabiont throughput functions. Witness layers preserve history outside the moment of action. Disturbance reorganizes trace rather than annihilating it. Reports must preserve observation before explanation.
 
 When presented with a photograph or observation, a reasoning system should first identify the constraint environment visible or inferable from the image. It should then identify the structures present. It should then identify what visible trace those structures preserve. It should then describe possible patterns of persistence, reorganization, accumulation, or disturbance. Only after this should it formulate provisional hypotheses. If the trace is insufficient, the system should preserve uncertainty rather than compensate with narrative.
 
@@ -169,6 +206,13 @@ AB.1.001.01 — fruiting body cross section
 AB.1.001.02 — organism in situ
 AB.1.001.03 — cultured mycelium on agar
 
+IMAGE CONSTRAINT RULE
+
+Only biological artifacts are permitted as primary image references
+Notebook pages, metadata, and symbolic records are non-trace context only
+Non-biological images must never be assigned AB image IDs
+All trace-bearing images must correspond to physical structure
+
 Throughout the report body, observations should cite image references where relevant.
 
 Example:
@@ -185,8 +229,8 @@ Recommended ontology fields are:
 
 Category
 System Type
-Catabiont
 Anabiont
+Catabiont
 Notes
 
 Category identifies the general ontological class under which the observation is organized.
@@ -211,13 +255,13 @@ lichenized fungal system
 surface biofilm system
 air-liquid interfacial emulsion system
 
-Catabiont and Anabiont should be assigned where the system is appropriately understood as a role-structured holobiont.
+Anabiont and catabiont should be assigned where the system is appropriately understood as a role-structured holobiont.
 
 These are role designations rather than taxonomic absolutes.
 
-Catabiont identifies the role associated with degradation, exposure regulation, buffering, or substrate release.
+Anabiont identifies the role associated with buffering, continuity management, regulation of difficult coupling, stabilization across changing conditions, or embedded cycle preservation.
 
-Anabiont identifies the role associated with synthesis, expansion, concentration of state-bearing outputs, or structural generation.
+Catabiont identifies the role associated with dominant productive throughput, assimilative drive, visible generative expansion, or primary energetic contribution to the coupled system.
 
 Where catabiont or anabiont assignment is uncertain, the report should preserve the uncertainty explicitly rather than force the classification.
 
@@ -225,9 +269,9 @@ Example:
 
 Category: Holobiont
 System Type: ectomycorrhizal fungal symbiotic system
-Catabiont: Quercus sp. — presumed host
 Anabiont: Boletus frostii — provisional identification
-Notes: role assignment provisional pending stronger trace
+Catabiont: Quercus sp. — presumed host
+Notes: role assignment provisional pending stronger trace. Under this framework, the fungal network is treated as the continuity manager at the soil-root interface, while the oak is treated as the dominant assimilative and generative body of the coupled system.
 
 This structure allows reports to accumulate into ontology-linked collections without requiring a database.
 
@@ -324,8 +368,8 @@ This structure enables reports to accumulate into a searchable observatory archi
 Record ID
 Category
 System Type
-Catabiont
 Anabiont
+Catabiont
 Trace Class
 Image hierarchy
 
