@@ -1,0 +1,209 @@
+:::::::::::::::::::::::::::::::::::::::::::::::::
+::                                             ::
+::   A S T R O B I O T A                       ::
+::                                             ::
+::   AUTONOMOUS OBSERVATORY                    ::
+::   TRACE-BASED LOGIC                         ::
+::                                             ::
+::   ASTROBIOTA FIELD RECORD                   ::
+::   [Record ID]                               ::
+::                                             ::
+:::::::::::::::::::::::::::::::::::::::::::::::::
+Trace preserved. Interpretation provisional. Mechanism unresolved.
+
+Runtime Template: <astrobiota-runtime-v1> [reference exact file used]
+Field Report Template: <astrobiota-field-report-template-v2.0> [reference exact file used]
+
+[Short title / system description]
+
+Record ID: [AB.1.0XX]
+Timestamp: [YYYY-MM-DD HH:MM TZ]
+Classification: [PUBLIC / CONFIDENTIAL]
+Source: [observer / image set / field image set / reactor image set / mixed]
+Location: [optional]
+Sample ID / Notebook Ref: [optional]
+Linked prior records: [none / AB.1.0XX, AB.1.0XX]
+Reasoning system: [optional]
+
+─────────────────────────────────────────────────
+
+SYSTEM CLASSIFICATION
+
+Category:
+Anabiont:
+Catabiont:
+System Type:
+Status:
+Notes:
+
+─────────────────────────────────────────────────
+
+IMAGE REFERENCES
+
+[Record image IDs and short labels]
+
+Example:
+[AB.1.0XX.01] — [primary observation]
+[AB.1.0XX.02] — [environmental context]
+[AB.1.0XX.03] — [structural detail]
+[AB.1.0XX.L04] — [lineage image, if applicable]
+
+─────────────────────────────────────────────────
+
+0. PURPOSE AND SCOPE
+
+This document records observations and provisional hypotheses concerning [system].
+
+Its purpose is to preserve trace, maintain continuity, and classify the system under constraint while it remains incompletely resolved.
+
+Its purpose is not proof of identity, mechanism, obligate coordination, or final explanation unless directly supported by trace.
+
+[Optional continuity sentence: This record extends / does not extend prior record(s) [ID].]
+
+─────────────────────────────────────────────────
+
+1. NAVIGATION RULES
+
+1. Trace precedes interpretation.
+2. Observation precedes explanation.
+3. Observation and inference must remain explicitly separated.
+4. Classification precedes mechanism.
+5. Novelty reduces claims rather than enlarging them.
+6. System history is relevant unless clearly disqualified.
+7. Role assignment is system-relative, not taxonomic by default.
+8. Persistence is treated as signal, not proof, of coordination or intelligence.
+9. When evidence is mixed, the report should land on the strongest defensible arrangement.
+
+─────────────────────────────────────────────────
+
+2. DOCUMENT STRUCTURE
+
+SYSTEM CONTEXT — Define the system and its visible constraints.
+
+OBSERVATION — Record what is visibly present without explanatory inflation.
+
+TRACE — Preserve persistent structural witness and major visible organization.
+
+BEHAVIORAL PATTERNS — Record regularities the available evidence can support.
+
+WORKING HYPOTHESIS — Hold bounded explanations without collapsing into proof.
+
+[Optional: ROLE LOGIC — Use when anabiont / catabiont assignment requires full treatment.]
+
+[Optional: CLAIM TRACEBACK — Use when major claims need explicit support mapping.]
+
+─────────────────────────────────────────────────
+
+3. SYSTEM CONTEXT
+
+The observed system is [concise physical description].
+
+The observation interface is [photographic / direct / vessel wall / field image / UVB image / mixed lighting].
+
+Visible constraints include [hydration / enclosure / substrate / light regime / condensation / disturbance / open environment].
+
+Scale is [macro / microecological / container-scale / not measured].
+
+[Optional continuity sentence: This record is downstream from / linked to [prior record ID], and that history is treated as relevant.]
+
+[Optional limitation sentence: No microscopy, sectioning, chemistry, or time-series revisit is available in this record unless stated.]
+
+─────────────────────────────────────────────────
+
+4. OBSERVATION
+
+- [Visible feature 1]
+- [Visible feature 2]
+- [Visible feature 3]
+- [Visible feature 4]
+- [Boundary or margin feature]
+- [Illumination-dependent feature, if relevant]
+- [Disturbance-linked feature, if relevant]
+- [Absence statement, if important]
+
+─────────────────────────────────────────────────
+
+5. TRACE
+
+Primary trace:
+[Main persistent structural witness.]
+
+Secondary trace:
+[Boundary, segregation, residue, layering, repeated feature, or interface behavior.]
+
+Additional trace:
+[Other supporting witness features, including lineage continuity if justified.]
+
+Trace significance:
+[State what can be said firmly from trace alone, and what remains unresolved.]
+
+─────────────────────────────────────────────────
+
+6. BEHAVIORAL PATTERNS
+
+- [Spatial regularity]
+- [Boundary regularity]
+- [Persistence / coexistence / segregation pattern]
+- [Disturbance-linked contrast, if available]
+- [Temporal caution statement if based only on still images]
+
+─────────────────────────────────────────────────
+
+7. WORKING HYPOTHESIS
+
+H1: [Strongest disciplined whole-system reading]
+
+H2: [Bounded alternative explanation]
+
+H3: [Continuity / lineage / coexistence explanation]
+
+H4: [Feature-specific explanation, if needed]
+
+H5: [Explicit unresolved alternative / caution statement]
+
+Provisional conclusion:
+[2–5 sentences stating the strongest disciplined reading, what should be carried forward, and what remains open.]
+
+─────────────────────────────────────────────────
+
+8. ROLE LOGIC (OPTIONAL)
+
+Use this section only when anabiont / catabiont assignment is central to the record.
+
+Anabiont assignment:
+[assigned / provisional / unresolved]
+
+Reason:
+[Why this actor is treated as continuity-bearing, stabilizing, interface-managing, or persistence-bearing.]
+
+Catabiont assignment:
+[assigned / provisional / unresolved]
+
+Reason:
+[Why this actor is treated as throughput-bearing, outwardly expressive, front-forming, or locally generative.]
+
+Why this assignment is stronger than morphology-first logic:
+[Brief justification.]
+
+─────────────────────────────────────────────────
+
+9. CLAIM TRACEBACK (OPTIONAL)
+
+Claim | Supporting trace | Status
+[Claim 1] | [Image / feature / lineage support] | [Supported / provisional / interpretive]
+[Claim 2] | [Image / feature / lineage support] | [Supported / provisional / interpretive]
+
+─────────────────────────────────────────────────
+
+APPENDIX A — IMAGE RECORD
+
+[Insert image IDs with one-line captions]
+
+APPENDIX B — LINEAGE TRACE (OPTIONAL)
+
+[Insert prior-image IDs or prior-record references with one-line captions]
+
+─────────────────────────────────────────────────
+
+END ASTROBIOTA FIELD RECORD
+Trace preserved. Interpretation provisional.
